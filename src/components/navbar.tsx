@@ -4,13 +4,67 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
 
 const navigation = [
-  { name: "Services", href: "#services" },
+  { 
+    name: "Services", 
+    href: "#services",
+    items: [
+      {
+        title: "Web Development",
+        href: "#web-development",
+        description: "Custom web development solutions for your business"
+      },
+      {
+        title: "Mobile Apps",
+        href: "#mobile-apps",
+        description: "Native and cross-platform mobile applications"
+      }
+    ]
+  },
   { name: "Customers", href: "#customers" },
   { name: "Pricing", href: "#pricing" },
   { name: "Company", href: "#company" },
-  { name: "Resources", href: "#resources" },
+  { 
+    name: "Resources",
+    items: [
+      {
+        title: "How it works",
+        href: "#how-it-works",
+        description: "Learn about our process and methodology"
+      },
+      {
+        title: "Blog",
+        href: "/blog",
+        description: "Read our latest articles and updates"
+      },
+      {
+        title: "Newsletter",
+        href: "/newsletter",
+        description: "Subscribe to our newsletter"
+      },
+      {
+        title: "FAQ",
+        href: "/faq",
+        description: "Frequently asked questions"
+      },
+      {
+        title: "Freebies",
+        href: "/freebies",
+        description: "Free resources and templates"
+      }
+    ]
+  },
   { name: "Our Work", href: "#work" },
 ];
 
@@ -39,17 +93,47 @@ export function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:justify-center flex-1 px-20">
-            <div className="flex space-x-10">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="text-lg text-gray-600 hover:text-gray-900 font-medium"
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
+            <NavigationMenu>
+              <NavigationMenuList className="flex space-x-10">
+                {navigation.map((item) => (
+                  <NavigationMenuItem key={item.name}>
+                    {item.items ? (
+                      <>
+                        <NavigationMenuTrigger className="text-lg text-gray-600 hover:text-gray-900 font-medium">
+                          {item.name}
+                        </NavigationMenuTrigger>
+                        <NavigationMenuContent>
+                          <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                            {item.items.map((subItem) => (
+                              <li key={subItem.title}>
+                                <NavigationMenuLink asChild>
+                                  <Link
+                                    href={subItem.href}
+                                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                                  >
+                                    <div className="text-sm font-medium leading-none">{subItem.title}</div>
+                                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                      {subItem.description}
+                                    </p>
+                                  </Link>
+                                </NavigationMenuLink>
+                              </li>
+                            ))}
+                          </ul>
+                        </NavigationMenuContent>
+                      </>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        className="text-lg text-gray-600 hover:text-gray-900 font-medium"
+                      >
+                        {item.name}
+                      </Link>
+                    )}
+                  </NavigationMenuItem>
+                ))}
+              </NavigationMenuList>
+            </NavigationMenu>
           </div>
 
           {/* Right side buttons */}
@@ -135,33 +219,6 @@ export function Navbar() {
           </div>
         </div>
       </div>
-
-      {/* Mobile menu */}
-      <div className={cn("md:hidden rounded-b-[32px]", isOpen ? "block" : "hidden")}>
-        <div className="px-4 pt-2 pb-3 space-y-1">
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg"
-            >
-              {item.name}
-            </Link>
-          ))}
-          <Link
-            href="/sign-in"
-            className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg"
-          >
-            Sign in
-          </Link>
-          <Link
-            href="/demo"
-            className="block w-full text-center bg-[#1C1B1F] text-white hover:bg-gray-800 px-6 py-3.5 text-lg font-medium rounded-full mt-2"
-          >
-            Book a demo
-          </Link>
-        </div>
-      </div>
-    </nav>
+      </nav>
   );
 }

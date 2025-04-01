@@ -85,7 +85,7 @@ export function HeroWithAnimations() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              All your{" "}
+              Get {" "}
             </motion.span>
             <span className="relative inline-flex items-center">
               <motion.span
@@ -93,7 +93,7 @@ export function HeroWithAnimations() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
-                design{" "}
+                Mobile App Design
               </motion.span>
               <motion.div 
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -214,13 +214,14 @@ export function HeroWithAnimations() {
                   </defs>
                 </svg>
               </motion.div>
+  
             </span>
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
             >
-              {" "}tasks in one monthly subscription
+              <br /> That Earn You More <br /> Than They Cost
             </motion.span>
           </h1>
           <motion.p 
@@ -229,9 +230,9 @@ export function HeroWithAnimations() {
             transition={{ duration: 0.6, delay: 1 }}
             className="mt-10 text-2xl leading-9 text-[#828088] max-w-3xl mx-auto"
           >
-            Magier is a creative subscription service, trusted by the world's
-            top brands to get exceptional design faster, more reliably and at
-            scale.
+            No calls. No waiting. No freelancers.
+            <br />
+            Just Business-driven design UI in Figma, ready to dev — starting at €490.
           </motion.p>
 
           <motion.div 

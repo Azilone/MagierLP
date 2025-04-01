@@ -9,6 +9,7 @@ import { FAQSection } from "@/components/faq-section";
 import { ResultsSection } from "@/components/results-section";
 import { Footer } from "@/components/footer";
 import { HeroWithAnimations } from "@/components/hero-with-animations";
+import { BenefitsSection } from "@/components/benefits-section";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
       {/* <NotificationBanner /> */}
       <div className="max-w-[1900px] mx-auto px-12 py-8 md:py-12 relative space-y-6">
         {/* Navbar container */}
-        <div className="bg-white rounded-[32px] sticky top-6 z-50 shadow-sm"> 
+        <div className="bg-white rounded-[32px] sticky top-6 z-50 shadow-sm">
           <Navbar />
         </div>
 
@@ -24,15 +25,18 @@ export default function Home() {
         <div className="bg-white rounded-[32px] ring ring-gray-200">
           <HeroWithAnimations />
         </div>
-        {/*<CustomersSection />*/} 
+        {/*<CustomersSection />*/}
+        <ProblemsSection />
+        <CTASection />
+        <BenefitsSection />
         <HowItWorksSection />
         <ServicesSection />
-        <ProblemsSection />
+      
         <SuccessStoriesSection />
         <ComparisonSection />
         <FAQSection />
         <ResultsSection />
-        <CTASection />
+      
       </div>
       <Footer />
     </div>
