@@ -1,63 +1,144 @@
 "use client";
 
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"; // Assuming this utility exists
+import { motion } from "framer-motion"; // Import motion
 
+// Define the correct Diamond Icon component (kept as defined, though not used in Cards)
+function DiamondIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 64 64"
+      fill="currentColor"
+      {...props}
+      color="#6A45E3"
+    >
+      <path d="M32 0 L64 32 L32 64 L0 32 Z M32 12.9 L51.1 32 L32 51.1 L12.9 32 Z"></path>
+    </svg>
+  );
+}
+
+function Cards() {
+  // Adjust horizontal spread based on screen size implicitly via card widths
+  // Or explicitly define different offsets if needed (more complex)
+  // Let's try reducing the base offset slightly first
+  const baseHorizontalOffsetMultiplier = 50; // Reduced from 55 for better fit on smaller screens
+  const baseVerticalOffsetMultiplier = 12; // Slightly reduced vertical lift
+  const baseScaleMultiplier = 0.06; // Slightly reduced scale difference
+  const baseOpacityMultiplier = 0; // Slightly increased opacity difference for clarity
+
+  return (
+    // Use min-height for better flexibility on different screen sizes
+    <div className="w-full min-h-[600px] lg:min-h-[650px] relative py-8 [perspective:1000px]">
+      {serviceCards.map((card, index) => {
+        const centerOffset = index - 2; // Center card is index 2
+
+        // Use the base multipliers defined above
+        const rotation = centerOffset * 12; // Keep rotation the same
+        const horizontalOffsetPercent = centerOffset * baseHorizontalOffsetMultiplier;
+        const verticalOffsetPercent = Math.abs(centerOffset) * baseVerticalOffsetMultiplier;
+        const scale = 1 - Math.abs(centerOffset) * baseScaleMultiplier;
+        const finalOpacity = 1 - Math.abs(centerOffset) * baseOpacityMultiplier;
+        const zIndex = 5 - Math.abs(centerOffset);
+
+        return (
+          <motion.div
+            key={card.title}
+            className="absolute left-1/2 top-1/2 transform-gpu" // Base positioning, GPU acceleration
+            style={{
+              zIndex: zIndex,
+              // transformOrigin: "center center" // Usually handled automatically
+            }}
+            initial={{ // Starting state (before animation / view)
+              opacity: 0,
+              scale: 0.6, // Start slightly larger than before, but still small
+              x: "-50%", // Start centered horizontally
+              y: "-40%", // Start centered vertically (relative to top-1/2)
+              rotate: 0,  // Start unrotated
+            }}
+            whileInView={{ // Target state (animate TO this when in view)
+              opacity: finalOpacity,
+              scale: scale,
+              x: `calc(-50% + ${horizontalOffsetPercent}%)`,
+              y: `calc(-50% + ${verticalOffsetPercent}%)`,
+              rotate: rotation,
+            }}
+            viewport={{ once: true, amount: 0.3 }} // Trigger animation once when 30% is visible
+            transition={{ // Animation timing and easing (applies to whileInView)
+              duration: 0.7, // Slightly longer duration
+              ease: [0.25, 0.1, 0.25, 1.0], // A common ease-out cubic bezier
+              delay: Math.abs(centerOffset) * 0.08, // Stagger animation start slightly more
+            }}
+          >
+            <ServiceCard
+              title={card.title}
+              description={card.description}
+              imageSrc={card.imageSrc}
+            />
+          </motion.div>
+        );
+      })}
+    </div>
+  );
+}
+
+// --- ResultsSection Component ---
 export function ResultsSection() {
   return (
-    <div className="w-full bg-white rounded-[42px] border border-gray-200/50 overflow-hidden">
-      <div className="flex flex-col items-center w-full max-w-[1200px] px-6 py-10 mx-auto lg:px-5 sm:px-4">
-        <div className="flex flex-col items-center w-full gap-8">
-          <div className="flex flex-col items-center gap-4 text-center">
-            <h2 className="text-[66px] font-semibold leading-[1.1] tracking-[-0.04em] text-[#140F23] lg:text-[48px] sm:text-[36px]">
-              <span>We deliver what counts</span>
-              <div className="inline-flex items-center">
-                <span>-</span>
-                <div className="flex items-center">
-                  <span className="text-[66px] font-semibold text-[#140F23] lg:text-[48px] sm:text-[36px]">
-                    top
-                  </span>
-                  <Image
-                    src="/images/premium-partner-badge.svg"
-                    alt="Premium Partner Badge"
-                    width={56}
-                    height={56}
-                    className="w-[56px] h-[56px] lg:w-[48px] lg:h-[48px] sm:w-[40px] sm:h-[40px]"
-                  />
-                </div>
-                <span>class results</span>
-              </div>
-            </h2>
-            <p className="text-lg text-[#828088] leading-[1.5] max-w-[625px] lg:text-base sm:text-sm">
-              Whether you're a startup founder or a marketing lead, we've seen
-              your design challenges – and we're here to help you solve them.
-            </p>
+    // Added overflow-hidden to the main container if needed, but clipping should happen within Cards boundary
+    <div className="w-full bg-white px-4 py-0 sm:px-6 md:px-8 lg:px-12 xl:px-16 rounded-[32px] ring-1 ring-gray-200 overflow-hidden">
+      {/* Section for cards - adjusted padding */}
+      <div className="w-full  pb-16 md:pb-24"> {/* Added top padding, adjusted bottom */}
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8"> {/* Consistent padding */}
+          {/* Cards container with gradient overlay */}
+          <div className="relative">
+            {/* Radial gradient overlay centered at bottom */}
+            <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 h-1/2 w-3/4 z-10" style={{
+              background: 'radial-gradient(ellipse at bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.4) 70%, transparent 100%)'
+            }} />
+            {/* Cards - Framer Motion handles animation timing */}
+            <div className="relative z-0">
+              <Cards />
+            </div>
           </div>
-          <div className="flex justify-center gap-4 sm:flex-col sm:w-full">
-            <Link
-              href="#"
-              className="px-[33px] py-[21px] bg-[#140F23] text-white rounded-[100px] text-base font-medium tracking-[-0.02em] transition-colors duration-150 sm:w-full"
-            >
-              Book a demo
-            </Link>
-            <Link
-              href="#"
-              className="px-[46px] py-[21px] border border-[#E5E5EA] rounded-[100px] text-base font-medium tracking-[-0.02em] text-[#140F23] transition-colors duration-150 sm:w-full"
-            >
-              Our work
-            </Link>
-          </div>
-          <div className="flex flex-wrap justify-center gap-8 max-w-[1200px] mt-10 lg:gap-6 sm:gap-4">
-            {serviceCards.map((card, index) => (
-              <ServiceCard
-                key={card.title}
-                title={card.title}
-                description={card.description}
-                imageSrc={card.imageSrc}
-                rotation={card.rotation}
-              />
-            ))}
+        </div>
+      </div>
+
+      {/* Content section - adjust top margin */}
+      <div className="w-full pb-16 md:pb-24"> {/* Added bottom padding */}
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8"> {/* Consistent padding */}
+          <div className="flex flex-col items-center -mt-12 md:-mt-16"> {/* Slightly adjusted negative margin */}
+            {/* Text Content - Responsive text sizes already handled */}
+            <div className="flex flex-col items-center gap-6 md:gap-8 text-center w-full">
+              <h2 className="text-[40px] font-semibold leading-[1.15] tracking-tight text-[#140F23] sm:text-[48px] md:text-[54px] lg:text-[64px] xl:text-[72px] w-full max-w-[1200px]">
+                We deliver what counts
+                <span className="block mt-2 md:mt-4 w-full"> {/* Use block for cleaner stacking */}
+                  - top class results
+                </span>
+              </h2>
+              <p className="text-base text-[#828088] leading-relaxed max-w-xl lg:max-w-3xl mx-auto lg:text-lg w-full"> {/* Adjusted max-width slightly */}
+                Whether you're a startup founder or a marketing lead, we've seen your design challenges – and we're here to help you solve them.
+              </p>
+            </div>
+
+            {/* Buttons - Responsive layout already handled */}
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 w-full max-w-md mx-auto mt-10 md:mt-12"> {/* Adjusted margin */}
+              <Link
+                href="#"
+                className="px-8 py-4 sm:px-[33px] sm:py-[21px] bg-[#140F23] text-white rounded-full text-base font-medium tracking-[-0.02em] transition-colors duration-150 hover:bg-opacity-90 w-full sm:w-auto text-center shadow-md" // Adjusted padding slightly for consistency
+              >
+                Book a demo
+              </Link>
+              <Link
+                href="#"
+                className="px-8 py-4 sm:px-[46px] sm:py-[21px] border border-[#E5E5EA] bg-white rounded-full text-base font-medium tracking-[-0.02em] text-[#140F23] transition-colors duration-150 hover:bg-gray-50 w-full sm:w-auto text-center shadow-sm" // Adjusted padding slightly
+              >
+                Our work
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -65,76 +146,68 @@ export function ResultsSection() {
   );
 }
 
+
+// --- Service Card Component (Responsive widths already included) ---
 interface ServiceCardProps {
   title: string;
   description: string;
   imageSrc: string;
-  rotation?: string;
 }
 
-function ServiceCard({
-  title,
-  description,
-  imageSrc,
-  rotation = "rotate-0",
-}: ServiceCardProps) {
+function ServiceCard({ title, description, imageSrc }: ServiceCardProps) {
   return (
-    <div
-      className={cn(
-        "flex flex-col w-[343px] bg-white border border-[#EBEBEE] rounded-[42px] p-[9px] transition-shadow duration-150",
-        rotation,
-      )}
-    >
-      <div className="relative w-full h-[226px]">
+    // Responsive width classes
+    <div className="w-[280px] sm:w-[300px] md:w-[320px] lg:w-[340px] bg-white border border-[#EBEBEE] rounded-[32px] p-4 shadow-lg">
+      {/* Responsive height classes */}
+      <div className="relative w-full h-[170px] sm:h-[180px] md:h-[200px] lg:h-[220px] mb-4">
         <Image
           src={imageSrc}
           alt={title}
           fill
-          className="rounded-[32px] object-cover"
+          // Updated sizes attribute to match responsive widths/heights
+          sizes="(max-width: 640px) 280px, (max-width: 768px) 300px, (max-width: 1024px) 320px, 340px"
+          className="rounded-[24px] object-cover"
         />
       </div>
-      <div className="p-5">
-        <h3 className="text-base font-medium text-[#140F23] mb-3">{title}</h3>
-        <p className="text-xs text-[#828088] leading-[1.5]">{description}</p>
+      <div className="space-y-2">
+        <h3 className="text-base md:text-lg font-medium text-[#140F23]">{title}</h3>
+        <p className="text-sm text-[#828088] leading-relaxed">{description}</p>
       </div>
     </div>
   );
 }
 
+
+// --- Service Card Data (Remains the same) ---
 const serviceCards = [
   {
     title: "Illustrations",
     description:
       "Custom hand crafted illustrations to captivate your audience and bring your brand to life.",
-    imageSrc: "/images/illustrations.jpg",
-    rotation: "-rotate-[18deg]",
+    imageSrc: "/images/Équipe d'experts dédiée.webp", // Make sure this path is correct
   },
-  {
-    title: "Presentations",
-    description:
-      "Stunning slides tailored to effectively communicate your ideas.",
-    imageSrc: "/images/presentations.jpg",
-    rotation: "rotate-[18deg]",
-  },
-  {
+   {
     title: "Brand & Logo Design",
     description:
       "We create impactful, scalable brand identities that make your business unforgettable.",
-    imageSrc: "/images/brand-design.jpg",
-    rotation: "-rotate-[9deg]",
-  },
-  {
-    title: "Landing Pages",
-    description:
-      "Professionally designed pages optimized for conversions and seamless user experiences.",
-    imageSrc: "/images/webdesign.jpg",
-    rotation: "rotate-[9deg]",
+    imageSrc: "/images/Équipe d'experts dédiée.webp",
   },
   {
     title: "Social Media Ads",
     description:
       "Attention-grabbing ads that elevate your campaigns and drive ROI.",
-    imageSrc: "/images/social-media-ads.jpg",
-    rotation: "rotate-0",
+    imageSrc: "/images/Équipe d'experts dédiée.webp",
   },
-];
+  {
+    title: "Landing Pages",
+    description:
+      "Professionally designed pages optimized for conversions and seamless user experiences.",
+    imageSrc: "/images/Équipe d'experts dédiée.webp",
+  },
+  {
+    title: "Presentations",
+    description:
+      "Stunning slides tailored to effectively communicate your ideas.",
+    imageSrc: "/images/Équipe d'experts dédiée.webp",
+  },
+];  

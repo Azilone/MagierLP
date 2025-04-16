@@ -14,11 +14,11 @@ import { BenefitsSection } from "@/components/benefits-section";
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-100">
-      {/* <NotificationBanner /> */}
-      <div className="max-w-[1900px] mx-auto px-12 py-8 md:py-12 relative space-y-6">
-        {/* Navbar container */}
-        <div className="bg-white rounded-[32px] sticky top-6 z-50 shadow-sm">
-          <Navbar />
+      <div className="max-w-[1200px] mx-auto px-4 ... py-8 ... relative space-y-6 ">
+
+        {/* ADD sticky top-0 z-50 to THIS div */}
+        <div className="sticky top-4 z-50 bg-white rounded-[32px] shadow-sm "> {/* Added top-4 for spacing example */}
+          <Navbar /> {/* Navbar component no longer needs sticky */}
         </div>
 
         {/* Main content container */}
@@ -28,15 +28,13 @@ export default function Home() {
         {/*<CustomersSection />*/}
         <ProblemsSection />
         <CTASection />
-        <BenefitsSection />
         <HowItWorksSection />
         <ServicesSection />
-      
-        <SuccessStoriesSection />
+        <BenefitsSection />
+        {/* <SuccessStoriesSection /> */}
         <ComparisonSection />
         <FAQSection />
         <ResultsSection />
-      
       </div>
       <Footer />
     </div>
