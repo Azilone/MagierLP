@@ -22,7 +22,7 @@ export default function Home() {
         </div>
 
         {/* Main content container */}
-        <div className="bg-white rounded-[32px] ring ring-gray-200">
+        <div className="bg-white rounded-[32px] ring ring-gray-200 bg-gradient-to-t from-white via-white   to-[#f8f7fd]/90">
           <HeroWithAnimations />
         </div>
         {/*<CustomersSection />*/}

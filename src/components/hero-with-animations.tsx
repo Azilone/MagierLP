@@ -1,15 +1,17 @@
 "use client";
 
-import Image from "next/image"; // Keep if used within PortfolioMarquee or future additions
-import Link from "next/link";
+
 import { motion } from "framer-motion";
 import { PortfolioMarquee } from "./testimonials-marquee"; // Ensure this component is also responsive if needed
+import { AuroraText } from "@/components/magicui/aurora-text";
+import { ShimmerButton } from "@/components/magicui/shimmer-button";
+
 
 export function HeroWithAnimations() {
   return (
     // Responsive Padding: Start smaller, increase on larger screens
-    <div className="relative px-4 pt-16 pb-16 sm:px-6 md:pt-16 md:pb-20 lg:px-12 lg:pt-22 lg:pb-24 "> {/* Added overflow-x-hidden */}
-      <div className="mx-auto max-w-7xl">
+    <div className="relative px-4 pt-16 pb-16 sm:px-6 md:pt-16 md:pb-20 lg:px-12 lg:pt-22 lg:pb-24 overflow-hidden"> {/* Added overflow-hidden */}
+      <div className="relative mx-auto max-w-7xl">
         {/* Trustpilot Rating - Adjusted margin and text size slightly */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -17,7 +19,7 @@ export function HeroWithAnimations() {
           transition={{ duration: 0.6 }}
           className="flex justify-center mb-8 md:mb-12" // Adjusted margin-bottom
         >
-          <div className="flex items-center space-x-2 bg-white shadow-sm border border-gray-100 px-3 py-1.5 md:px-4 md:py-2 rounded-lg">
+          <div className="flex items-center space-x-2 bg-white/80  backdrop-blur-sm shadow-sm border border-gray-100 px-3 py-1.5 md:px-4 md:py-2 rounded-lg">
             <div className="flex">
               {/* Trustpilot SVG - consider scaling if needed, but usually fine */}
               <svg /* SVG Content */
@@ -59,32 +61,34 @@ export function HeroWithAnimations() {
                          xl:text-[60px] xl:leading-[1.1] xl:tracking-[-2px]
                          2xl:text-[72px] 2xl:leading-[1.1] 2xl:tracking-[-3px]
                          lg:max-w-5xl lg:mx-auto"
-          >
-            <motion.span /* Animation */
+
+>
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
+              className="inline-block"
             >
-              Get{" "}
-            </motion.span>
-            <span className="relative inline-block"> {/* Use inline-block for better wrapping control */}
-              <motion.span /* Animation */
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-              >
-                Mobile App Design
-              </motion.span>
-              {/* Removed the empty animated div unless it served a specific purpose */}
-            </span>
-            <motion.span /* Animation */
+              We
+            </motion.div>{" "}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="inline-block"
+            >
+              <AuroraText colors={["#FFCFF5", "#5F1CFC" ]} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[60px] 2xl:text-[72px]">
+               turn your memories
+              </AuroraText>
+            </motion.div>
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="block" // Ensure line break works consistently
+              className="block"
             >
-               That Earn You More <span className=""><br/></span> Than They Cost {/* Optional break for very small */}
-            </motion.span>
+              into works of art <span className=""><br/></span> 
+            </motion.div>
           </h1>
 
            {/* Responsive Paragraph: Adjust size, leading, margin */}
@@ -97,51 +101,19 @@ export function HeroWithAnimations() {
                        lg:mt-6 lg:text-base lg:leading-7 lg:max-w-lg
                        xl:text-lg xl:leading-7 xl:max-w-xl"
           >
-            No calls. No waiting. No freelancers.
+            The best gift they've ever received
             <br />
-            Just Business-driven design UI in Figma, ready to dev — starting at €490.
+            Without spending hours shopping or worrying how it'll turn out.
           </motion.p>
 
-           {/* Responsive Buttons: Adjust size, spacing, layout */}
+          {/* Add Pulsating Button */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.2 }}
-            // Flex column on smallest, row on larger. Adjust gap and margin.
-            className="mt-10 flex flex-col items-center justify-center gap-y-4 gap-x-6
-                       sm:flex-row
-                       md:mt-12 md:gap-x-8
-                       lg:mt-14"
+            className="mt-8 md:mt-10 lg:mt-12"
           >
-            <motion.div /* Animation */
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              {/* Responsive Button */}
-              <Link
-                href="/demo"
-                className="inline-block bg-[#140F23] text-white hover:bg-gray-800 px-4 py-2 text-sm font-medium rounded-full transition-colors
-                           md:px-6 md:py-3 md:text-base
-                           lg:px-8 lg:py-4
-                           "
-              >
-                Book a demo
-              </Link>
-            </motion.div>
-            <motion.div /* Animation */
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              {/* Responsive Button */}
-              <Link
-                href="/work"
-                className="inline-block text-sm font-medium leading-6 text-[#140F23] hover:text-gray-600 px-4 py-2 rounded-full border border-[#E5E5EA] transition-colors
-                           md:px-6 md:py-3 md:text-base
-                           lg:px-8 lg:py-4"
-              >
-                Our work
-              </Link>
-            </motion.div>
+            <ShimmerButton>Shimmer Button</ShimmerButton>
           </motion.div>
 
            {/* Testimonials Marquee - Adjust margin */}
