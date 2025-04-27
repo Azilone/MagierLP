@@ -6,7 +6,6 @@ import clsx from 'clsx';
 // --- Icon Components ---
 
 function SparkIcon() {
-  // ... (SparkIcon code remains the same)
   return (
     <svg
       width="24"
@@ -19,7 +18,7 @@ function SparkIcon() {
       <path
         d="M12.7674 17.6381C12.492 18.3342 11.508 18.3342 11.2325 17.6381L10.0322 14.5929C9.94855 14.3814 9.78128 14.2116 9.56728 14.128L6.52209 12.9276C5.82597 12.6522 5.82597 11.6682 6.52209 11.3928L9.56728 10.1924C9.77882 10.1087 9.94855 9.94144 10.0322 9.72744L11.2325 6.68225C11.508 5.98613 12.492 5.98613 12.7674 6.68225L13.9678 9.72744C14.0514 9.93898 14.2187 10.1087 14.4327 10.1924L17.4779 11.3928C18.174 11.6682 18.174 12.6522 17.4779 12.9276L14.4327 14.128C14.2212 14.2116 14.0514 14.3789 13.9678 14.5929L12.7674 17.6381Z"
         fill="currentColor"
-      ></path>
+      />
     </svg>
   );
 }
@@ -31,50 +30,52 @@ function CheckmarkIcon({
   highlighted?: boolean;
   gray?: boolean;
 }) {
-  // --- Color Logic Correction ---
-  const isActuallyHighlighted = highlighted && !gray; // Specifically for Magier column
+  const isActuallyHighlighted = highlighted && !gray;
 
-  // Default/Gray state
   let circleFill = "none";
   let circleStroke = "#828088";
   let checkStroke = "#828088";
 
-  // Highlighted (Magier) state overrides
   if (isActuallyHighlighted) {
-    circleFill = "white"; // White filled circle
-    circleStroke = "white"; // White circle stroke (or could be transparent/none if fill is solid)
-    checkStroke = "#5F1CFC"; // Purple checkmark inside
+    circleFill = "white";
+    circleStroke = "white";
+    checkStroke = "#5F1CFC";
   }
 
   return (
     <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 flex-shrink-0">
-      {/* Circle */}
       <path
         d="M12.4102 22.1602C17.9102 22.1602 22.4102 17.6602 22.4102 12.1602C22.4102 6.66016 17.9102 2.16016 12.4102 2.16016C6.91016 2.16016 2.41016 6.66016 2.41016 12.1602C2.41016 17.6602 6.91016 22.1602 12.4102 22.1602Z"
         fill={circleFill}
         stroke={circleStroke}
         strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
-      ></path>
-      {/* Checkmark */}
+      />
       <path
         d="M8.16016 12.1621L10.9902 14.9921L16.6602 9.33203"
-        stroke={checkStroke} // Use the calculated check stroke color
+        stroke={checkStroke}
         strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
-      ></path>
+      />
     </svg>
   );
 }
 
-
 function MinusIcon() {
- // ... (MinusIcon code remains the same)
   return (
-    <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 flex-shrink-0">
+    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 flex-shrink-0">
       <path
-        d="M13.1514 22.1602C18.6514 22.1602 23.1514 17.6602 23.1514 12.1602C23.1514 6.66016 18.6514 2.16016 13.1514 2.16016C7.65137 2.16016 3.15137 6.66016 3.15137 12.1602C3.15136 17.6602 7.65137 22.1602 13.1514 22.1602Z"
-        stroke="#828088" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
-      ></path>
-      <path d="M9.15137 12.1602H17.1514" stroke="#828088" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+        d="M12.4102 22.1602C17.9102 22.1602 22.4102 17.6602 22.4102 12.1602C22.4102 6.66016 17.9102 2.16016 12.4102 2.16016C6.91016 2.16016 2.41016 6.66016 2.41016 12.1602C2.41016 17.6602 6.91016 22.1602 12.4102 22.1602Z"
+        stroke="#828088"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M8.41016 12.1602H16.4102"
+        stroke="#828088"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
@@ -82,24 +83,44 @@ function MinusIcon() {
 // --- Data Definition ---
 
 const categories = [
-    "Pricing", "Unlimited tasks", "Unlimited revisions",
-    "Pre-qualified designers", "Time to start", "Processing time",
+    "Creation Time",
+    "Artistic Quality",
+    "Customization",
+    "Account Setup",
+    "Processing Speed",
+    "Emotional Impact",
+    "Price",
+    "Expertise"
 ];
 
 const comparisonData = {
-    magier: [ "Fixed monthly price", <CheckmarkIcon highlighted key="magier-1" />, <CheckmarkIcon highlighted key="magier-2" />, <CheckmarkIcon highlighted key="magier-3" />, "<2 days", "<48h" ],
-    platforms: [ "Per task", <MinusIcon key="platforms-1" />, <MinusIcon key="platforms-2" />, <MinusIcon key="platforms-3" />, "1 week", "1 week" ],
-    freelancer: [ "Per task", <MinusIcon key="freelancer-1" />, <MinusIcon key="freelancer-2" />, <CheckmarkIcon gray key="freelancer-3" />, "2+ weeks", "Several weeks" ],
-    agencies: [ "Per task", <MinusIcon key="agencies-1" />, <MinusIcon key="agencies-2" />, <CheckmarkIcon gray key="agencies-3" />, "4+ weeks", "Several weeks" ],
+    magier: [
+        "30 seconds or less",
+        "AI-enhanced artistry with professional styles",
+        "Real-time preview of all designs",
+        "None — just upload, customize, and checkout",
+        "Instant transformation",
+        '"I cried when I opened it" (actual customer quote)',
+        "Premium quality starting at just $19",
+        "Developed by award-winning designers and AI specialists"
+    ],
+    competitor: [
+        "Up to 30 minutes of uploading and editing",
+        "Basic filters or no enhancements",
+        "Limited preview options, if any",
+        "Lengthy registration process",
+        "Hours of manual design work",
+        '"It\'s a nice photo gift"',
+        "Similar quality costs $40+ elsewhere",
+        "Generic templates designed for mass production"
+    ]
 };
 
 type ComparisonType = keyof typeof comparisonData;
 
 const comparisonTypesConfig = [
-    { id: 'magier', label: 'magier' },
-    { id: 'platforms', label: 'Platforms' },
-    { id: 'freelancer', label: 'Freelancer' },
-    { id: 'agencies', label: 'Agencies' },
+    { id: 'magier', label: 'Memorable.ai' },
+    { id: 'competitor', label: 'Traditional Photo Services' }
 ] as const;
 
 
@@ -185,15 +206,12 @@ export function ComparisonSection() {
 
   // Desktop Column Titles
   const desktopColumnTitles = {
-      // ... (Titles remain the same, Magier SVG etc.)
       magier: (
         <svg width="120" height="37" viewBox="0 0 120 37" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[100px] h-[30px] mx-auto">
            <g clipPath="url(#clip0_1_18202_fix3)"><path d="M24.2756 8.48047C25.4473 8.48047 26.4635 8.69668 27.3243 9.12908C28.1971 9.56148 28.9144 10.1915 29.4764 11.0193C30.0502 11.8347 30.4747 12.8292 30.7497 14.0029C31.0366 15.1765 31.1801 16.5046 31.1801 17.9872V28.2907H25.7282V18.1169C25.7282 17.3262 25.6505 16.6529 25.4951 16.0969C25.3516 15.5286 25.1424 15.0715 24.8674 14.7256C24.5924 14.3673 24.2636 14.1079 23.8811 13.9473C23.5104 13.7867 23.092 13.7064 22.6257 13.7064C22.1475 13.7064 21.6932 13.8299 21.2628 14.077C20.8323 14.3117 20.4498 14.6515 20.115 15.0962C19.7802 15.541 19.5112 16.0722 19.308 16.6899C19.1167 17.3077 19.021 17.9995 19.021 18.7655V28.2907H13.5692V18.1169C13.5692 17.3138 13.4915 16.6344 13.3361 16.0784C13.1926 15.5225 12.9834 15.0715 12.7084 14.7256C12.4334 14.3673 12.1046 14.1079 11.722 13.9473C11.3514 13.7867 10.933 13.7064 10.4666 13.7064C10.0004 13.7064 9.54606 13.8299 9.1037 14.077C8.67329 14.3117 8.2907 14.6515 7.95594 15.0962C7.62118 15.541 7.35218 16.0722 7.14893 16.6899C6.95764 17.3077 6.86199 17.9995 6.86199 18.7655V28.2907H1.41016V9.09201H6.57505L6.64679 11.4085C6.8859 10.9884 7.1848 10.5992 7.54347 10.241C7.9141 9.88269 8.33255 9.57383 8.79882 9.31439C9.2651 9.05495 9.7792 8.8511 10.3411 8.70285C10.903 8.5546 11.4949 8.48047 12.1166 8.48047C13.5871 8.48047 14.8066 8.81404 15.7751 9.48117C16.7554 10.1359 17.5146 11.0873 18.0526 12.335C18.9015 10.9637 19.84 9.98153 20.8682 9.38852C21.9084 8.78315 23.0442 8.48047 24.2756 8.48047Z" fill="#F0F0F1"></path><path d="M41.8932 28.9207C40.6498 28.9207 39.5021 28.6551 38.45 28.1239C37.4098 27.5803 36.5072 26.8452 35.742 25.9186C34.9888 24.9921 34.397 23.9111 33.9666 22.6756C33.5481 21.4278 33.3389 20.0997 33.3389 18.6914C33.3389 17.2953 33.5541 15.9796 33.9845 14.7441C34.4149 13.4964 35.0067 12.4092 35.7599 11.4826C36.5251 10.556 37.4278 9.8271 38.4679 9.29586C39.5081 8.75227 40.6379 8.48047 41.8574 8.48047C43.2323 8.48047 44.4458 8.74609 45.4979 9.27733C46.55 9.80857 47.363 10.5684 47.9369 11.5567V9.09201H53.1735V28.2907H47.9189V25.863C47.3451 26.839 46.5381 27.5926 45.4979 28.1239C44.4577 28.6551 43.2562 28.9207 41.8932 28.9207ZM43.2383 23.6578C43.8719 23.6578 44.4577 23.5343 44.9958 23.2872C45.5457 23.0277 46.018 22.6756 46.4125 22.2309C46.819 21.7861 47.1358 21.2611 47.363 20.6557C47.5902 20.0503 47.7037 19.3955 47.7037 18.6914C47.7037 17.9995 47.5842 17.3509 47.3451 16.7455C47.1179 16.1402 46.8011 15.6151 46.3946 15.1704C46 14.7256 45.5338 14.3735 44.9958 14.1141C44.4577 13.8546 43.8779 13.7249 43.2562 13.7249C42.6465 13.7249 42.0726 13.8423 41.5346 14.077C40.9966 14.2994 40.5243 14.6268 40.1178 15.0592C39.7113 15.4792 39.3885 15.9981 39.1494 16.6158C38.9222 17.2212 38.8086 17.913 38.8086 18.6914C38.8086 19.5067 38.9282 20.2233 39.1673 20.841C39.4064 21.4587 39.7292 21.9776 40.1357 22.3977C40.5422 22.8177 41.0145 23.1327 41.5525 23.3428C42.0905 23.5528 42.6524 23.6578 43.2383 23.6578Z" fill="#F0F0F1"></path><path d="M65.3024 36.6602C63.6884 36.6602 62.3075 36.444 61.1598 36.0116C60.012 35.5916 59.0615 35.0294 58.3083 34.3252C57.5671 33.6334 57.0171 32.8365 56.6584 31.9347C56.3117 31.0452 56.1324 30.1309 56.1204 29.192H61.3032C61.3989 29.6244 61.5364 30.0074 61.7157 30.341C61.907 30.6745 62.1581 30.9587 62.4689 31.1934C62.7798 31.4281 63.1624 31.6011 63.6167 31.7123C64.083 31.8358 64.6449 31.8976 65.3024 31.8976C66.1274 31.8976 66.8328 31.7802 67.4186 31.5455C68.0044 31.3231 68.4827 31.0143 68.8533 30.6189C69.2359 30.2236 69.5109 29.7603 69.6783 29.2291C69.8576 28.6855 69.9473 27.0676 69.9473 26.4375V24.8809C69.6364 25.4121 69.2718 25.8569 68.8533 26.2151C68.4468 26.5734 67.9985 26.8637 67.5083 27.0861C67.0181 27.3085 66.492 27.4691 65.9301 27.5679C65.3802 27.6544 64.8063 27.6977 64.2085 27.6977C62.8814 27.6977 61.6739 27.4506 60.5859 26.9564C59.5099 26.4622 58.5833 25.7889 57.8062 24.9365C57.0291 24.0717 56.4253 23.071 55.9949 21.9344C55.5764 20.7854 55.3672 19.5623 55.3672 18.2651C55.3672 16.9679 55.5764 15.7325 55.9949 14.5588C56.4133 13.3728 56.9992 12.335 57.7524 11.4455C58.5175 10.5436 59.4322 9.8271 60.4962 9.29586C61.5603 8.75227 62.7379 8.48047 64.0292 8.48047C64.8063 8.48047 65.5117 8.57313 66.1453 8.75845C66.779 8.94376 67.3409 9.18467 67.8311 9.48117C68.3332 9.77768 68.7577 10.1112 69.1044 10.4819C69.463 10.8402 69.75 11.1984 69.9652 11.5567V9.09201H75.2018V26.419C75.2018 27.7903 74.9747 30.0692 74.5203 31.1934C74.066 32.33 73.4085 33.2998 72.5476 34.1029C71.6988 34.9182 70.6646 35.5483 69.4451 35.9931C68.2256 36.4378 66.8447 36.6602 65.3024 36.6602ZM65.2666 22.8053C65.9002 22.8053 66.4861 22.688 67.0241 22.4532C67.574 22.2062 68.0463 21.8726 68.4408 21.4525C68.8473 21.0325 69.1642 20.5507 69.3913 20.0071C69.6185 19.4511 69.7321 18.8643 69.7321 18.2466C69.7321 17.6536 69.6185 17.0853 69.3913 16.5417C69.1642 15.9981 68.8533 15.5163 68.4588 15.0962C68.0642 14.6762 67.592 14.3426 67.042 14.0955C66.504 13.8485 65.9182 13.7249 65.2845 13.7249C64.6509 13.7249 64.059 13.8299 63.5091 14.0399C62.9711 14.25 62.5048 14.5526 62.1103 14.948C61.7157 15.331 61.4049 15.8004 61.1777 16.3564C60.9505 16.9123 60.837 17.5424 60.837 18.2466C60.837 18.9261 60.9505 19.55 61.1777 20.1183C61.4049 20.6742 61.7157 21.1499 62.1103 21.5452C62.5048 21.9405 62.9711 22.2494 63.5091 22.4718C64.059 22.6942 64.6449 22.8053 65.2666 22.8053Z" fill="#F0F0F1"></path><path d="M81.2167 6.83115C80.7026 6.83115 80.2423 6.75085 79.8358 6.59024C79.4412 6.42963 79.1005 6.21343 78.8136 5.94164C78.5386 5.65749 78.3294 5.3301 78.1859 4.95947C78.0424 4.57648 77.9707 4.17497 77.9707 3.75492C77.9707 3.33487 78.0424 2.93953 78.1859 2.5689C78.3294 2.18592 78.5386 1.85853 78.8136 1.58673C79.0885 1.30258 79.4293 1.0802 79.8358 0.919597C80.2423 0.746637 80.7086 0.660156 81.2346 0.660156C81.7726 0.660156 82.2449 0.746637 82.6514 0.919597C83.0579 1.0802 83.3986 1.30258 83.6736 1.58673C83.9605 1.85853 84.1757 2.18592 84.3192 2.5689C84.4627 2.93953 84.5344 3.33487 84.5344 3.75492C84.5344 4.18732 84.4627 4.58884 84.3192 4.95947C84.1757 5.3301 83.9605 5.65749 83.6736 5.94164C83.3986 6.21343 83.0519 6.42963 82.6334 6.59024C82.2269 6.75085 81.7547 6.83115 81.2167 6.83115ZM78.4728 9.09199H83.9964V28.2907H78.4728V9.09199Z" fill="#F0F0F1"></path><path d="M105.559 18.5431C105.559 18.852 105.547 19.1176 105.523 19.34C105.511 19.5623 105.487 19.8218 105.451 20.1183H91.7501C91.9773 21.4031 92.4615 22.3729 93.2027 23.0277C93.944 23.6701 94.8526 23.9914 95.9287 23.9914C96.8971 23.9914 97.6383 23.806 98.1524 23.4354C98.6785 23.0524 99.0431 22.583 99.2464 22.027H105.164C104.961 22.8795 104.602 23.7196 104.088 24.5473C103.586 25.3627 102.94 26.0978 102.151 26.7526C101.374 27.395 100.472 27.9139 99.4437 28.3092C98.4155 28.7045 97.2797 28.9022 96.0363 28.9022C94.5896 28.9022 93.2625 28.6366 92.055 28.1054C90.8594 27.5618 89.8252 26.8267 88.9525 25.9001C88.0917 24.9735 87.4221 23.8925 86.9439 22.6571C86.4657 21.4093 86.2266 20.0874 86.2266 18.6914C86.2266 17.2953 86.4657 15.9796 86.9439 14.7441C87.4221 13.4964 88.0917 12.4092 88.9525 11.4826C89.8133 10.556 90.8475 9.8271 92.055 9.29586C93.2625 8.75227 94.5896 8.48047 96.0363 8.48047C97.4949 8.48047 98.81 8.75227 99.9817 9.29586C101.153 9.8271 102.151 10.5498 102.976 11.4641C103.801 12.3783 104.435 13.4469 104.877 14.67C105.332 15.8807 105.559 17.1718 105.559 18.5431ZM99.9099 16.2637C99.8621 15.819 99.7246 15.4113 99.4975 15.0406C99.2823 14.6577 99.0013 14.3303 98.6546 14.0585C98.3079 13.7743 97.9133 13.5581 97.471 13.4099C97.0286 13.2493 96.5563 13.169 96.0542 13.169C95.6238 13.169 95.1994 13.2246 94.7809 13.3357C94.3744 13.4469 93.9859 13.6323 93.6152 13.8917C93.2566 14.1388 92.9337 14.46 92.6468 14.8553C92.3599 15.2383 92.1327 15.7078 91.9653 16.2637H99.9099Z" fill="#F0F0F1"></path><path d="M107.574 9.0918H112.864V11.7974C113.283 10.9944 113.845 10.3458 114.55 9.85159C115.267 9.34507 116.17 9.0918 117.258 9.0918H119.41V13.9471H117.563C116.164 13.9471 115.07 14.4166 114.281 15.3555C113.504 16.2944 113.115 17.6596 113.115 19.4509V28.2905H107.574V9.0918Z" fill="#F0F0F1"></path></g><defs><clipPath id="clip0_1_18202_fix3"><rect width="119" height="36" fill="white" transform="translate(0.910156 0.660156)"></rect></clipPath></defs>
         </svg>
       ),
-      platforms: "Platforms",
-      freelancer: "Freelancer",
-      agencies: "Agencies",
+      competitor: "Traditional Photo Services",
   };
 
   const columnBaseClass = "flex-1 max-w-[260px] rounded-[32px] flex flex-col overflow-hidden";
@@ -214,9 +232,9 @@ export function ComparisonSection() {
                  </div>
              </div>
              <div className="text-[#140F23] font-sans text-[40px] leading-[44px] sm:text-[50px] sm:leading-[55px] lg:text-[66px] font-semibold lg:leading-[72.6px] tracking-tight lg:tracking-[-2.64px]">
-                 <div className="mb-3 md:mb-5">What makes</div>
+                 <div className="mb-3 md:mb-5">Why choose</div>
                  <div className="flex items-center justify-center gap-2 md:gap-[15px]">
-                     <span>magier</span>
+                     <span>Memorable.ai</span>
                      <div>
                          <svg /* Magier Icon */
                             width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -227,7 +245,7 @@ export function ComparisonSection() {
                            </g><defs><clipPath id="clip0_1_18101_fix4"><rect width="56" height="56" fill="white" transform="translate(0.150391 0.0595703)"></rect></clipPath></defs>
                          </svg>
                      </div>
-                     <span>unique</span>
+                     <span>today</span>
                  </div>
              </div>
          </div>
@@ -236,8 +254,8 @@ export function ComparisonSection() {
         <div className="hidden lg:flex flex-row justify-center gap-4 md:gap-6 w-full items-stretch">
             {/* Desktop: Left Column - Categories */}
             <div className={columnStandardClass}>
-                 <div className="min-h-[70px] border-b border-[#E5E5EA]"></div> {/* Header Spacer */}
-                 <div className="flex flex-col "> 
+                 <div className="min-h-[70px] border-b border-[#E5E5EA]"></div>
+                 <div className="flex flex-col">
                     {categories.map((cat) => (
                         <DataRowItem key={cat} isCategory>
                             {cat}
@@ -246,7 +264,7 @@ export function ComparisonSection() {
                 </div>
             </div>
 
-            {/* Desktop: Magier Column - Highlighted */}
+            {/* Desktop: Memorable.ai Column - Highlighted */}
             <div className={`${columnBaseClass} bg-[#777CFD] p-[10px] rounded-[42px]`}>
                  <div className="bg-[#5F1CFC] rounded-[32px] flex flex-col flex-1 overflow-hidden">
                     <DataRowItem isHeader isHighlighted>
@@ -262,23 +280,19 @@ export function ComparisonSection() {
                  </div>
             </div>
 
-
-            {/* Desktop: Standard Columns */}
-            {(['platforms', 'freelancer', 'agencies'] as const).map((key) => (
-                <div key={key} className={columnStandardClass}>
-                    <DataRowItem isHeader>
-                        {desktopColumnTitles[key]}
-                    </DataRowItem>
-                    {/* Add dividers back here for standard columns */}
-                    <div className="flex flex-col divide-y divide-[#E5E5EA]">
-                        {comparisonData[key].map((item, index) => (
-                            <DataRowItem key={`${key}-desk-${index}`}>
-                                {item}
-                            </DataRowItem>
-                        ))}
-                    </div>
+            {/* Desktop: Competitor Column */}
+            <div className={columnStandardClass}>
+                <DataRowItem isHeader>
+                    {desktopColumnTitles.competitor}
+                </DataRowItem>
+                <div className="flex flex-col divide-y divide-[#E5E5EA]">
+                    {comparisonData.competitor.map((item, index) => (
+                        <DataRowItem key={`competitor-desk-${index}`}>
+                            {item}
+                        </DataRowItem>
+                    ))}
                 </div>
-            ))}
+            </div>
         </div>
 
         {/* --- Mobile/Tablet View --- */}

@@ -51,10 +51,25 @@
 
 .animate-marquee {
   animation: marquee var(--duration) linear infinite;
+  will-change: transform;
+  transition: animation-play-state 0.15s ease-out;
 }
 
 .animate-marquee-vertical {
   animation: marquee-vertical var(--duration) linear infinite;
+  will-change: transform;
+  transition: animation-play-state 0.15s ease-out;
+}
+
+/* Pause on hover */
+.hover\:pause-marquee:hover ~ * .animate-marquee,
+.hover\:pause-marquee:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+.group:hover .group-hover\:\[animation-play-state\:paused\] {
+  animation-play-state: paused;
+  transition: all 0.15s ease-out;
 }
 
 @theme inline {

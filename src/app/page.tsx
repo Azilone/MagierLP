@@ -13,8 +13,8 @@ import { BenefitsSection } from "@/components/benefits-section";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-100">
-      <div className="max-w-[1200px] mx-auto  py-4 sm:py-6 md:py-8 lg:py-10 relative space-y-4 sm:space-y-6 md:space-y-8 lg:space-y-10">
+    <div className="bg-gray-100">
+      <div className="mx-auto max-w-[1920px] px-4 sm:px-6 lg:px-8 py-8 relative space-y-8">
 
         {/* ADD sticky top-0 z-50 to THIS div */}
         <div className="sticky top-4 z-50 bg-white rounded-[32px]  ring ring-gray-200"> {/* Added top-4 for spacing example */}
@@ -25,6 +25,7 @@ export default function Home() {
         <div className="bg-white rounded-[32px]  bg-gradient-to-t from-white via-white to-[#f8f7fd]/90 ring ring-gray-200">
           <HeroWithAnimations />
         </div>
+        <ComparisonSection />
         {/*<CustomersSection />*/}
         <ProblemsSection />
         <CTASection />
@@ -32,7 +33,7 @@ export default function Home() {
         <ServicesSection />
         <BenefitsSection />
         {/* <SuccessStoriesSection /> */}
-        <ComparisonSection />
+     
         <FAQSection />
         <ResultsSection />
       </div>

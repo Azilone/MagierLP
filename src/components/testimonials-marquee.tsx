@@ -4,60 +4,88 @@ import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/magicui/marquee"
 import Image from "next/image";
 import Link from "next/link";
+import { ImageComparison, ImageComparisonImage, ImageComparisonSlider } from "@/components/ui/image-comparison";
 
 const portfolioItems = [
   {
     title: "Brand Design",
-    image: "/work/presentation.jpg",
+    beforeImage: "/images/placeholder-image1.jpg",
+    afterImage: "/images/placeholder-image2.webp",
     href: "/work/brand-design",
   },
   {
     title: "Webdesign",
-    image: "/work/presentation.jpg",
+    beforeImage: "/images/placeholder-image1.jpg",
+    afterImage: "/images/placeholder-image2.webp",
     href: "/work/webdesign",
   },
   {
     title: "Illustrations",
-    image: "/work/presentation.jpg",
+    beforeImage: "/images/placeholder-image1.jpg",
+    afterImage: "/images/placeholder-image2.webp",
     href: "/work/illustrations",
   },
   {
     title: "Presentations",
-    image: "/work/presentation.jpg",
+    beforeImage: "/images/placeholder-image1.jpg",
+    afterImage: "/images/placeholder-image2.webp",
     href: "/work/presentations",
   },
 ];
 
 const PortfolioCard = ({
   title,
-  image,
+  beforeImage,
+  afterImage,
   href,
 }: {
   title: string;
-  image: string;
+  beforeImage: string;
+  afterImage: string;
   href: string;
 }) => {
   return (
-    <div className="mx-2 sm:mx-2.5 md:mx-3 border-1 rounded-2xl sm:rounded-3xl p-1.5 sm:p-2">
+    <div className="hover:scale-[1.02] transition-transform duration-300 mx-1 sm:mx-2 md:mx-3 lg:mx-4 xl:mx-4 border-1 rounded-2xl sm:rounded-3xl p-1 sm:p-1.5 md:p-2 lg:p-2">
       {/* Outer white border container with very subtle shadow */}
-      <div className="bg-white rounded-[16px] sm:rounded-[20px] md:rounded-[24px] p-[1px]">
+      <div className="bg-white rounded-[14px] sm:rounded-[16px] md:rounded-[20px] lg:rounded-[24px] xl:rounded-[28px] p-[1px]">
         {/* Main container */}
-        <div className="relative w-[220px] h-[160px] sm:w-[280px] sm:h-[180px] md:w-[320px] md:h-[220px] 
-                      rounded-2xl sm:rounded-2xl md:rounded-3xl bg-[#D0E6DD] overflow-hidden">
+        <div className="relative w-[150px] h-[112px] 
+                      sm:w-[180px] sm:h-[135px] 
+                      md:w-[220px] md:h-[165px] 
+                      lg:w-[260px] lg:h-[195px]
+                      xl:w-[300px] xl:h-[225px]
+                      2xl:w-[320px] 2xl:h-[240px]
+                      rounded-xl sm:rounded-2xl md:rounded-2xl bg-[#D0E6DD] overflow-hidden">
           {/* Content container */}
-          <div className="relative w-full h-full">
-            <Image
-              src={image}
-              alt={title}
-              fill
-              className="object-cover"
+          <ImageComparison 
+            className="w-full h-full" 
+            enableHover
+            springOptions={{
+              bounce: 0.3,
+              duration: 0.5,
+              stiffness: 100,
+              damping: 15
+            }}
+          >
+            <ImageComparisonImage
+              src={beforeImage}
+              alt={`${title} Before`}
+              position="left"
             />
-          </div>
+            <ImageComparisonImage
+              src={afterImage}
+              alt={`${title} After`}
+              position="right"
+            />
+            <ImageComparisonSlider className="w-0.5 bg-white/30 backdrop-blur-sm">
+              <div className="absolute left-1/2 top-1/2 h-8 w-6 -translate-x-1/2 -translate-y-1/2 rounded-[4px] bg-white/50" />
+            </ImageComparisonSlider>
+          </ImageComparison>
         </div>
       </div>
       {/* Title with more spacing and lighter weight */}
-      <div className="mt-2 sm:mt-3 md:mt-4 text-center">
-        <h3 className="text-base sm:text-lg md:text-xl text-gray-900 font-medium my-2 sm:my-2.5 md:my-3">{title}</h3>
+      <div className="mt-1.5 sm:mt-2 md:mt-2.5 lg:mt-3 text-center">
+        <h3 className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-900 font-medium">{title}</h3>
       </div>
     </div>
   );
@@ -66,18 +94,22 @@ const PortfolioCard = ({
 export function PortfolioMarquee() {
   return (
     <div className="relative w-full overflow-hidden">
-      <Marquee 
-        className="[--duration:20s] py-2 sm:py-2.5 md:py-3"
-        pauseOnHover={false}
-        reverse={false}
-        repeat={6}
-      >
-        {portfolioItems.map((item, index) => (
-          <PortfolioCard key={`${item.title}-${index}`} {...item} />
-        ))}
-      </Marquee>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/5 sm:w-1/6 bg-gradient-to-r from-white to-transparent"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/5 sm:w-1/6 bg-gradient-to-l from-white to-transparent"></div>
+      <div className="group">
+        <Marquee 
+          className="[--duration:35s]"
+          pauseOnHover
+          reverse={false}
+          repeat={4}
+        >
+          {portfolioItems.map((item, index) => (
+            <div key={`${item.title}-${index}`} className="hover:pause-marquee">
+              <PortfolioCard {...item} />
+            </div>
+          ))}
+        </Marquee>
+      </div>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-white to-transparent"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-white to-transparent"></div>
     </div>
   );
 }

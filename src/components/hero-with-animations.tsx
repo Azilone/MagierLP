@@ -2,40 +2,42 @@
 
 
 import { motion } from "framer-motion";
-import { PortfolioMarquee } from "./testimonials-marquee"; // Ensure this component is also responsive if needed
+import { PortfolioMarquee } from "./testimonials-marquee"; 
 import { AuroraText } from "@/components/magicui/aurora-text";
-import ModernButton from "./ui/CTAButton";
+import CTAButton from "./ui/CTAButton";
 import { Spotlight } from "./ui/spotlight";
 
 export function HeroWithAnimations() {
   return (
-    <div className="relative min-h-screen">
+    <div className="relative">
       <div className="absolute inset-0 rounded-[32px] overflow-hidden">
-        <div className="absolute  bg-white" />
-        <Spotlight
-          gradientFirst="radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(288, 100%, 90%, 0.08) 0, hsla(267, 89%, 55%, 0.05) 50%, hsla(267, 89%, 55%, 0) 80%)"
-          gradientSecond="radial-gradient(50% 50% at 50% 50%, hsla(288, 100%, 90%, 0.06) 0, hsla(267, 89%, 55%, 0.03) 80%, transparent 100%)"
-          gradientThird="radial-gradient(50% 50% at 50% 50%, hsla(288, 100%, 90%, 0.04) 0, hsla(267, 89%, 55%, 0.02) 80%, transparent 100%)"
-          translateY={-200}
-          width={460}
-          height={1080}
-          smallWidth={200}
-        />
+        <div className="absolute bg-white" />
+        <div className="opacity-[0.15] sm:opacity-25 md:opacity-50 lg:opacity-100">
+          <Spotlight
+            gradientFirst="radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(288, 100%, 90%, 0.08) 0, hsla(267, 89%, 55%, 0.05) 50%, hsla(267, 89%, 55%, 0) 80%)"
+            gradientSecond="radial-gradient(50% 50% at 50% 50%, hsla(288, 100%, 90%, 0.06) 0, hsla(267, 89%, 55%, 0.03) 80%, transparent 100%)"
+            gradientThird="radial-gradient(50% 50% at 50% 50%, hsla(288, 100%, 90%, 0.04) 0, hsla(267, 89%, 55%, 0.02) 80%, transparent 100%)"
+            translateY={-300}
+            width={860}
+            height={1280}
+            smallWidth={200}
+          />
+        </div>
       </div>
-      <div className="relative min-h-screen px-4 pt-12 pb-12 sm:px-6 md:pt-14 md:pb-16 lg:px-10 lg:pt-18 lg:pb-20">
-        <div className="relative mx-auto max-w-6xl">
-          {/* Trustpilot Rating - Made smaller */}
+      <div className="relative px-4 pt-16 pb-12 min-h-[70vh] flex items-center sm:px-6 md:pt-20 md:pb-16 lg:px-10 lg:pt-24 lg:pb-24 xl:pt-28 xl:pb-28">
+        <div className="relative mx-auto max-w-7xl w-full">
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex justify-center mb-6 md:mb-10"
+            className="flex justify-center mb-[2vh] md:mb-[2.5vh]"
           >
-            <div className="flex items-center space-x-2 bg-white/80 backdrop-blur-sm shadow-sm border border-gray-100 px-2.5 py-1 md:px-3.5 md:py-1.5 rounded-lg">
+            <div className="flex items-center space-x-2 md:space-x-3 bg-white/80 backdrop-blur-sm shadow-sm border border-gray-100 px-3 py-1.5 md:px-4 md:py-2 lg:px-4 lg:py-2 rounded-lg md:rounded-xl">
               <div className="flex">
-                {/* Trustpilot SVG - consider scaling if needed, but usually fine */}
+    
                 <svg /* SVG Content */
-                  className="h-2.5 w-auto md:h-3.5"
+                  className="h-3 w-auto md:h-4 lg:h-3.5"
                   width="82" // Keep width/height attributes for aspect ratio
                   height="16"
                   viewBox="0 0 82 16"
@@ -57,7 +59,7 @@ export function HeroWithAnimations() {
                 </svg>
               </div>
               {/* Responsive Text Size */}
-              <span className="text-xs md:text-sm font-medium text-gray-700">
+              <span className="text-sm md:text-base lg:text-sm font-medium text-gray-700">
                 4.8 stars 50+ Reviews
               </span>
             </div>
@@ -66,13 +68,12 @@ export function HeroWithAnimations() {
           {/* Main Content */}
           <div className="text-center">
              {/* Responsive Headline: Adjust size, leading, tracking */}
-            <h1 className="text-2xl font-bold tracking-tight text-[#140F23] leading-tight
-                           sm:text-3xl sm:leading-tight
-                           md:text-3xl md:leading-none md:tracking-[-0.5px]
-                           lg:text-4xl lg:leading-[1.1] lg:tracking-[-1px]
-                           xl:text-[48px] xl:leading-[1.1] xl:tracking-[-1.5px]
-                           2xl:text-[56px] 2xl:leading-[1.1] 2xl:tracking-[-2px]
-                           lg:max-w-4xl lg:mx-auto"
+            <h1 className="text-[2.8vh] font-bold tracking-tight text-[#140F23] leading-tight
+                           sm:text-[3.2vh] sm:leading-tight
+                           md:text-[3.5vh] md:leading-none md:tracking-[-0.5px]
+                           lg:text-[5vh] lg:leading-[1.1] lg:tracking-[-0.75px]
+                           xl:text-[5.5vh] xl:leading-[1.1] xl:tracking-[-1px]
+                           max-w-[80vw] mx-auto"
             >
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -88,7 +89,7 @@ export function HeroWithAnimations() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="inline-block"
               >
-                <AuroraText colors={["#FFCFF5", "#5F1CFC" ]} className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-[48px] 2xl:text-[56px]">
+                <AuroraText colors={["#FFCFF5", "#5F1CFC" ]} className="text-[2.8vh] sm:text-[3.2vh] md:text-[3.5vh] lg:text-[5vh] xl:text-[5.5vh]">
                  turn your memories
                 </AuroraText>
               </motion.div>
@@ -107,10 +108,10 @@ export function HeroWithAnimations() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1 }}
-              className="mt-2 text-xs leading-relaxed text-[#828088] max-w-xs mx-auto
-                         md:mt-4 md:text-sm md:leading-6
-                         lg:mt-5 lg:text-sm lg:leading-6 lg:max-w-md
-                         xl:text-base xl:leading-7 xl:max-w-lg"
+              className="mt-[1.5vh] text-[1.4vh] leading-relaxed text-[#828088] max-w-sm mx-auto
+                         md:mt-[1.8vh] md:text-[1.5vh] md:leading-7 md:max-w-md
+                         lg:mt-[2vh] lg:text-[1.6vh] lg:leading-8 lg:max-w-lg
+                         xl:text-[1.7vh] xl:leading-8 xl:max-w-xl"
             >
               The best gift they've ever received
               <br />
@@ -122,19 +123,17 @@ export function HeroWithAnimations() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.2 }}
-              className="mt-6 md:mt-8 lg:mt-10 flex justify-center"
+              className="mt-[3vh] flex justify-center"
             >
-              
-
-              <ModernButton />
+              <CTAButton />
             </motion.div>
 
              {/* Testimonials Marquee - Adjust margin */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.1 }} // Stagger slightly after buttons
-              className="mt-10 md:mt-12 lg:mt-16 w-full overflow-hidden" // Responsive margin-top
+              transition={{ duration: 0.6, delay: 1.1 }}
+              className="mt-[4vh] w-full overflow-hidden"
             >
               <PortfolioMarquee />
             </motion.div>
