@@ -14,6 +14,7 @@ import {
   NavigationMenuViewport,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { ShimmerButton } from "./magicui/shimmer-button";
 
 const navigation = [
   { 
@@ -91,11 +92,9 @@ export function Navbar() {
   };
 
   return (
-    // REMOVE sticky top-0 z-50 from this line:
-    <nav className="bg-white rounded-[32px] w-full">
+    <nav className="bg-white rounded-[32px] w-full p-4">
       <div className="mx-auto px-3 sm:px-4 lg:px-6">
-        <div className="flex h-24 items-center justify-between">
-          {/* Logo */}
+        <div className="flex  items-center justify-between">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <div className="h-14 w-14 bg-[#1C1B1F] rounded-xl flex items-center justify-center">
@@ -192,12 +191,7 @@ export function Navbar() {
             >
               Sign in
             </Link>
-            <Link
-              href="/demo"
-              className="bg-[#1C1B1F] text-white hover:bg-gray-800  px-3.5 py-3.5 xl:px-5 xl:py-5 text-xs xl:text-sm font-medium rounded-full"
-            >
-              Book a demo
-            </Link>
+            <ShimmerButton>Upload Your Photo</ShimmerButton>
           </div>
 
           {/* Mobile menu button - changed from md: to lg: */}

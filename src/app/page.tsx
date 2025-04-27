@@ -14,15 +14,15 @@ import { BenefitsSection } from "@/components/benefits-section";
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-100">
-      <div className="max-w-[1200px] mx-auto px-4 ... py-8 ... relative space-y-6 ">
+      <div className="max-w-[1200px] mx-auto  py-4 sm:py-6 md:py-8 lg:py-10 relative space-y-4 sm:space-y-6 md:space-y-8 lg:space-y-10">
 
         {/* ADD sticky top-0 z-50 to THIS div */}
-        <div className="sticky top-4 z-50 bg-white rounded-[32px] shadow-sm "> {/* Added top-4 for spacing example */}
+        <div className="sticky top-4 z-50 bg-white rounded-[32px]  ring ring-gray-200"> {/* Added top-4 for spacing example */}
           <Navbar /> {/* Navbar component no longer needs sticky */}
         </div>
 
         {/* Main content container */}
-        <div className="bg-white rounded-[32px] ring ring-gray-200 bg-gradient-to-t from-white via-white   to-[#f8f7fd]/90">
+        <div className="bg-white rounded-[32px]  bg-gradient-to-t from-white via-white to-[#f8f7fd]/90 ring ring-gray-200">
           <HeroWithAnimations />
         </div>
         {/*<CustomersSection />*/}
