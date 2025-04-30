@@ -5,11 +5,14 @@ import { HowItWorksSection } from "@/components/how-it-works-section";
 import { ServicesSection } from "@/components/services-section";
 import { SuccessStoriesSection } from "@/components/success-stories-section";
 import { ComparisonSection } from "@/components/comparison-section";
+import { AIImageComparison } from "@/components/ai-image-comparison";
 import { FAQSection } from "@/components/faq-section";
 import { ResultsSection } from "@/components/results-section";
 import { Footer } from "@/components/footer";
 import { HeroWithAnimations } from "@/components/hero-with-animations";
 import { BenefitsSection } from "@/components/benefits-section";
+import { ComparisonSection2 } from "@/components/comparison-section-2";
+
 
 export default function Home() {
   return (
@@ -26,6 +29,8 @@ export default function Home() {
           <HeroWithAnimations />
         </div>
         <ComparisonSection />
+        <ComparisonSection2 />
+        <AIImageComparison />
         {/*<CustomersSection />*/}
         <ProblemsSection />
         <CTASection />
