@@ -97,16 +97,14 @@ export function Navbar() {
         <div className="flex  items-center justify-between">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <div className="h-14 w-14 bg-[#1C1B1F] rounded-xl flex items-center justify-center">
-                <Image
-                  src="/logo.svg"
-                  alt="Magier"
-                  width={24}
-                  height={24}
-                  className="w-3.5 h-3.5"
-                />
-              </div>
-              <span className="ml-2 text-sm sm:text-base font-black">FastFrame</span>
+              <Image
+                src="/images/logo.webp"
+                alt="GetPawtrait"
+                width={128}
+                height={128}
+                className="w-14 h-14 rounded-lg"
+              />
+              <span className="ml-2 text-sm sm:text-base font-black">GetPawtrait</span>
             </Link>
           </div>
 

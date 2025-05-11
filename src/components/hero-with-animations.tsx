@@ -25,7 +25,7 @@ export function HeroWithAnimations() {
           />
         </div>
       </div>
-      <div className="relative px-4 pt-16 pb-12 min-h-[70vh] flex items-center sm:px-6 md:pt-20 md:pb-16 lg:px-10 lg:pt-24 lg:pb-24 xl:pt-28 xl:pb-28">
+      <div className="relative px-4 pt-8 pb-12 min-h-[70vh] flex items-center sm:px-6 md:pt-20 md:pb-16 lg:px-10 lg:pt-24 lg:pb-24 xl:pt-28 xl:pb-28">
         <div className="relative mx-auto max-w-7xl w-full">
 
           <HeroStatsBar />

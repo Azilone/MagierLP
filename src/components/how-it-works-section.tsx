@@ -122,7 +122,7 @@ export function HowItWorksSection() {
             {/* Number Chip */}
             <div className="absolute -top-4 -left-4 flex items-center justify-center w-9 h-9 rounded-full bg-[#5F1CFC] text-white font-bold text-lg shadow-md border-4 border-white">3</div>
             {/* Placeholder Image Area */}
-            <div className="flex h-[300px] w-full items-center justify-center rounded-[32px] bg-[#F6D3AD]">
+            <div className="flex h-[300px] w-full items-center justify-center rounded-[32px] bg-[#E9C69E]">
               {/* Replace with <Image /> component */}
               <Image
                 src="/images/hiw3.webp"

@@ -97,7 +97,7 @@ export function ResultsSection() {
           <div className="relative">
             {/* Radial gradient overlay centered at bottom */}
             <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 h-1/2 w-3/4 z-10" style={{
-              background: 'radial-gradient(ellipse at bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.4) 70%, transparent 100%)'
+              background: 'radial-gradient(ellipse at bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0) 70%, transparent)'
             }} />
             {/* Cards - Framer Motion handles animation timing */}
             <div className="relative z-0">
@@ -114,13 +114,11 @@ export function ResultsSection() {
             {/* Text Content - Responsive text sizes already handled */}
             <div className="flex flex-col items-center gap-6 md:gap-8 text-center w-full">
               <h2 className="text-[40px] font-semibold leading-[1.15] tracking-tight text-[#140F23] sm:text-[48px] md:text-[54px] lg:text-[64px] xl:text-[72px] w-full max-w-[1200px]">
-                We deliver what counts
-                <span className="block mt-2 md:mt-4 w-full"> {/* Use block for cleaner stacking */}
-                  - top class results
-                </span>
+                Turn your pet's photo into custom art
+               
               </h2>
               <p className="text-base text-[#828088] leading-relaxed max-w-xl lg:max-w-3xl mx-auto lg:text-lg w-full"> {/* Adjusted max-width slightly */}
-                Whether you're a startup founder or a marketing lead, we've seen your design challenges – and we're here to help you solve them.
+                Upload a photo, choose your style, and get a unique portrait of your pet. Simple, personal, and made to order.
               </p>
             </div>
 
@@ -128,15 +126,15 @@ export function ResultsSection() {
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 w-full max-w-md mx-auto mt-10 md:mt-12"> {/* Adjusted margin */}
               <Link
                 href="#"
-                className="px-8 py-4 sm:px-[33px] sm:py-[21px] bg-[#140F23] text-white rounded-full text-base font-medium tracking-[-0.02em] transition-colors duration-150 hover:bg-opacity-90 w-full sm:w-auto text-center shadow-md" // Adjusted padding slightly for consistency
+                className="px-8 py-4 sm:px-[33px] sm:py-[21px] bg-[#140F23] text-white rounded-full text-base font-medium tracking-[-0.02em] transition-colors duration-150 hover:bg-opacity-90 w-full sm:w-auto text-center shadow-md"
               >
-                Book a demo
+                Get Started
               </Link>
               <Link
                 href="#"
-                className="px-8 py-4 sm:px-[46px] sm:py-[21px] border border-[#E5E5EA] bg-white rounded-full text-base font-medium tracking-[-0.02em] text-[#140F23] transition-colors duration-150 hover:bg-gray-50 w-full sm:w-auto text-center shadow-sm" // Adjusted padding slightly
+                className="px-8 py-4 sm:px-[46px] sm:py-[21px] border border-[#E5E5EA] bg-white rounded-full text-base font-medium tracking-[-0.02em] text-[#140F23] transition-colors duration-150 hover:bg-gray-50 w-full sm:w-auto text-center shadow-sm"
               >
-                Our work
+                See Examples
               </Link>
             </div>
           </div>
@@ -184,30 +182,30 @@ const serviceCards = [
     title: "Illustrations",
     description:
       "Custom hand crafted illustrations to captivate your audience and bring your brand to life.",
-    imageSrc: "/images/Équipe d'experts dédiée.webp", // Make sure this path is correct
+    imageSrc: "/images/customer/ac1.jpg", // Make sure this path is correct
   },
    {
     title: "Brand & Logo Design",
     description:
       "We create impactful, scalable brand identities that make your business unforgettable.",
-    imageSrc: "/images/Équipe d'experts dédiée.webp",
+    imageSrc: "/images/customer/ac2.jpg",
   },
   {
     title: "Social Media Ads",
     description:
       "Attention-grabbing ads that elevate your campaigns and drive ROI.",
-    imageSrc: "/images/Équipe d'experts dédiée.webp",
+    imageSrc: "/images/customer/ac3.jpg",
   },
   {
     title: "Landing Pages",
     description:
       "Professionally designed pages optimized for conversions and seamless user experiences.",
-    imageSrc: "/images/Équipe d'experts dédiée.webp",
+    imageSrc: "/images/customer/ac4.jpg",
   },
   {
     title: "Presentations",
     description:
       "Stunning slides tailored to effectively communicate your ideas.",
-    imageSrc: "/images/Équipe d'experts dédiée.webp",
+    imageSrc: "/images/customer/ac5.jpg",
   },
 ];  

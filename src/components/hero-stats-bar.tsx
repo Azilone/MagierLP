@@ -6,7 +6,7 @@ const HeroStatsBar = () => (
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6, delay: 0.15 }}
-    className="flex justify-center mb-3 sm:mb-4 md:mb-5"
+    className="flex justify-center mb-16 sm:mb-16 md:mb-16"
   >
     <div className="flex flex-wrap items-center justify-center gap-x-3 sm:gap-x-5 gap-y-1.5 bg-white/10 backdrop-blur-md shadow border border-gray-100 px-2.5 sm:px-3.5 md:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl text-xs sm:text-sm font-medium text-gray-800">
       <span className="flex items-center gap-1 sm:gap-1.5">
