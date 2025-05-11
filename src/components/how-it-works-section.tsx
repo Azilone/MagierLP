@@ -26,36 +26,37 @@ export function HowItWorksSection() {
             <div className="w-full lg:w-auto">
               {/* Responsive heading */}
               <h2 className="text-4xl font-bold leading-tight tracking-tighter text-[#140F23] sm:text-3xl lg:text-[50px] xl:text-[56px]">
-                We make it{' '}
-                {/* Inline container for "super" + icon */}
+              How to get your custom pet portrait{' '}
+                {/* Inline container for "magic" + icon */}
                 <span className="inline-flex items-center gap-2 align-bottom">
-                  super
-                  {/* Responsive SVG */}
+                  {/* Pet Paw SVG from public/svg/petpaw.svg */}
                   <svg
-                    width="48"
-                    height="48"
-                    viewBox="0 0 57 57"
-                    fill="none"
+                    width="68"
+                    height="68"
+                    viewBox="0 0 64 64"
+                    fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="inline-block h-9 w-9 sm:h-10 sm:w-10 lg:h-12 lg:w-12"
+                    className="inline-block h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16 text-[#5F1CFC] rotate-[-12deg]"
                   >
-                    {/* Ensure fill="currentColor" is used if you want the parent's text color to apply */}
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M16.3106 3.11349C17.2814 2.1427 18.9192 2.41626 19.5218 3.64982L22.1149 8.95799C22.4898 9.72539 22.336 10.6462 21.7321 11.2501L11.3272 21.655C10.7233 22.2589 9.80254 22.4127 9.03515 22.0378L3.72698 19.4447C2.49341 18.8421 2.21985 17.2042 3.19063 16.2334L16.3106 3.11349ZM54.4834 50.3045C54.8243 51.3067 53.5781 52.0822 52.8296 51.3337L40.0708 38.575C39.7289 38.233 39.6901 37.6988 39.903 37.2646C40.9252 35.1794 40.5694 32.5894 38.8356 30.8555C36.6541 28.674 33.1172 28.674 30.9357 30.8555C28.7543 33.037 28.7543 36.5739 30.9357 38.7554C32.67 40.4897 35.2609 40.8452 37.3464 39.822C37.7807 39.6089 38.3151 39.6476 38.6571 39.9897L51.4362 52.7688C52.1847 53.5173 51.4092 54.7635 50.407 54.4226L9.75766 40.5934C9.19639 40.4025 8.92464 39.7663 9.16859 39.226C12.3816 32.1091 14.0901 26.9048 14.1366 22.3854C14.1394 22.1157 14.2436 21.8562 14.4343 21.6656L21.7376 14.3622C21.9283 14.1715 22.1878 14.0673 22.4575 14.0645C26.9767 14.0182 32.1808 12.3099 39.2977 9.0969C39.838 8.85296 40.4742 9.12471 40.6651 9.68598L54.4834 50.3045Z"
-                      fill="#5F1CFC" // Or use fill="currentColor" if inheriting color
-                    />
+                    <path d="M18.137 21.824c-5.645 1.549-9.088 7.132-8.092 10.944c.998 3.813 4.766-.53 10.411-2.08c5.643-1.551 11.024.281 10.028-3.532c-.997-3.813-6.702-6.883-12.347-5.332" />f
+                    <path d="M13.768 20.047c1.701-.632 1.918-4.417 1.012-6.969c-.906-2.55-3.02-4.103-4.721-3.469c-1.7.635-2.344 3.217-1.438 5.767c.906 2.551 3.445 5.306 5.147 4.671" />
+                    <path d="M20.708 18.078c1.803-.162 2.967-3.759 2.736-6.465c-.23-2.704-1.879-4.763-3.682-4.604c-1.803.163-3.079 2.486-2.848 5.19c.232 2.704 1.989 6.041 3.794 5.879" />
+                    <path d="M28.678 10.164c-1.809 0-3.275 2.2-3.275 4.914c0 2.716 1.467 6.195 3.275 6.195c1.81 0 3.276-3.479 3.276-6.195c.001-2.715-1.466-4.914-3.276-4.914" />
+                    <path d="M3.318 17.127c-1.568.926-1.766 3.584-.439 5.936c1.324 2.35 4.293 4.612 5.86 3.685c1.568-.927 1.141-4.693-.184-7.043c-1.325-2.352-3.671-3.505-5.237-2.578" />
+                    <path d="M45.865 44.529c-5.645-1.551-11.352 1.52-12.348 5.332c-.998 3.813 4.385 1.981 10.029 3.532c5.645 1.55 9.412 5.893 10.408 2.08c.998-3.812-2.446-9.394-8.089-10.944" />
+                    <path d="M50.234 42.755c1.699.632 4.24-2.123 5.146-4.674c.906-2.551.262-5.133-1.438-5.767c-1.701-.635-3.813.919-4.719 3.47s-.69 6.336 1.011 6.971" />
+                    <path d="M43.295 40.782c1.803.162 3.561-3.174 3.791-5.878s-1.043-5.028-2.846-5.19c-1.803-.16-3.451 1.9-3.684 4.605c-.23 2.705.936 6.301 2.739 6.463" />
+                    <path d="M35.322 43.978c1.811 0 3.277-3.479 3.277-6.195c0-2.714-1.467-4.914-3.277-4.914s-3.277 2.2-3.277 4.916c0 2.714 1.469 6.193 3.277 6.193" />
+                    <path d="M60.683 39.832c-1.568-.927-3.912.226-5.236 2.577c-1.323 2.351-1.751 6.117-.186 7.044c1.568.927 4.537-1.335 5.861-3.685c1.324-2.351 1.127-5.009-.439-5.936" />
                   </svg>
                 </span>{' '}
-                easy
+            
               </h2>
             </div>
 
             {/* Paragraph with responsive max-width */}
             <p className="w-full max-w-md text-md leading-relaxed tracking-[-0.36px] text-[#828088] lg:pt-2">
-              Working with us is like having a full team of top designers,
-              developers and art directors in-house. Always ready to go.
+              
             </p>
           </div>
         </div>
@@ -64,13 +65,15 @@ export function HowItWorksSection() {
         <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
           {/* Card 1 */}
           {/* Corrected border class */}
-          <div className="flex flex-col items-start rounded-[42px] border-2 border-gray-200] bg-white p-3 ">
+          <div className="relative flex flex-col items-start rounded-[42px] border-2 border-gray-200] bg-white p-3 ">
+            {/* Number Chip */}
+            <div className="absolute -top-4 -left-4 flex items-center justify-center w-9 h-9 rounded-full bg-[#5F1CFC] text-white font-bold text-lg shadow-md border-4 border-white">1</div>
             {/* Placeholder Image Area */}
-            <div className="flex h-[300px] w-full items-center justify-center rounded-[32px] bg-gray-100">
+            <div className="flex h-[300px] w-full items-center justify-center rounded-[32px] bg-[#F7E6D4] bg-[radial-gradient(circle,_#ede9fe_1px,_transparent_1px)] [background-size:20px_20px]">
               {/* Replace with <Image /> component */}
               <Image
-                  src="/images/Équipe d'experts dédiée.webp"
-                  alt="Design Subscription"
+                  src="/images/hiw1.webp"
+                  alt="Upload your pet photo"
                   className="object-contain w-full h-full rounded-[32px]"
                   width={400}
                   height={305}
@@ -79,55 +82,63 @@ export function HowItWorksSection() {
             {/* Card Content */}
             <div className="flex w-full flex-col items-center justify-center gap-3 p-6 pt-5 text-center">
               <h3 className="text-xl font-medium leading-tight tracking-tight text-[#140F23] md:text-2xl">
-                Subscribe to your team
+                Upload a photo of your pet
               </h3>
               <p className="text-base leading-relaxed text-[#828088] sm:text-lg">
-                Meet your handpicked team of experts led by your dedicated
-                Project Manager.
+                Pick a photo you like—any clear picture works. Just upload it to get started.
               </p>
             </div>
           </div>
 
           {/* Card 2 */}
           {/* Corrected border class */}
-          <div className="flex flex-col items-start rounded-[42px] border-2 border-gray-200 bg-white p-3 ">
-            {/* Placeholder Image Area */}
-            <div className="flex h-[300px] w-full items-center justify-center rounded-[32px] bg-gray-100">
-               {/* Replace with <Image /> component */}
-              <span className="font-medium text-gray-500">
-                [Create Requests Image Here]
-              </span>
+          <div className="relative flex flex-col items-start rounded-[42px] border-2 border-gray-200 bg-white p-3 ">
+            {/* Number Chip */}
+            <div className="absolute -top-4 -left-4 flex items-center justify-center w-9 h-9 rounded-full bg-[#5F1CFC] text-white font-bold text-lg shadow-md border-4 border-white">2</div>
+            <div className="flex h-[300px] w-full items-center justify-center rounded-[32px] bg-[#F7E6D4] bg-[radial-gradient(circle,_#ede9fe_1px,_transparent_1px)] [background-size:20px_20px]">
+         
+              <Image
+                src="/images/hiw2.webp"
+                alt="Choose your favorite style"
+                className="object-contain w-full h-full rounded-[32px] opacity-90"
+                width={400}
+                height={305}
+              />
             </div>
              {/* Card Content */}
             <div className="flex w-full flex-col items-center justify-center gap-3 p-6 pt-5 text-center">
               <h3 className="text-xl font-medium leading-tight tracking-tight text-[#140F23] md:text-2xl">
-                Create requests
+                Choose your favorite style
               </h3>
               <p className="text-base leading-relaxed text-[#828088] sm:text-lg">
-                Simply submit your design & webflow request we will straight
-                jump to work.
+                Pick between a handcrafted design or get an instant, high-quality AI illustration. See previews on different products before you decide.
               </p>
             </div>
           </div>
 
           {/* Card 3 (Rotated) */}
           {/* Corrected border class. Added transform-gpu for performance. */}
-          <div className="flex transform-gpu flex-col items-start rounded-[42px] border-2 border-gray-200 bg-white p-3 transition-transform duration-300 md:rotate-[4deg] md:hover:rotate-[2deg]">
+          <div className="relative flex transform-gpu flex-col items-start rounded-[42px] border-2 border-gray-200 bg-white p-3 transition-transform duration-300 md:rotate-[4deg] md:hover:rotate-[2deg]">
+            {/* Number Chip */}
+            <div className="absolute -top-4 -left-4 flex items-center justify-center w-9 h-9 rounded-full bg-[#5F1CFC] text-white font-bold text-lg shadow-md border-4 border-white">3</div>
             {/* Placeholder Image Area */}
-            <div className="flex h-[300px] w-full items-center justify-center rounded-[32px] bg-gray-100">
+            <div className="flex h-[300px] w-full items-center justify-center rounded-[32px] bg-[#F6D3AD]">
               {/* Replace with <Image /> component */}
-              <span className="font-medium text-gray-500">
-                [Review Complete Image Here]
-              </span>
+              <Image
+                src="/images/hiw3.webp"
+                alt="Get your artwork"
+                className="object-contain w-full h-full rounded-[32px] opacity-90"
+                width={400}
+                height={305}
+              />
             </div>
              {/* Card Content */}
             <div className="flex w-full flex-col items-center justify-center gap-3 p-6 pt-5 text-center">
               <h3 className="text-xl font-medium leading-tight tracking-tight text-[#140F23] md:text-2xl">
-                Review & Complete
+                Get your artwork
               </h3>
               <p className="text-base leading-relaxed text-[#828088] sm:text-lg">
-                Check the work we have done for you and give us your feedback.
-                We revise until you are happy.
+                Place your order and receive your pet's portrait as a digital file or printed product. It's that simple.
               </p>
             </div>
           </div>
@@ -137,63 +148,45 @@ export function HowItWorksSection() {
         <div className="flex w-full flex-wrap items-center justify-center gap-x-6 gap-y-4 md:gap-x-8 lg:gap-x-10">
           {/* Feature 1 */}
           <div className="flex items-center gap-2">
-            <svg
-              width="20"
-              height="22"
-              viewBox="0 0 20 22"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 text-[#5F1CFC]" // SVG inherits this text color
-            >
-              {/* Added fill="currentColor" to the path */}
-              <path d="M10.7625 16.4178C10.4871 17.1139 9.50316 17.1139 9.22767 16.4178L8.0273 13.3726C7.94367 13.1611 7.7764 12.9913 7.5624 12.9077L4.51721 11.7073C3.82109 11.4319 3.82109 10.4479 4.51721 10.1725L7.5624 8.97212C7.77394 8.88849 7.94367 8.72122 8.0273 8.50722L9.22767 5.46203C9.50316 4.76591 10.4871 4.76591 10.7625 5.46203L11.9629 8.50722C12.0465 8.71876 12.2138 8.88849 12.4278 8.97212L15.473 10.1725C16.1691 10.4479 16.1691 11.4319 15.473 11.7073L12.4278 12.90"
-                fill="currentColor" // Make the path inherit color from parent SVG element
-              />
-               {/* The path data seems incomplete in your original snippet, ensure it's complete */}
-            </svg>
-            <span className="text-base font-medium text-[#5F1CFC]"> {/* Consistent text style */}
-               {/* Feature text would go here */}
-               Feature 1 Text
+            {/* Lightning bolt icon chip */}
+            <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#5F1CFC] text-white">
+              <svg width="20" height="20" fill="none" viewBox="0 0 20 20">
+                <path d="M11 2L4 11h5l-1 7 7-9h-5l1-7z" fill="white"/>
+              </svg>
+            </span>
+            <span className="text-base font-medium text-[#5F1CFC]">
+              Instant result preview
             </span>
           </div>
 
           {/* Feature 2 */}
           <div className="flex items-center gap-2">
-            <svg
-              width="20"
-              height="22"
-              viewBox="0 0 20 22"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 text-[#5F1CFC]"
-            >
-              <path d="M10.7625 16.4178C10.4871 17.1139 9.50316 17.1139 9.22767 16.4178L8.0273 13.3726C7.94367 13.1611 7.7764 12.9913 7.5624 12.9077L4.51721 11.7073C3.82109 11.4319 3.82109 10.4479 4.51721 10.1725L7.5624 8.97212C7.77394 8.88849 7.94367 8.72122 8.0273 8.50722L9.22767 5.46203C9.50316 4.76591 10.4871 4.76591 10.7625 5.46203L11.9629 8.50722C12.0465 8.71876 12.2138 8.88849 12.4278 8.97212L15.473 10.1725C16.1691 10.4479 16.1691 11.4319 15.473 11.7073L12.4278 12.9077C12.2138 12.9913 12.0465 13.1611 11.9629 13.3726L10.7625 16.4178Z"
-                fill="currentColor"
-              />
-            </svg>
+            {/* Diamond icon chip (SVG from public/svg/Icône SVG Diamant.svg) */}
+            <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#5F1CFC] text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" className="w-4 h-4">
+                <path fill="#fff" d="M32.711 64 64 30H44.71L32.711 64zM64 28l-8.762-11.969L46.031 28H64zM53.508 15H32.437l11.494 12.45L53.508 15zM32 30H21.41L32 59.99 42.59 30H32zM0 30l31.289 34L19.29 30H0zM32 28h9.72L32 17.47 22.28 28H32zM8.762 16.031 0 28h17.969L8.762 16.031zM31.563 15H10.492l9.577 12.45L31.563 15zM32 13a1 1 0 0 1-1-1V1a1 1 0 0 1 2 0v11a1 1 0 0 1-1 1zM40 13a1 1 0 0 1-.759-1.65l6-7a1 1 0 0 1 1.518 1.3l-6 7A.993.993 0 0 1 40 13zM24 13a.993.993 0 0 1-.759-.35l-6-7a1 1 0 0 1 1.518-1.3l6 7A1 1 0 0 1 24 13z"/>
+              </svg>
+            </span>
             <span className="text-base font-medium text-[#5F1CFC]">
-              Feature 2 Text
+              High quality materials
             </span>
           </div>
 
           {/* Feature 3 */}
           <div className="flex items-center gap-2">
-            <svg
-              width="20"
-              height="22"
-              viewBox="0 0 20 22"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 text-[#5F1CFC]"
-            >
-              <path d="M10.7625 16.4178C10.4871 17.1139 9.50316 17.1139 9.22767 16.4178L8.0273 13.3726C7.94367 13.1611 7.7764 12.9913 7.5624 12.9077L4.51721 11.7073C3.82109 11.4319 3.82109 10.4479 4.51721 10.1725L7.5624 8.97212C7.77394 8.88849 7.94367 8.72122 8.0273 8.50722L9.22767 5.46203C9.50316 4.76591 10.4871 4.76591 10.7625 5.46203L11.9629 8.50722C12.0465 8.71876 12.2138 8.88849 12.4278 8.97212L15.473 10.1725C16.1691 10.4479 16.1691 11.4319 15.473 11.7073L12.4278 12.9077C12.2138 12.9913 12.0465 13.1611 11.9629 13.3726L10.7625 16.4178Z"
-                fill="currentColor"
-              />
-            </svg>
+            {/* Globe icon chip */}
+            <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#5F1CFC] text-white">
+              <svg width="20" height="20" fill="none" viewBox="0 0 20 20">
+                <circle cx="10" cy="10" r="7" stroke="white" strokeWidth="2" fill="none"/>
+                <ellipse cx="10" cy="10" rx="7" ry="3" stroke="white" strokeWidth="2" fill="none"/>
+                <path d="M10 3v14" stroke="white" strokeWidth="2"/>
+              </svg>
+            </span>
             <span className="text-base font-medium text-[#5F1CFC]">
-              Feature 3 Text
+              Worldwide delivery
             </span>
           </div>
+          
 
 
         </div>

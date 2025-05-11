@@ -3,15 +3,13 @@ import { ProblemsSection } from "@/components/problems-section";
 import { CTASection } from "@/components/cta-section";
 import { HowItWorksSection } from "@/components/how-it-works-section";
 import { ServicesSection } from "@/components/services-section";
-import { SuccessStoriesSection } from "@/components/success-stories-section";
-import { ComparisonSection } from "@/components/comparison-section";
 import { AIImageComparison } from "@/components/ai-image-comparison";
 import { FAQSection } from "@/components/faq-section";
 import { ResultsSection } from "@/components/results-section";
 import { Footer } from "@/components/footer";
 import { HeroWithAnimations } from "@/components/hero-with-animations";
 import { BenefitsSection } from "@/components/benefits-section";
-import { ComparisonSection2 } from "@/components/comparison-section-2";
+import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 
 
 export default function Home() {
@@ -28,17 +26,54 @@ export default function Home() {
         <div className="bg-white rounded-[32px]  bg-gradient-to-t from-white via-white to-[#f8f7fd]/90 ring ring-gray-200">
           <HeroWithAnimations />
         </div>
-        <ComparisonSection />
-        <ComparisonSection2 />
-        <AIImageComparison />
-        {/*<CustomersSection />*/}
-        <ProblemsSection />
-        <CTASection />
-        <HowItWorksSection />
+        <AnimatedTestimonials
+          testimonials={[
+            {
+              quote:
+                "A fantastic picture of my fur babies! The quality and detail is brilliant! So so happy with my purchase!",
+              name: "Louise S.",
+              designation: "",
+              src: "/images/customer/ac1.jpg",
+            },
+            {
+              quote:
+                "This is the 2nd canvas that we have done. The quality is A+, including the frames!! Great communication during the entire process, start to finish! We have a 3rd picture-canvas that will be in the works soon... We can't wait to work with you again!!",
+              name: "Christopher S.",
+              designation: "",
+              src: "/images/customer/ac2.jpg",
+            },
+            {
+              quote:
+                "I'm so pleased with the portrait; it was a gift for my husband after our beloved lab passed away. The picture is absolutely perfect and captures his spirit beautifully.",
+              name: "Leah A.",
+              designation: "",
+              src: "/images/customer/ac3.jpg",
+            },
+            {
+              quote:
+                "I'm sorry, not sorry, but I'm in love with this. Super easy to order. They sent a proof and the final photo is even better than expected because it has like a velvet feel to it almost like a vintage painting or art.",
+              name: "Betsy T.",
+              designation: "",
+              src: "/images/customer/ac4.jpg",
+            },
+            {
+              quote:
+                "Amazing service, updated all the way and absolutely delighted with the portrait of our gorgeous dog. The quality is exceptional and the attention to detail is remarkable.",
+              name: "Lauraine Q.",
+              designation: "",
+              src: "/images/customer/ac5.jpg",
+            },
+          ]}
+          // autoplay={true}
+        />
         <ServicesSection />
+        <HowItWorksSection />
+        <AIImageComparison />
         <BenefitsSection />
+        {/*<CustomersSection />*/}
+        {/* <ProblemsSection />
+        <CTASection /> */}
         {/* <SuccessStoriesSection /> */}
-     
         <FAQSection />
         <ResultsSection />
       </div>

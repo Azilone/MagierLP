@@ -10,41 +10,32 @@ import {
 
 // Placeholder content for FAQ answers
 const faqAnswers: { [key: string]: string } = {
-  "What does 'unlimited design tasks' mean?":
-    "Unlimited design tasks mean you can submit as many design requests as you need, and we'll work on them sequentially, one task at a time.",
-  "Do you offer one-time projects, or only subscriptions?":
-    "We primarily focus on subscription plans to provide ongoing design support, but we do consider one-time projects on a case-by-case basis. Please contact us to discuss your project.",
-  "What about large projects or a relaunch?":
-    "For large projects or relaunches that require more intensive work or multiple designers simultaneously, we recommend discussing a custom plan with us to ensure we meet your timeline and scope.",
-  "What types of clients and industries do you work with?":
-    "We work with a diverse range of clients across various industries, including tech startups, SaaS companies, marketing agencies, e-commerce businesses, and more. Our focus is on delivering high-quality digital design.",
-  "Can I cancel my subscription monthly?":
-    "Yes, our subscription plans are typically billed monthly or quarterly, and you can cancel your subscription at the end of your current billing cycle.",
-  "I am not satisfied with the design. How many revisions can I request?":
-    "We offer unlimited revisions. We'll continue refining the design based on your feedback until you are completely satisfied.",
-  "When do I get my results?":
-    "The turnaround time for design tasks typically ranges from 24 to 72 hours, depending on the complexity of the request. We prioritize clear communication about timelines.",
-  "What kind of services do you provide?":
-    "We offer a wide range of design services, including UI/UX design, branding, graphic design for marketing materials, social media graphics, presentation design, and more. Check our services page for a detailed list.",
-  "How quickly can we get started?":
-    "You can get started almost immediately after signing up for a subscription plan. Once subscribed, you can begin submitting your design requests right away.",
-  "Why should I choose magier over a freelancer or design agency?":
-    "Magier offers a flexible subscription model with predictable costs, access to a dedicated design team, faster turnaround times compared to many agencies, and unlimited requests/revisions, providing a scalable and efficient design solution.",
+  "Do you deliver worldwide?":
+    "Yes, we deliver everywhere in the world, with no exceptions.",
+  "What are the delivery times?":
+    "Delivery usually takes between 3 and 5 business days after your design is approved. Some items may require additional time depending on their nature.",
+  "Can I request changes to my design?":
+    "Absolutely! All designs created by our artist can be revised as many times as you wish. We keep working until you are completely satisfied.",
+  "What if my gift arrives damaged?":
+    "If your gift arrives damaged, we will refund you or send a replacement, whichever you prefer.",
+  "Do you create custom designs?":
+    "Yes, we do! Send us your request via our contact form or reach out directly to our artist. We love bringing your unique ideas to life.",
+  "Can I upload a photo of any animal?":
+    "Yes, you can upload a photo of any animal. We welcome all pets and animals for our custom designs.",
+  "Can I include multiple animals in one design?":
+    "Yes, you can include multiple animals in a single design. Just let us know your preferences when submitting your request.",
 };
 
 
 export function FAQSection() {
   const faqItems = [
-    "What does 'unlimited design tasks' mean?",
-    "Do you offer one-time projects, or only subscriptions?",
-    "What about large projects or a relaunch?",
-    "What types of clients and industries do you work with?",
-    "Can I cancel my subscription monthly?",
-    "I am not satisfied with the design. How many revisions can I request?",
-    "When do I get my results?",
-    "What kind of services do you provide?",
-    "How quickly can we get started?",
-    "Why should I choose magier over a freelancer or design agency?",
+    "Do you deliver worldwide?",
+    "What are the delivery times?",
+    "Can I request changes to my design?",
+    "What if my gift arrives damaged?",
+    "Do you create custom designs?",
+    "Can I upload a photo of any animal?",
+    "Can I include multiple animals in one design?",
   ];
 
   return (

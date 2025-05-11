@@ -17,17 +17,17 @@ export function BenefitsSection() {
 
             {/* Left Side: Title and Badge */}
             {/* Add a wrapper here to contain badge + title for baseline calculation */}
-            <div className="flex flex-col gap-4 lg:w-3/5 xl:w-2/3 ">
+            <div className="flex flex-col gap-3 lg:w-3/5 xl:w-2/3">
               {/* Badge */}
-              <div className="px-4 pt-2 pb-2 text-sm md:text-base font-medium tracking-tight text-violet-700 border-2 border-2-violet-200 rounded-[42px] w-fit mx-auto lg:mx-0">
-                Our benefits
+              <div className="px-2.5 pt-1 pb-1 text-xs md:text-sm font-medium tracking-tight text-violet-700 border border-violet-200 rounded-[42px] w-fit mx-auto lg:mx-0">
+                Why Choose Us?
               </div>
               {/* Main Heading */}
               {/* Ensure this h1 is the element whose baseline is used */}
-              <h1 className="flex flex-wrap justify-center lg:justify-start items-center gap-x-2 sm:gap-x-2.5 gap-y-1 text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold tracking-tighter text-gray-900 leading-tight">
-                <span>The</span>
+              <h1 className="flex flex-wrap justify-center lg:justify-start items-center gap-x-2 sm:gap-x-2 gap-y-1 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-semibold tracking-tighter text-gray-900 leading-tight">
+                <span>Benefits</span>
                 <span className="flex items-center">
-                  <span>design</span>
+                  <span>That</span>
                   {/* SVG Icon */}
                   <svg
                     width="57"
@@ -35,10 +35,10 @@ export function BenefitsSection() {
                     viewBox="0 0 57 57"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="inline-block w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 xl:w-14 xl:h-14 mx-1.5 md:mx-2 align-middle "
+                    className="inline-block w-7 h-7 sm:w-9 sm:h-9 lg:w-11 lg:h-11 xl:w-13 xl:h-13 mx-1 md:mx-1.5 align-middle"
                   >
-                    {/* SVG content */}
-                     <g clipPath="url(#clip0_1_16843)">
+                    {/* SVG content remains unchanged */}
+                    <g clipPath="url(#clip0_1_16843)">
                       <path d="M46.7328 7.89754C46.5631 7.66452 46.3118 7.52979 46.0468 7.52979H37.3259H28.605H19.884H11.1631C10.8981 7.52979 10.6468 7.66452 10.4771 7.89754L2.31245 19.1109C2.16838 19.3087 2.09981 19.5527 2.10583 19.7944C2.11174 20.0312 2.18932 20.2659 2.33771 20.4527L27.2834 51.8581C27.6377 52.3042 28.1213 52.5272 28.605 52.5272C29.0886 52.5272 29.5722 52.3042 29.9265 51.8581L54.8722 20.4527C55.0206 20.2659 55.0981 20.0312 55.104 19.7944C55.1101 19.5527 55.0415 19.3087 54.8974 19.1109L46.7328 7.89754Z" fill="#5F1CFC"></path>
                       <path d="M28.6073 19.7954H16.1055L27.7001 50.1531C28.0242 51.0017 29.2204 51.0135 29.5613 50.1715L41.3002 21.1706C41.5663 20.5132 41.0825 19.7954 40.3732 19.7954H28.6073Z" fill="#CBD2F3"></path>
                       <path d="M27.283 51.8592L2.33734 20.4537C2.18895 20.2669 2.11138 20.0323 2.10547 19.7954H16.1028L28.6046 52.5283C28.121 52.5283 27.6374 52.3053 27.283 51.8592Z" fill="#5F1CFC"></path>
@@ -59,17 +59,13 @@ export function BenefitsSection() {
                     </defs>
                   </svg>
                 </span>
-                <span>partner</span>
-                <span>you deserve</span>
+                <span>Make a Real Difference</span>
               </h1>
             </div>
 
             {/* Right Side: Description */}
-            {/* *** REMOVED lg:pt-10 *** */}
             <div className="tracking-tight leading-relaxed max-w-md lg:w-2/5 xl:w-1/3 text-zinc-500 ">
-              In our previous companies we have been in your shoes. And now we
-              have built a service we would have loved - fast, efficient,
-              reliable.
+              We create custom pet portraits with care, speed, and a personal touch. No empty promises—just real results, happy customers, and artwork you'll be proud to display.
             </div>
           </div>
 
@@ -80,21 +76,20 @@ export function BenefitsSection() {
             <div className="flex flex-col p-3.5 bg-white border-2 border-gray-200 shadow-xl shadow-gray-200/40 h-auto min-h-[500px] md:min-h-[513px] rounded-[42px]">
               <div className="flex-shrink-0  w-full overflow-hidden rounded-[32px]">
                 <Image
-                  src="/images/Équipe d'experts dédiée.webp"
-                  alt="Expert Design Team"
-                  className="object-contain w-full h-full rounded-[32px]" // Rounding on Image
-                  width={400}
-                  height={305}
+                  src="/images/benefits/1.webp"
+                  alt="Artwork Ready Fast"
+                  className="object-contain w-full h-full rounded-[32px]"
+                  width={350}
+                  height={350}
                   priority
                 />
               </div>
               <div className="flex flex-col justify-center flex-grow px-4 sm:px-6 pt-5 md:pt-6 pb-6 md:pb-7 text-center">
                 <h3 className="mb-2 md:mb-3 text-xl md:text-2xl font-medium tracking-tight leading-snug text-gray-900">
-                  Dedicated expert team
+                  Instant Preview & Fast Delivery
                 </h3>
                 <p className=" tracking-tight leading-relaxed text-zinc-500">
-                  Your dedicated project manager handles all of your requests
-                  with our expert designers & developers.
+                  Get instant AI-generated previews or choose handcrafted artwork by our artists, ready in just 1-2 days. Quick results without compromising on quality.
                 </p>
               </div>
             </div>
@@ -105,20 +100,19 @@ export function BenefitsSection() {
              <div className="flex flex-col p-3.5 bg-white border-2 border-gray-200 shadow-xl shadow-gray-200/40 h-auto min-h-[500px] md:min-h-[513px] rounded-[42px]">
               <div className="flex-shrink-0 w-full overflow-hidden rounded-[32px]">
                 <Image
-                  src="/images/Équipe d'experts dédiée.webp"
-                  alt="Fast Design Results"
+                  src="/images/benefits/2.webp"
+                  alt="Unlimited Free Revisions"
                   className="object-contain w-full h-full rounded-[32px]"
-                  width={400}
-                  height={305}
+                  width={350}
+                  height={350}
                 />
               </div>
               <div className="flex flex-col justify-center flex-grow px-4 sm:px-6 pt-5 md:pt-6 pb-6 md:pb-7 text-center">
                 <h3 className="mb-2 md:mb-3 text-xl md:text-2xl font-medium tracking-tight leading-snug text-gray-900">
-                  Fast results
+                  Creative Freedom
                 </h3>
                 <p className=" tracking-tight leading-relaxed text-zinc-500">
-                  Receive your first results for your active task within 48
-                  hours.
+                  Explore different styles and variations at your own pace. With our intuitive platform, you're in control - no back-and-forth emails needed.
                 </p>
               </div>
             </div>
@@ -128,20 +122,19 @@ export function BenefitsSection() {
             <div className="flex flex-col p-3.5 bg-white border-2 border-gray-200 shadow-xl lg:shadow-gray-300/50 shadow-gray-200/40 h-auto min-h-[500px] md:min-h-[513px] rounded-[42px] lg:rotate-[6deg] lg:relative lg:z-10 lg:top-[20px]  transform transition-transform duration-300 hover:rotate-4 hover:z-20 ">
               <div className="flex-shrink-0 w-full overflow-hidden rounded-[32px]">
                 <Image
-                  src="/images/Équipe d'experts dédiée.webp"
-                  alt="Design Subscription"
+                  src="/images/benefits/3.webp"
+                  alt="100% Satisfaction Guarantee"
                   className="object-contain w-full h-full rounded-[32px]"
-                  width={400}
-                  height={305}
+                  width={350}
+                  height={350}
                 />
               </div>
               <div className="flex flex-col justify-center flex-grow px-4 sm:px-6 pt-5 md:pt-6 pb-6 md:pb-7 text-center">
                 <h3 className="mb-2 md:mb-3 text-xl md:text-2xl font-medium tracking-tight leading-snug text-gray-900">
-                  Flexible & scalable
+                  100% Satisfaction Guarantee
                 </h3>
                 <p className=" tracking-tight leading-relaxed text-zinc-500">
-                  Cancel or pause your subscription when you need it. And
-                  upgrade to multiple pipelines if there is more to do.
+                  See exactly what you'll get before you buy. Choose your style, preview your design, and love the result - guaranteed.
                 </p>
               </div>
             </div>
@@ -151,20 +144,19 @@ export function BenefitsSection() {
              <div className="flex flex-col p-3.5 bg-white border-2 border-gray-200 shadow-xl lg:shadow-gray-300/50 shadow-gray-200/40 h-auto min-h-[500px] md:min-h-[513px] rounded-[42px] lg:rotate-[-6deg] lg:relative lg:z-10 lg:top-[-20px]  transform transition-transform duration-300 hover:rotate-[-4deg] hover:z-20">
               <div className="flex-shrink-0 w-full overflow-hidden rounded-[32px]">
                 <Image
-                  src="/images/Équipe d'experts dédiée.webp"
-                  alt="Premium Designer"
+                  src="/images/benefits/4.webp"
+                  alt="Worldwide Delivery"
                   className="object-contain w-full h-full rounded-[32px]"
-                  width={400}
-                  height={305}
+                  width={350}
+                  height={350}
                 />
               </div>
               <div className="flex flex-col justify-center flex-grow px-4 sm:px-6 pt-5 md:pt-6 pb-6 md:pb-7 text-center">
                 <h3 className=" mb-2 md:mb-3 text-xl md:text-2xl font-medium tracking-tight leading-snug text-gray-900">
-                  Top-notch quality
+                  Worldwide Delivery
                 </h3>
                 <p className="tracking-tight leading-relaxed text-zinc-500">
-                  We only hire the best designers and developers to make sure to
-                  serve your needs.
+                  We deliver your finished product anywhere in the world, safely and reliably.
                 </p>
               </div>
             </div>
@@ -174,20 +166,19 @@ export function BenefitsSection() {
             <div className="flex flex-col p-3.5 bg-white border-2 border-gray-200 shadow-xl shadow-gray-200/40 h-auto min-h-[500px] md:min-h-[513px] rounded-[42px]">
               <div className="flex-shrink-0 w-full overflow-hidden rounded-[32px]">
                 <Image
-                  src="/images/Équipe d'experts dédiée.webp"
-                  alt="Design as a Service Project Management"
+                  src="/images/benefits/5.webp"
+                  alt="Human Support Team"
                   className="object-contain w-full h-full rounded-[32px]"
-                  width={400}
-                  height={305}
+                  width={350}
+                  height={350}
                 />
               </div>
               <div className="flex flex-col justify-center flex-grow px-4 sm:px-6 pt-5 md:pt-6 pb-6 md:pb-7 text-center">
                 <h3 className="mb-2 md:mb-3 text-xl md:text-2xl font-medium tracking-tight leading-snug text-gray-900">
-                  Easy project management
+                  French Support Team 🇫🇷
                 </h3>
-                <p className=" tracking-tight leading-relaxed text-zinc-500">
-                  Submit your tasks in our easy tool and communicate via Slack
-                  for urgent questions.
+                <p className="tracking-tight leading-relaxed text-zinc-500">
+                  Our team in France is here to help you in any language. Questions or special requests? We're just a message away.
                 </p>
               </div>
             </div>
@@ -197,25 +188,23 @@ export function BenefitsSection() {
             <div className="flex flex-col p-3.5 bg-white border-2 border-gray-200 shadow-xl shadow-gray-200/40 h-auto min-h-[500px] md:min-h-[513px] rounded-[42px]">
               <div className="flex-shrink-0 w-full overflow-hidden rounded-[32px]">
                 <Image
-                  src="/images/Équipe d'experts dédiée.webp"
-                  alt="Figma Design"
+                  src="/images/benefits/6.webp"
+                  alt="Quality First Approach"
                   className="object-contain w-full h-full rounded-[32px]"
-                  width={400}
-                  height={305}
+                  width={350}
+                  height={350}
                 />
               </div>
               <div className="flex flex-col justify-center flex-grow px-4 sm:px-6 pt-5 md:pt-6 pb-6 md:pb-7 text-center">
                 <h3 className="mb-2 md:mb-3 text-xl md:text-2xl font-medium tracking-tight leading-snug text-gray-900">
-                  100% made for you
+                  Quality First Approach
                 </h3>
-                <p className=" tracking-tight leading-relaxed text-zinc-500">
-                  Every design is created individually for you and you will
-                  receive all raw data files.
+                <p className="tracking-tight leading-relaxed text-zinc-500">
+                  Choose your style before ordering - we've carefully selected our partners for their exceptional quality and attention to detail. Your satisfaction is guaranteed.
                 </p>
               </div>
             </div>
             {/* --- End Card 6 --- */}
-
           </div>
 
           {/* Decorative SVGs */}
