@@ -15,29 +15,33 @@ interface ImageComparisonData {
 
 const comparisonData: Record<'memorable' | 'others', ImageComparisonData> = {
   memorable: {
-    title: "Memorable.ai",
-    description: "Professional-grade AI enhancement with emotional depth",
+    title: "GetPawtrait.com",
+    description: "Why GetPawtrait stands out for pet portraits",
     beforeImage: "/images/placeholder-image1.jpg",
     afterImage: "/images/placeholder-image2.webp",
     features: [
-      "Enhanced emotional expression",
-      "Natural skin tones",
-      "Preserved authentic details",
-      "Professional lighting adjustment",
-      "Consistent quality across all photos"
+      "Proprietary Pawtraits model V2 + optional designer retouching: sharp details, true-to-life colors",
+      "Instant HD preview before payment",
+      "150+ exclusive pet styles",
+      "100% pets: dogs, cats, rabbits, horses, birds…",
+      "Posters, mugs, phone cases, hoodies… 30+ formats",
+      "Mobile-first, Apple Pay/Google Pay, optional account (60 sec checkout)",
+      "Local printing, 3–5 days, tracked shipping"
     ]
   },
   others: {
-    title: "Other AI Services",
-    description: "Basic AI filters with inconsistent results",
+    title: "Other Pet Portrait Services",
+    description: "How typical services compare",
     beforeImage: "/images/placeholder-image1.jpg",
     afterImage: "/images/placeholder-image2.webp",
     features: [
-      "Artificial-looking effects",
-      "Inconsistent skin tones",
-      "Loss of important details",
-      "Harsh or unnatural lighting",
-      "Varying quality between photos"
+      "Low-res or no preview, pay before you see",
+      "Fewer than 10 styles, often reused elsewhere",
+      "Generalist (\"human portrait\" models adapted for pets)",
+      "1–3 formats (usually just posters)",
+      "Long checkout, mandatory signup, back-and-forth with outsourced designers",
+      "No clear policy",
+      "Variable times, limited tracking"
     ]
   }
 };
@@ -194,7 +198,7 @@ export function AIImageComparison() {
         <div className="flex flex-col items-center max-w-[650px] text-center mb-8 sm:mb-12 md:mb-16">
           <div className="flex flex-col items-center mb-4">
             <div className="text-[#5F1CFC] font-sans text-xs sm:text-sm md:text-base leading-4 tracking-[-0.32px] py-[7.5px] px-[17px] rounded-[42px] border border-[#E5E5EA]">
-              AI Quality Comparison
+              Quality Comparison
             </div>
           </div>
           <h2 className="text-[#140F23] font-sans text-3xl sm:text-4xl md:text-5xl lg:text-[66px] font-semibold leading-tight sm:leading-tight lg:leading-[72.6px] tracking-tight lg:tracking-[-2.64px]">

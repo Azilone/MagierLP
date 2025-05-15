@@ -17,56 +17,12 @@ import {
 import { ShimmerButton } from "./magicui/shimmer-button";
 
 const navigation = [
-  { 
-    name: "Services", 
-    href: "#services",
-    items: [
-      {
-        title: "Web Development",
-        href: "#web-development",
-        description: "Custom web development solutions for your business"
-      },
-      {
-        title: "Mobile Apps",
-        href: "#mobile-apps",
-        description: "Native and cross-platform mobile applications"
-      }
-    ]
-  },
-  { name: "Customers", href: "#customers" },
-  { name: "Pricing", href: "#pricing" },
-  { name: "Company", href: "#company" },
-  { 
-    name: "Resources",
-    items: [
-      {
-        title: "How it works",
-        href: "#how-it-works",
-        description: "Learn about our process and methodology"
-      },
-      {
-        title: "Blog",
-        href: "/blog",
-        description: "Read our latest articles and updates"
-      },
-      {
-        title: "Newsletter",
-        href: "/newsletter",
-        description: "Subscribe to our newsletter"
-      },
-      {
-        title: "FAQ",
-        href: "/faq",
-        description: "Frequently asked questions"
-      },
-      {
-        title: "Freebies",
-        href: "/freebies",
-        description: "Free resources and templates"
-      }
-    ]
-  },
-  { name: "Our Work", href: "#work" },
+  { name: "How it works", href: "#how-it-works" },
+  { name: "Services", href: "#services" },
+  { name: "Benefits", href: "#benefits" },
+  { name: "FAQ", href: "#faq" },
+  { name: "Results", href: "#results" },
+  { name: "Testimonials", href: "#testimonials" },
 ];
 
 export function Navbar() {
@@ -114,39 +70,12 @@ export function Navbar() {
               <NavigationMenuList className="flex space-x-1 xl:space-x-4">
                 {navigation.map((item) => (
                   <NavigationMenuItem key={item.name}>
-                    {item.items ? (
-                      <>
-                        <NavigationMenuTrigger className="text-xs xl:text-sm text-gray-600 hover:text-gray-900 font-medium py-1 px-1.5">
-                          {item.name}
-                        </NavigationMenuTrigger>
-                        <NavigationMenuContent>
-                          <ul className="grid w-[260px] gap-2 p-3 md:w-[350px] lg:w-[450px] md:grid-cols-2">
-                            {item.items.map((subItem) => (
-                              <li key={subItem.title}>
-                                <NavigationMenuLink asChild>
-                                  <Link
-                                    href={subItem.href}
-                                    className="block select-none space-y-1 rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                                  >
-                                    <div className="text-xs font-medium leading-none">{subItem.title}</div>
-                                    <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
-                                      {subItem.description}
-                                    </p>
-                                  </Link>
-                                </NavigationMenuLink>
-                              </li>
-                            ))}
-                          </ul>
-                        </NavigationMenuContent>
-                      </>
-                    ) : (
-                      <Link
-                        href={item.href}
-                        className="text-xs xl:text-sm text-gray-600 hover:text-gray-900 font-medium px-1.5 py-1"
-                      >
-                        {item.name}
-                      </Link>
-                    )}
+                    <Link
+                      href={item.href}
+                      className="text-xs xl:text-sm text-gray-600 hover:text-gray-900 font-medium px-1.5 py-1"
+                    >
+                      {item.name}
+                    </Link>
                   </NavigationMenuItem>
                 ))}
               </NavigationMenuList>
@@ -242,53 +171,13 @@ export function Navbar() {
         <div className="px-4 pt-2 pb-3 space-y-1 sm:px-6 bg-white rounded-b-[32px] shadow-lg">
           {navigation.map((item) => (
             <div key={item.name} className="py-2">
-              {item.items ? (
-                <div>
-                  <button
-                    onClick={() => toggleMobileSubmenu(item.name)}
-                    className="flex justify-between items-center w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md"
-                  >
-                    {item.name}
-                    <svg
-                      className={cn("w-5 h-5 transform transition-transform", 
-                        mobileMenuOpen[item.name] ? "rotate-180" : "")}
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </button>
-                  {mobileMenuOpen[item.name] && (
-                    <div className="pl-4 pr-2 py-2 space-y-2">
-                      {item.items.map((subItem) => (
-                        <Link
-                          key={subItem.title}
-                          href={subItem.href}
-                          onClick={() => setIsOpen(false)}
-                          className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md"
-                        >
-                          <div className="font-medium">{subItem.title}</div>
-                          <div className="text-sm text-gray-500">{subItem.description}</div>
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <Link
-                  href={item.href}
-                  onClick={() => setIsOpen(false)}
-                  className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md"
-                >
-                  {item.name}
-                </Link>
-              )}
+              <Link
+                href={item.href}
+                onClick={() => setIsOpen(false)}
+                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md"
+              >
+                {item.name}
+              </Link>
             </div>
           ))}
           <div className="pt-4 pb-3 border-t border-gray-200">

@@ -2,9 +2,9 @@
 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { cn } from "@/lib/utils"; // Assuming this utility exists
 import { motion } from "framer-motion"; // Import motion
+
+import CTAButton from "./ui/CTAButton";
 
 // Define the correct Diamond Icon component (kept as defined, though not used in Cards)
 function DiamondIcon(props: React.SVGProps<SVGSVGElement>) {
@@ -118,29 +118,18 @@ export function ResultsSection() {
                
               </h2>
               <p className="text-base text-[#828088] leading-relaxed max-w-xl lg:max-w-3xl mx-auto lg:text-lg w-full"> {/* Adjusted max-width slightly */}
-                Upload a photo, choose your style, and get a unique portrait of your pet. Simple, personal, and made to order.
+              GetPawtrait.com: premium pet portraits, previewed in real time, printed and delivered to your door in days — starting at €19.
               </p>
             </div>
 
             {/* Buttons - Responsive layout already handled */}
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 w-full max-w-md mx-auto mt-10 md:mt-12"> {/* Adjusted margin */}
-              <Link
-                href="#"
-                className="px-8 py-4 sm:px-[33px] sm:py-[21px] bg-[#140F23] text-white rounded-full text-base font-medium tracking-[-0.02em] transition-colors duration-150 hover:bg-opacity-90 w-full sm:w-auto text-center shadow-md"
-              >
-                Get Started
-              </Link>
-              <Link
-                href="#"
-                className="px-8 py-4 sm:px-[46px] sm:py-[21px] border border-[#E5E5EA] bg-white rounded-full text-base font-medium tracking-[-0.02em] text-[#140F23] transition-colors duration-150 hover:bg-gray-50 w-full sm:w-auto text-center shadow-sm"
-              >
-                See Examples
-              </Link>
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 w-full max-w-md mx-auto mt-10 md:mt-12">
+              <CTAButton />
+            </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
   );
 }
 
@@ -179,33 +168,33 @@ function ServiceCard({ title, description, imageSrc }: ServiceCardProps) {
 // --- Service Card Data (Remains the same) ---
 const serviceCards = [
   {
-    title: "Illustrations",
+    title: "Posters & Canvas",
     description:
-      "Custom hand crafted illustrations to captivate your audience and bring your brand to life.",
-    imageSrc: "/images/customer/ac1.jpg", // Make sure this path is correct
+      "Transform your pet photos into stunning wall art. Premium quality prints delivered to your door in days.",
+    imageSrc: "/images/customer/ac1.jpg",
   },
-   {
-    title: "Brand & Logo Design",
-    description:
-      "We create impactful, scalable brand identities that make your business unforgettable.",
+  {
+    title: "Mugs & Phone Cases",
+    description: 
+      "Show off your furry friend everywhere you go. Durable, high-quality prints that last.",
     imageSrc: "/images/customer/ac2.jpg",
   },
   {
-    title: "Social Media Ads",
+    title: "Gift Sets",
     description:
-      "Attention-grabbing ads that elevate your campaigns and drive ROI.",
+      "Perfect for pet lovers. Mix and match products to create the ultimate personalized gift.",
     imageSrc: "/images/customer/ac3.jpg",
   },
   {
-    title: "Landing Pages",
+    title: "Custom Styles",
     description:
-      "Professionally designed pages optimized for conversions and seamless user experiences.",
+      "Choose from our exclusive collection of pet-specific art styles. From classic to modern.",
     imageSrc: "/images/customer/ac4.jpg",
   },
   {
-    title: "Presentations",
+    title: "Premium Quality",
     description:
-      "Stunning slides tailored to effectively communicate your ideas.",
+      "Professional printing, worldwide shipping, and gift wrapping available. Satisfaction guaranteed.",
     imageSrc: "/images/customer/ac5.jpg",
   },
-];  
+];

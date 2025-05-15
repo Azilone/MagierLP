@@ -27,7 +27,7 @@ const Button = () => {
             fill="none"/>
         </svg>
         <span className="text">
-          {isMobile ? 'Upload Photo' : 'Upload Your Photo'}
+          {isMobile ? 'Upload Photo' : 'Create my free Pawtrait'}
         </span>
         <span className="circle" />
         <svg viewBox="0 0 24 24" className="arr-1" xmlns="http://www.w3.org/2000/svg">

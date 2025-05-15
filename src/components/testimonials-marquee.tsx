@@ -8,28 +8,28 @@ import { ImageComparison, ImageComparisonImage, ImageComparisonSlider } from "@/
 
 const portfolioItems = [
   {
-    title: "Brand Design",
-    beforeImage: "/images/placeholder-image1.jpg",
-    afterImage: "/images/placeholder-image2.webp",
-    href: "/work/brand-design",
+    title: "PHOTO > CADEAU",
+    beforeImage: "/images/rabbit1.webp",
+    afterImage: "/images/rabbit2.webp",
+    href: "",
   },
   {
-    title: "Webdesign",
-    beforeImage: "/images/placeholder-image1.jpg",
-    afterImage: "/images/placeholder-image2.webp",
-    href: "/work/webdesign",
+    title: "PHOTO > CADEAU",
+    beforeImage: "/images/rabbit1.webp",
+    afterImage: "/images/rabbit2.webp",
+    href: "",
   },
   {
-    title: "Illustrations",
-    beforeImage: "/images/placeholder-image1.jpg",
-    afterImage: "/images/placeholder-image2.webp",
-    href: "/work/illustrations",
+    title: "PHOTO > CADEAU",
+    beforeImage: "/images/rabbit1.webp",
+    afterImage: "/images/rabbit2.webp",
+    href: "",
   },
   {
-    title: "Presentations",
-    beforeImage: "/images/placeholder-image1.jpg",
-    afterImage: "/images/placeholder-image2.webp",
-    href: "/work/presentations",
+    title: "PHOTO > CADEAU",
+    beforeImage: "/images/rabbit1.webp",
+    afterImage: "/images/rabbit2.webp",
+    href: "",
   },
 ];
 

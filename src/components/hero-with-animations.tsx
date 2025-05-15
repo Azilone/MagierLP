@@ -25,7 +25,7 @@ export function HeroWithAnimations() {
           />
         </div>
       </div>
-      <div className="relative px-4 pt-8 pb-12 min-h-[70vh] flex items-center sm:px-6 md:pt-20 md:pb-16 lg:px-10 lg:pt-24 lg:pb-24 xl:pt-28 xl:pb-28">
+      <div className="relative px-4  pb-12 min-h-[70vh] flex items-center sm:px-6  md:pb-16 lg:px-10  lg:pb-24  xl:pb-28 sm:pt-7 lg:pt-12">
         <div className="relative mx-auto max-w-7xl w-full">
 
           <HeroStatsBar />
@@ -34,8 +34,8 @@ export function HeroWithAnimations() {
 
           {/* Main Content */}
           <div className="text-center">
-             {/* Responsive Headline: Adjust size, leading, tracking */}
-            <h1 className="text-[2.8vh] font-bold tracking-tight text-[#140F23] leading-tight
+            
+            <h1 className="text-[3vh] font-bold tracking-tight text-[#140F23] leading-tight
                            sm:text-[3.2vh] sm:leading-tight
                            md:text-[3.5vh] md:leading-none md:tracking-[-0.5px]
                            lg:text-[5vh] lg:leading-[1.1] lg:tracking-[-0.75px]
@@ -56,7 +56,7 @@ export function HeroWithAnimations() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="inline-block"
               >
-                <AuroraText colors={["#FFCFF5", "#5F1CFC" ]} className="text-[2.8vh] sm:text-[3.2vh] md:text-[3.5vh] lg:text-[5vh] xl:text-[5.5vh]">
+                <AuroraText colors={["#FFCFF5", "#5F1CFC" ]} className="text-[3vh] sm:text-[3.2vh] md:text-[3.5vh] lg:text-[5vh] xl:text-[5.5vh]">
                 any pet
                 </AuroraText>
               </motion.div>
@@ -68,6 +68,14 @@ export function HeroWithAnimations() {
               >
                 into works of art <span className=""><br/></span> 
               </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1 }}
+                className="block text-[1.7vh] text-[#5F1CFC] font-medium mt-1"
+              >
+                in under 3 minutes.
+              </motion.div>
             </h1>
 
              {/* Responsive Paragraph: Adjust size, leading, margin */}
@@ -75,14 +83,16 @@ export function HeroWithAnimations() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1 }}
-              className="mt-[1.5vh] text-[1.4vh] leading-relaxed text-[#828088] max-w-sm mx-auto
-                         md:mt-[1.8vh] md:text-[1.5vh] md:leading-7 md:max-w-md
-                         lg:mt-[2vh] lg:text-[1.6vh] lg:leading-8 lg:max-w-lg
-                         xl:text-[1.7vh] xl:leading-8 xl:max-w-xl"
+              className="mt-[1.2vh] text-[1.2vh] leading-relaxed text-[#828088] max-w-sm mx-auto
+                         md:mt-[1.5vh] md:text-[1.3vh] md:leading-6 md:max-w-md
+                         lg:mt-[1.8vh] lg:text-[1.4vh] lg:leading-7 lg:max-w-lg
+                         xl:text-[1.5vh] xl:leading-7 xl:max-w-xl"
             >
-              The best gift they've ever received
+              Upload a photo, pick from the largest library of pet-only styles, and see an instant HD preview on posters, mugs, phone cases and more.
+
+
               <br />
-              Without spending hours shopping or worrying how it'll turn out.
+              Premium printing. Worldwide delivery.
             </motion.p>
 
             {/* Add Pulsating Button */}

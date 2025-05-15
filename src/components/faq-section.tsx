@@ -10,32 +10,32 @@ import {
 
 // Placeholder content for FAQ answers
 const faqAnswers: { [key: string]: string } = {
+  "How much does a Pawtrait cost?":
+    "From €19 (mug) to €45 (XL poster). Your first 3 styles are free in medium quality.",
+  "Can I add multiple pets to one illustration?":
+    "Yes — up to 4 companions per artwork at no extra charge.",
+  "Which payments do you accept?":
+    "Apple Pay, Google Pay, Visa, Mastercard, PayPal. (We use Stripe)",
+  "Production & shipping times?":
+    "24–48 h production, 3–5 business-day tracked delivery across USA.",
   "Do you deliver worldwide?":
     "Yes, we deliver everywhere in the world, with no exceptions.",
-  "What are the delivery times?":
-    "Delivery usually takes between 3 and 5 business days after your design is approved. Some items may require additional time depending on their nature.",
-  "Can I request changes to my design?":
-    "Absolutely! All designs created by our artist can be revised as many times as you wish. We keep working until you are completely satisfied.",
   "What if my gift arrives damaged?":
     "If your gift arrives damaged, we will refund you or send a replacement, whichever you prefer.",
-  "Do you create custom designs?":
-    "Yes, we do! Send us your request via our contact form or reach out directly to our artist. We love bringing your unique ideas to life.",
-  "Can I upload a photo of any animal?":
-    "Yes, you can upload a photo of any animal. We welcome all pets and animals for our custom designs.",
-  "Can I include multiple animals in one design?":
-    "Yes, you can include multiple animals in a single design. Just let us know your preferences when submitting your request.",
+  "Can I request changes to my design?":
+    "Absolutely! All designs created by our artist can be revised as many times as you wish. We keep working until you are completely satisfied.",
 };
 
 
 export function FAQSection() {
   const faqItems = [
+    "How much does a Pawtrait cost?",
+    "Can I add multiple pets to one illustration?",
+    "Which payments do you accept?",
+    "Production & shipping times?",
     "Do you deliver worldwide?",
-    "What are the delivery times?",
-    "Can I request changes to my design?",
     "What if my gift arrives damaged?",
-    "Do you create custom designs?",
-    "Can I upload a photo of any animal?",
-    "Can I include multiple animals in one design?",
+    "Can I request changes to my design?",
   ];
 
   return (
