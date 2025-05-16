@@ -41,7 +41,7 @@ export function Navbar() {
   }, []);
 
   const toggleMobileSubmenu = (itemName: any) => {
-    setMobileMenuOpen(prev => ({
+    setMobileMenuOpen((prev: Record<string, boolean>) => ({
       ...prev,
       [itemName]: !prev[itemName]
     }));
