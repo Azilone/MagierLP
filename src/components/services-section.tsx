@@ -18,12 +18,14 @@ const serviceNames = [
   'Pet Tags or Collars',
 ];
 
+// Add price to each showcase
 const showcaseDetailsData = [
   {
     serviceName: 'Custom Pet Portraits',
     imageSrc: "/images/product_placeholder.webp",
     imageAlt: "Custom Pet Portraits showcase",
     clientName: "Pet Lover #1",
+    price: 49.99,
     detailsTags: [ { text: "Best Seller", isHighlight: true }, { text: "Unique Art" }, { text: "Any Pet" } ]
   },
   {
@@ -31,6 +33,7 @@ const showcaseDetailsData = [
     imageSrc: "/images/product_placeholder.webp",
     imageAlt: "Personalized Mugs showcase",
     clientName: "Coffee Addict",
+    price: 19.99,
     detailsTags: [ { text: "Gift Idea", isHighlight: true }, { text: "Dishwasher Safe" }, { text: "Photo or Text" } ]
   },
   {
@@ -38,6 +41,7 @@ const showcaseDetailsData = [
     imageSrc: "/images/product_placeholder.webp",
     imageAlt: "Custom T-Shirts showcase",
     clientName: "Dog Dad",
+    price: 29.99,
     detailsTags: [ { text: "Wearable Art", isHighlight: true }, { text: "Unisex" }, { text: "All Sizes" } ]
   },
   {
@@ -45,6 +49,7 @@ const showcaseDetailsData = [
     imageSrc: "/images/product_placeholder.webp",
     imageAlt: "Sweatshirts/Hoodies showcase",
     clientName: "Cat Mom",
+    price: 59.99,
     detailsTags: [ { text: "Cozy", isHighlight: true }, { text: "Embroidered or Printed" }, { text: "Customizable" } ]
   },
   {
@@ -52,6 +57,7 @@ const showcaseDetailsData = [
     imageSrc: "/images/product_placeholder.webp",
     imageAlt: "Custom Blankets showcase",
     clientName: "Gift Giver",
+    price: 39.99,
     detailsTags: [ { text: "Super Soft", isHighlight: true }, { text: "Large Size" }, { text: "Photo or Art" } ]
   },
   {
@@ -59,6 +65,7 @@ const showcaseDetailsData = [
     imageSrc: "/images/product_placeholder.webp",
     imageAlt: "Personalized Pillows/Cushions showcase",
     clientName: "Home Decor Fan",
+    price: 24.99,
     detailsTags: [ { text: "Decor & Comfort", isHighlight: true }, { text: "Custom Print" }, { text: "Pet Face" } ]
   },
   {
@@ -66,6 +73,7 @@ const showcaseDetailsData = [
     imageSrc: "/images/product_placeholder.webp",
     imageAlt: "Custom Posters showcase",
     clientName: "Art Collector",
+    price: 14.99,
     detailsTags: [ { text: "Wall Art", isHighlight: true }, { text: "Multiple Sizes" }, { text: "Glossy/Matte" } ]
   },
   {
@@ -73,6 +81,7 @@ const showcaseDetailsData = [
     imageSrc: "/images/product_placeholder.webp",
     imageAlt: "Pet Bandanas showcase",
     clientName: "Fashion Pet",
+    price: 12.99,
     detailsTags: [ { text: "Trendy", isHighlight: true }, { text: "Adjustable" }, { text: "Custom Text" } ]
   },
   {
@@ -80,6 +89,7 @@ const showcaseDetailsData = [
     imageSrc: "/images/product_placeholder.webp",
     imageAlt: "Custom Phone Cases showcase",
     clientName: "Pet Parent On-the-Go",
+    price: 21.99,
     detailsTags: [ { text: "Protective", isHighlight: true }, { text: "Fits All Models" }, { text: "Photo Print" } ]
   },
   {
@@ -87,6 +97,7 @@ const showcaseDetailsData = [
     imageSrc: "/images/product_placeholder.webp",
     imageAlt: "Pet Tags or Collars showcase",
     clientName: "Safety First",
+    price: 9.99,
     detailsTags: [ { text: "Essential", isHighlight: true }, { text: "Engraved or Printed" }, { text: "Custom Info" } ]
   },
 ];
@@ -97,26 +108,24 @@ export function ServicesSection() {
   const currentShowcase = showcaseDetailsData.find(item => item.serviceName === selectedService);
 
   return (
-    <section className="flex w-full flex-col items-center bg-white px-4 py-0 sm:px-6 md:px-8 lg:px-12 xl:px-16 rounded-[32px] ring-1 ring-gray-200"> {/* Adjusted padding slightly */}
-      {/* Inner container - Adjusted responsive gap */}
-      <div className="flex w-full max-w-[1200px] flex-col gap-8 py-12 sm:py-16 md:py-20 lg:gap-12 xl:gap-16"> {/* Réduit gaps et padding */}
+    <section className="flex w-full flex-col items-center bg-white px-2 py-0 sm:px-4 md:px-6 lg:px-8 xl:px-10 rounded-[24px] ring-1 ring-gray-200"> {/* Reduced padding and border radius */}
+      {/* Inner container - Reduced gap */}
+      <div className="flex w-full max-w-[1100px] flex-col gap-5 py-8 sm:py-10 md:py-14 lg:gap-8 xl:gap-10"> {/* Smaller gaps and padding */}
 
         {/* Section Header */}
-        <div className="flex flex-col gap-4 md:gap-5 lg:gap-6"> {/* Responsive gap */}
+        <div className="flex flex-col gap-2 md:gap-3 lg:gap-4"> {/* Smaller gap */}
           <div className="flex">
-            <span className="w-fit rounded-[42px] border border-[#E5E5EA] px-4 py-1.5 text-sm font-medium text-[#5F1CFC] md:px-[17px] md:py-[7.5px] md:text-base md:leading-4 tracking-[-0.32px]"> {/* Adjusted padding/text for smaller screens */}
+            <span className="w-fit rounded-[32px] border border-[#E5E5EA] px-3 py-1 text-xs font-medium text-[#5F1CFC] md:px-4 md:py-1.5 md:text-sm md:leading-4 tracking-[-0.32px]"> {/* Smaller padding/text */}
               Collections
             </span>
           </div>
           {/* Title and Description Row */}
-          <div className="flex flex-col items-start justify-between gap-4 md:gap-6 lg:flex-row lg:items-start lg:gap-8"> {/* Changed to flex-col first, then lg:flex-row */}
+          <div className="flex flex-col items-start justify-between gap-2 md:gap-3 lg:flex-row lg:items-start lg:gap-4"> {/* Smaller gap */}
 
             {/* Title Block */}
-            <h2 className="text-2xl font-bold leading-snug tracking-tighter text-[#140F23] sm:text-3xl sm:leading-snug md:text-[32px] md:leading-tight lg:text-[40px] lg:leading-tight">
+            <h2 className="text-xl font-bold leading-snug tracking-tighter text-[#140F23] sm:text-2xl sm:leading-snug md:text-[26px] md:leading-tight lg:text-[32px] lg:leading-tight">
               Explore Our Collections
             </h2>
-
-           
 
           </div>
         </div>
@@ -124,16 +133,15 @@ export function ServicesSection() {
         {/* Service Details (Tags + Showcase) */}
         <div className="flex flex-col">
           {/* Service Tags */}
-          <div className="pb-4 md:pb-6"> {/* Réduit padding bottom */}
-            {/* Added text-sm md:text-base for smaller tags on mobile */}
-            <div className="flex flex-wrap justify-center gap-1.5 md:gap-2">
+          <div className="pb-2 md:pb-3"> {/* Smaller padding bottom */}
+            <div className="flex flex-wrap justify-center gap-1 md:gap-1.5">
               {serviceNames.map((serviceName) => {
                 const isSelected = selectedService === serviceName;
                 return (
                   <div
                     key={serviceName}
                     onClick={() => setSelectedService(serviceName)}
-                    className={`cursor-pointer rounded-[42px] px-2.5 py-1.5 text-xs font-medium leading-4 tracking-[-0.36px] transition-colors duration-200 md:px-4 md:py-2 md:text-sm ${
+                    className={`cursor-pointer rounded-[32px] px-2 py-1 text-xs font-medium leading-4 tracking-[-0.36px] transition-colors duration-200 md:px-3 md:py-1.5 md:text-sm ${
                       isSelected
                         ? 'bg-[#5F1CFC] text-white'
                         : 'border border-[#E5E5EA] bg-white text-[#828088] hover:border-gray-400 hover:text-gray-900'
@@ -149,55 +157,55 @@ export function ServicesSection() {
           {/* Showcase Area */}
           {currentShowcase ? (
             <div className="flex w-full items-start justify-center">
-              {/* Adjusted padding for smaller screens */}
-              <div className="flex w-full flex-col rounded-[32px] border border-[#E5E5EA] bg-white p-2 sm:rounded-[42px] sm:p-[13px]">
+              <div className="flex w-full flex-col rounded-[20px] border border-[#E5E5EA] bg-white p-1 sm:rounded-[28px] sm:p-2">
                 {/* Image container - RESPONSIVE HEIGHT */}
-                {/* Utilisation d'un aspect-ratio 16:9 pour un format paysage standard */}
-                <div className="relative w-full overflow-hidden rounded-[24px] bg-gray-200 sm:rounded-[32px] aspect-[16/9]"> {/* Ratio 16:9, responsive */}
+                <div className="relative w-full overflow-hidden rounded-[16px] bg-gray-200 sm:rounded-[24px] aspect-[16/9]">
                   <Image
                     src={currentShowcase.imageSrc}
                     alt={currentShowcase.imageAlt}
                     fill
-                    sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, (max-width: 1200px) 50vw, 1150px" // Adjusted sizes attribute
+                    sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, (max-width: 1200px) 50vw, 1150px"
                     className="object-cover transition-opacity duration-500 opacity-100"
                     key={currentShowcase.serviceName}
                   />
                 </div>
-                {/* Showcase Details - Adjusted padding and stacking */}
-                {/* Stacks earlier (below lg), adjusts padding */}
-                <div className="flex flex-col items-start justify-between gap-3 px-2 pt-3 pb-2 sm:px-4 lg:flex-row lg:items-center lg:px-5 lg:pt-4 lg:pb-3">
-                  {/* Left side - Adjusted text size */}
-                  <div className="flex items-center">
-                     <span className="text-sm font-semibold text-[#140F23] md:text-base">
-                       {currentShowcase.clientName}
-                     </span>
+                {/* Showcase Details - Add price tag */}
+                <div className="flex flex-col items-start justify-between gap-2 px-2 pt-2 pb-1 sm:px-3 lg:flex-row lg:items-center lg:px-4 lg:pt-3 lg:pb-2">
+                  {/* Left side - Client name and price */}
+                  <div className="flex flex-col items-start gap-1">
+                    <span className="text-xs font-semibold text-[#140F23] md:text-sm">
+                      {currentShowcase.clientName}
+                    </span>
+                    {/* Price tag - visually emphasized */}
+                    <span className="mt-1 rounded-[16px] bg-[#F7F1FF] px-3 py-1 text-base font-bold text-[#5F1CFC] shadow-sm border border-[#E5D6FF] md:text-lg lg:text-xl">
+                      {currentShowcase.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}
+                    </span>
                   </div>
-                  {/* Right side - Tags - Adjusted gap and text size */}
+                  {/* Right side - Tags */}
                   <div className="flex flex-wrap items-center gap-1 sm:gap-1.5">
-                     {currentShowcase.detailsTags.map((tag, index) => (
-                       <div
-                         key={index}
-                         className={`flex items-center gap-1 rounded-[42px] border px-2 py-1 text-xs font-medium leading-4 tracking-[-0.32px] sm:px-3 sm:py-1.5 sm:text-sm md:text-sm ${
-                           tag.isHighlight
-                           ? 'border-[#5F1CFC] text-[#5F1CFC]'
-                           : 'border-[#E5E5EA] bg-white text-[#140F23]'
-                         }`}
-                       >
-                         <span>{tag.text}</span>
-                       </div>
-                     ))}
+                    {currentShowcase.detailsTags.map((tag, index) => (
+                      <div
+                        key={index}
+                        className={`flex items-center gap-1 rounded-[32px] border px-2 py-1 text-xs font-medium leading-4 tracking-[-0.32px] sm:px-2.5 sm:py-1.5 sm:text-sm md:text-sm ${
+                          tag.isHighlight
+                          ? 'border-[#5F1CFC] text-[#5F1CFC]'
+                          : 'border-[#E5E5EA] bg-white text-[#140F23]'
+                        }`}
+                      >
+                        <span>{tag.text}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
             </div>
           ) : (
-             <div className="text-center text-gray-500 py-10">Select a service to see details.</div>
+             <div className="text-center text-gray-500 py-6 text-sm">Select a service to see details.</div>
           )}
         </div>
 
         {/* Call to Action Button */}
-        {/* Adjusted padding top for responsiveness */}
-        <div className="flex w-full justify-center">
+        <div className="flex w-full justify-center pt-2">
          <ShimmerButton>Upload Your Photo</ShimmerButton>
         </div>
 
