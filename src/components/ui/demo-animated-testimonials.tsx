@@ -1,4 +1,5 @@
 import { AnimatedTestimonials } from "./animated-testimonials";
+import assets from "@/data/assets.json";
 
 function AnimatedTestimonialsDemo() {
   const testimonials = [
@@ -7,7 +8,7 @@ function AnimatedTestimonialsDemo() {
         "Le souci du détail et les fonctionnalités innovantes ont complètement transformé notre workflow. C'est exactement ce que nous recherchions.",
       name: "Sarah Chen",
       designation: "Product Manager chez TechFlow",
-      src: "/product-placeholder.webp", // Placeholder local
+      src: assets.images.placeholders.demo, // Placeholder local
     },
     {
       quote:

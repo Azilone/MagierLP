@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'; // Assurez-vous que React et useState sont importés
 import Image from "next/image";
+import assets from "@/data/assets.json";
 import { ShimmerButton } from './magicui/shimmer-button';
 
 // --- Données (inchangées par rapport à la version précédente) ---
@@ -22,7 +23,7 @@ const serviceNames = [
 const showcaseDetailsData = [
   {
     serviceName: 'Custom Pet Portraits',
-    imageSrc: "/images/product_placeholder.webp",
+    imageSrc: assets.images.placeholders.product,
     imageAlt: "Custom Pet Portraits showcase",
     clientName: "Pet Lover #1",
     price: 49.99,
@@ -30,7 +31,7 @@ const showcaseDetailsData = [
   },
   {
     serviceName: 'Personalized Mugs',
-    imageSrc: "/images/product_placeholder.webp",
+    imageSrc: assets.images.placeholders.product,
     imageAlt: "Personalized Mugs showcase",
     clientName: "Coffee Addict",
     price: 19.99,
@@ -38,7 +39,7 @@ const showcaseDetailsData = [
   },
   {
     serviceName: 'Custom T-Shirts',
-    imageSrc: "/images/product_placeholder.webp",
+    imageSrc: assets.images.placeholders.product,
     imageAlt: "Custom T-Shirts showcase",
     clientName: "Dog Dad",
     price: 29.99,
@@ -46,7 +47,7 @@ const showcaseDetailsData = [
   },
   {
     serviceName: 'Embroidered or Printed Sweatshirts/Hoodies',
-    imageSrc: "/images/product_placeholder.webp",
+    imageSrc: assets.images.placeholders.product,
     imageAlt: "Sweatshirts/Hoodies showcase",
     clientName: "Cat Mom",
     price: 59.99,
@@ -54,7 +55,7 @@ const showcaseDetailsData = [
   },
   {
     serviceName: 'Custom Blankets',
-    imageSrc: "/images/product_placeholder.webp",
+    imageSrc: assets.images.placeholders.product,
     imageAlt: "Custom Blankets showcase",
     clientName: "Gift Giver",
     price: 39.99,
@@ -62,7 +63,7 @@ const showcaseDetailsData = [
   },
   {
     serviceName: 'Personalized Pillows/Cushions',
-    imageSrc: "/images/product_placeholder.webp",
+    imageSrc: assets.images.placeholders.product,
     imageAlt: "Personalized Pillows/Cushions showcase",
     clientName: "Home Decor Fan",
     price: 24.99,
@@ -70,7 +71,7 @@ const showcaseDetailsData = [
   },
   {
     serviceName: 'Custom Posters',
-    imageSrc: "/images/product_placeholder.webp",
+    imageSrc: assets.images.placeholders.product,
     imageAlt: "Custom Posters showcase",
     clientName: "Art Collector",
     price: 14.99,
@@ -78,7 +79,7 @@ const showcaseDetailsData = [
   },
   {
     serviceName: 'Pet Bandanas',
-    imageSrc: "/images/product_placeholder.webp",
+    imageSrc: assets.images.placeholders.product,
     imageAlt: "Pet Bandanas showcase",
     clientName: "Fashion Pet",
     price: 12.99,
@@ -86,7 +87,7 @@ const showcaseDetailsData = [
   },
   {
     serviceName: 'Custom Phone Cases',
-    imageSrc: "/images/product_placeholder.webp",
+    imageSrc: assets.images.placeholders.product,
     imageAlt: "Custom Phone Cases showcase",
     clientName: "Pet Parent On-the-Go",
     price: 21.99,
@@ -94,7 +95,7 @@ const showcaseDetailsData = [
   },
   {
     serviceName: 'Pet Tags or Collars',
-    imageSrc: "/images/product_placeholder.webp",
+    imageSrc: assets.images.placeholders.product,
     imageAlt: "Pet Tags or Collars showcase",
     clientName: "Safety First",
     price: 9.99,

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import assets from "@/data/assets.json";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import {
@@ -54,7 +55,7 @@ export function Navbar() {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <Image
-                src="/images/logo.webp"
+                src={assets.images.logo}
                 alt="GetPawtrait"
                 width={128}
                 height={128}

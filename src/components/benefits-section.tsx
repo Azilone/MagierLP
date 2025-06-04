@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import assets from "@/data/assets.json";
 
 export function BenefitsSection() {
   return (
@@ -76,7 +77,7 @@ export function BenefitsSection() {
             <div className="flex flex-col p-3.5 bg-white border-2 border-gray-200 shadow-xl shadow-gray-200/40 h-auto min-h-[500px] md:min-h-[513px] rounded-[42px]">
               <div className="flex-shrink-0  w-full overflow-hidden rounded-[32px]">
                 <Image
-                  src="/images/benefits/1.webp"
+                  src={assets.images.benefits["1"]}
                   alt="Artwork Ready Fast"
                   className="object-contain w-full h-full rounded-[32px]"
                   width={350}
@@ -100,7 +101,7 @@ export function BenefitsSection() {
              <div className="flex flex-col p-3.5 bg-white border-2 border-gray-200 shadow-xl shadow-gray-200/40 h-auto min-h-[500px] md:min-h-[513px] rounded-[42px]">
               <div className="flex-shrink-0 w-full overflow-hidden rounded-[32px]">
                 <Image
-                  src="/images/benefits/2.webp"
+                  src={assets.images.benefits["2"]}
                   alt="Unlimited Free Revisions"
                   className="object-contain w-full h-full rounded-[32px]"
                   width={350}
@@ -122,7 +123,7 @@ export function BenefitsSection() {
             <div className="flex flex-col p-3.5 bg-white border-2 border-gray-200 shadow-xl lg:shadow-gray-300/50 shadow-gray-200/40 h-auto min-h-[500px] md:min-h-[513px] rounded-[42px] lg:rotate-[6deg] lg:relative lg:z-10 lg:top-[20px]  transform transition-transform duration-300 hover:rotate-4 hover:z-20 ">
               <div className="flex-shrink-0 w-full overflow-hidden rounded-[32px]">
                 <Image
-                  src="/images/benefits/3.webp"
+                  src={assets.images.benefits["3"]}
                   alt="100% Satisfaction Guarantee"
                   className="object-contain w-full h-full rounded-[32px]"
                   width={350}
@@ -144,7 +145,7 @@ export function BenefitsSection() {
              <div className="flex flex-col p-3.5 bg-white border-2 border-gray-200 shadow-xl lg:shadow-gray-300/50 shadow-gray-200/40 h-auto min-h-[500px] md:min-h-[513px] rounded-[42px] lg:rotate-[-6deg] lg:relative lg:z-10 lg:top-[-20px]  transform transition-transform duration-300 hover:rotate-[-4deg] hover:z-20">
               <div className="flex-shrink-0 w-full overflow-hidden rounded-[32px]">
                 <Image
-                  src="/images/benefits/4.webp"
+                  src={assets.images.benefits["4"]}
                   alt="Worldwide Delivery"
                   className="object-contain w-full h-full rounded-[32px]"
                   width={350}
@@ -166,7 +167,7 @@ export function BenefitsSection() {
             <div className="flex flex-col p-3.5 bg-white border-2 border-gray-200 shadow-xl shadow-gray-200/40 h-auto min-h-[500px] md:min-h-[513px] rounded-[42px]">
               <div className="flex-shrink-0 w-full overflow-hidden rounded-[32px]">
                 <Image
-                  src="/images/benefits/5.webp"
+                  src={assets.images.benefits["5"]}
                   alt="Human Support Team"
                   className="object-contain w-full h-full rounded-[32px]"
                   width={350}
@@ -188,7 +189,7 @@ export function BenefitsSection() {
             <div className="flex flex-col p-3.5 bg-white border-2 border-gray-200 shadow-xl shadow-gray-200/40 h-auto min-h-[500px] md:min-h-[513px] rounded-[42px]">
               <div className="flex-shrink-0 w-full overflow-hidden rounded-[32px]">
                 <Image
-                  src="/images/benefits/6.webp"
+                  src={assets.images.benefits["6"]}
                   alt="Quality First Approach"
                   className="object-contain w-full h-full rounded-[32px]"
                   width={350}

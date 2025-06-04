@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import assets from "@/data/assets.json";
 import { motion, AnimatePresence } from "framer-motion";
 import dynamic from 'next/dynamic';
 
@@ -50,7 +51,7 @@ const problemsData = [
             </defs>
         </svg>
         ),
-        lottieSrc: "/lotties/1.json",
+        lottieSrc: assets.lotties["1"],
     },
     {
         id: 2,
@@ -85,7 +86,7 @@ const problemsData = [
              <path d="M12.3787 51.1594C11.7962 51.474 11.2446 51.9521 10.8807 52.5404C10.3553 53.3899 10.2009 54.4916 11.0056 55.7798C11.2341 56.1455 11.1228 56.6271 10.7571 56.8556C10.3915 57.084 9.9098 56.9727 9.68136 56.6071C9.45514 56.2449 9.28122 55.8856 9.15432 55.5317C8.68061 57.1143 8.31357 58.4354 8.71679 59.9403C8.98638 60.9464 9.6449 61.8041 10.5475 62.3248C11.4438 62.8418 12.53 62.9845 13.5298 62.7166C14.5366 62.4469 15.3952 61.7884 15.9165 60.8862C16.4379 59.984 16.5793 58.9119 16.3097 57.9058C15.8922 56.3475 14.8579 55.3729 13.5979 54.1853C12.6618 53.3031 11.7097 51.9514 12.3787 51.1594Z" fill="#D2D2D9"></path>
          </svg>
         ),
-        lottieSrc: "/lotties/2.json",
+        lottieSrc: assets.lotties["2"],
     },
     {
         id: 3,
@@ -118,7 +119,7 @@ const problemsData = [
              <path d="M16.039 71.3523C14.5128 70.4711 13.6066 69.1834 14.015 68.4761C14.4233 67.7689 15.9916 67.9098 17.5178 68.791C19.044 69.6722 19.9502 70.9598 19.5419 71.6671C19.1335 72.3744 17.5652 72.2334 16.039 71.3523Z" fill="#8A8A93" stroke="#8A8A93"></path>
          </svg>
         ),
-        lottieSrc: "/lotties/4.json",
+        lottieSrc: assets.lotties["4"],
     },
 ];
 
