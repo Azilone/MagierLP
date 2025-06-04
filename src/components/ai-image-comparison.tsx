@@ -109,26 +109,26 @@ function ComparisonCard({
         "flex flex-col rounded-2xl sm:rounded-[32px] overflow-hidden w-full",
         isHighlighted
           ? "bg-[#777CFD] p-2 sm:p-[10px]"
-          : "bg-white border border-[#E5E5EA]"
+          : "bg-white border border-border-primary"
       )}
     >
       <div
         className={clsx(
           "flex flex-col h-full rounded-xl sm:rounded-[32px] overflow-hidden",
-          isHighlighted ? "bg-[#5F1CFC]" : ""
+          isHighlighted ? "bg-accent" : ""
         )}
       >
         {/* Header */}
         <div
           className={clsx(
             "px-4 sm:px-6 py-4 sm:py-8 text-center",
-            isHighlighted ? "text-white" : "text-[#140F23]"
+            isHighlighted ? "text-white" : "text-text-primary"
           )}
         >
           <h3 className="text-xl sm:text-2xl font-semibold mb-2">{data.title}</h3>
           <p className={clsx(
             "text-sm sm:text-base",
-            isHighlighted ? "text-white/90" : "text-[#828088]"
+            isHighlighted ? "text-white/90" : "text-text-muted"
           )}>
             {data.description}
           </p>
@@ -172,7 +172,7 @@ function ComparisonCard({
                 key={index}
                 className={clsx(
                   "flex items-center gap-2 sm:gap-3",
-                  isHighlighted ? "text-white" : "text-[#140F23]"
+                  isHighlighted ? "text-white" : "text-text-primary"
                 )}
               >
                 {isHighlighted ? (
@@ -197,11 +197,11 @@ export function AIImageComparison() {
         {/* Header */}
         <div className="flex flex-col items-center max-w-[650px] text-center mb-8 sm:mb-12 md:mb-16">
           <div className="flex flex-col items-center mb-4">
-            <div className="text-[#5F1CFC] font-sans text-xs sm:text-sm md:text-base leading-4 tracking-[-0.32px] py-[7.5px] px-[17px] rounded-[42px] border border-[#E5E5EA]">
+            <div className="text-accent font-sans text-xs sm:text-sm md:text-base leading-4 tracking-[-0.32px] py-[7.5px] px-[17px] rounded-[42px] border border-border-primary">
               Quality Comparison
             </div>
           </div>
-          <h2 className="text-[#140F23] font-sans text-3xl sm:text-4xl md:text-5xl lg:text-[66px] font-semibold leading-tight sm:leading-tight lg:leading-[72.6px] tracking-tight lg:tracking-[-2.64px]">
+          <h2 className="text-text-primary font-sans text-3xl sm:text-4xl md:text-5xl lg:text-size-66 font-semibold leading-tight sm:leading-tight lg:leading-[72.6px] tracking-tight lg:tracking-[-2.64px]">
             See the difference in quality
           </h2>
         </div>

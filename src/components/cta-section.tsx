@@ -6,7 +6,7 @@ import Image from "next/image"; // Import next/image
 export function CTASection() {
   return (
     // Main container: Using Magier's style - large padding, specific bg, rounded
-    <div className="relative mx-auto my-8 w-full rounded-[32px] bg-[#5F1CFC] px-5 py-12 sm:p-12 md:p-16 flex flex-col items-center overflow-hidden">
+    <div className="relative mx-auto my-8 w-full rounded-[32px] bg-accent px-5 py-12 sm:p-12 md:p-16 flex flex-col items-center overflow-hidden">
       {/* Decorative SVG - Top Right */}
       <Image
         src="/svg/cta1.svg"
@@ -50,7 +50,7 @@ export function CTASection() {
         <div className="mt-6">
           <Link
             href="/demo"
-            className="inline-block rounded-full bg-white px-6 py-3 text-base font-bold text-[#5F1CFC] tracking-tight transition-transform duration-200 hover:scale-105 sm:px-8 sm:py-4"
+            className="inline-block rounded-full bg-white px-6 py-3 text-base font-bold text-accent tracking-tight transition-transform duration-200 hover:scale-105 sm:px-8 sm:py-4"
           >
             Book a demo
           </Link>

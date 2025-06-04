@@ -113,11 +113,11 @@ export function ResultsSection() {
           <div className="flex flex-col items-center -mt-12 md:-mt-16"> {/* Slightly adjusted negative margin */}
             {/* Text Content - Responsive text sizes already handled */}
             <div className="flex flex-col items-center gap-6 md:gap-8 text-center w-full">
-              <h2 className="text-[40px] font-semibold leading-[1.15] tracking-tight text-[#140F23] sm:text-[48px] md:text-[54px] lg:text-[64px] xl:text-[72px] w-full max-w-[1200px]">
+              <h2 className="text-size-40 font-semibold leading-[1.15] tracking-tight text-text-primary sm:text-size-48 md:text-size-54 lg:text-size-64 xl:text-size-72 w-full max-w-[1200px]">
                 Turn your pet's photo into custom art
                
               </h2>
-              <p className="text-base text-[#828088] leading-relaxed max-w-xl lg:max-w-3xl mx-auto lg:text-lg w-full"> {/* Adjusted max-width slightly */}
+              <p className="text-base text-text-muted leading-relaxed max-w-xl lg:max-w-3xl mx-auto lg:text-lg w-full"> {/* Adjusted max-width slightly */}
               GetPawtrait.com: premium pet portraits, previewed in real time, printed and delivered to your door in days — starting at €19.
               </p>
             </div>
@@ -144,7 +144,7 @@ interface ServiceCardProps {
 function ServiceCard({ title, description, imageSrc }: ServiceCardProps) {
   return (
     // Responsive width classes
-    <div className="w-[280px] sm:w-[300px] md:w-[320px] lg:w-[340px] bg-white border border-[#EBEBEE] rounded-[32px] p-4 shadow-lg">
+    <div className="w-[280px] sm:w-[300px] md:w-[320px] lg:w-[340px] bg-white border border-border-light rounded-[32px] p-4 shadow-lg">
       {/* Responsive height classes */}
       <div className="relative w-full h-[170px] sm:h-[180px] md:h-[200px] lg:h-[220px] mb-4">
         <Image
@@ -157,8 +157,8 @@ function ServiceCard({ title, description, imageSrc }: ServiceCardProps) {
         />
       </div>
       <div className="space-y-2">
-        <h3 className="text-base md:text-lg font-medium text-[#140F23]">{title}</h3>
-        <p className="text-sm text-[#828088] leading-relaxed">{description}</p>
+        <h3 className="text-base md:text-lg font-medium text-text-primary">{title}</h3>
+        <p className="text-sm text-text-muted leading-relaxed">{description}</p>
       </div>
     </div>
   );

@@ -13,7 +13,7 @@ function SparkIcon() {
       viewBox="0 0 24 25"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-5 h-5 md:w-[18px] md:h-[18px] flex-shrink-0 text-[#5F1CFC]"
+      className="w-5 h-5 md:w-[18px] md:h-[18px] flex-shrink-0 text-accent"
     >
       <path
         d="M12.7674 17.6381C12.492 18.3342 11.508 18.3342 11.2325 17.6381L10.0322 14.5929C9.94855 14.3814 9.78128 14.2116 9.56728 14.128L6.52209 12.9276C5.82597 12.6522 5.82597 11.6682 6.52209 11.3928L9.56728 10.1924C9.77882 10.1087 9.94855 9.94144 10.0322 9.72744L11.2325 6.68225C11.508 5.98613 12.492 5.98613 12.7674 6.68225L13.9678 9.72744C14.0514 9.93898 14.2187 10.1087 14.4327 10.1924L17.4779 11.3928C18.174 11.6682 18.174 12.6522 17.4779 12.9276L14.4327 14.128C14.2212 14.2116 14.0514 14.3789 13.9678 14.5929L12.7674 17.6381Z"
@@ -147,9 +147,9 @@ function DataRowItem({
     const textStyle = clsx(
         "text-lg leading-[27px] tracking-[-0.36px]",
         isHighlighted && !isHeader && "text-white",
-        !isHighlighted && !isHeader && !isCategory && "text-[#828088]",
-        isCategory && !isHeader && "text-[#140F23] font-medium",
-        isHeader && !isHighlighted && "text-[#140F23] text-xl md:text-2xl font-semibold tracking-[-0.96px]",
+        !isHighlighted && !isHeader && !isCategory && "text-text-muted",
+        isCategory && !isHeader && "text-text-primary font-medium",
+        isHeader && !isHighlighted && "text-text-primary text-xl md:text-2xl font-semibold tracking-[-0.96px]",
         isHeader && isHighlighted && "text-white"
     );
 
@@ -187,8 +187,8 @@ function ComparisonChip({ label, id, isActive, onClick }: ComparisonChipProps) {
             className={clsx(
                 "py-3 px-5 md:px-6 rounded-xl text-base md:text-lg font-medium transition-colors duration-200 ease-in-out whitespace-nowrap",
                 isActive
-                    ? "bg-[#5F1CFC] text-white shadow-md"
-                    : "bg-white text-gray-500 border border-gray-200 hover:bg-gray-50 hover:text-[#5F1CFC]"
+                    ? "bg-accent text-white shadow-md"
+                    : "bg-white text-gray-500 border border-gray-200 hover:bg-gray-50 hover:text-accent"
             )}
         >
             {displayLabel}
@@ -215,7 +215,7 @@ export function ComparisonSection() {
   };
 
   const columnBaseClass = "flex-1 max-w-[260px] rounded-[32px] flex flex-col overflow-hidden";
-  const columnStandardClass = `${columnBaseClass} bg-white border border-[#E5E5EA]`;
+  const columnStandardClass = `${columnBaseClass} bg-white border border-border-primary`;
 
   return (
     <div className="flex flex-col items-center w-full py-20 md:py-28 relative overflow-hidden px-4 sm:px-6 ">
@@ -227,11 +227,11 @@ export function ComparisonSection() {
          <div className="flex flex-col items-center max-w-[650px] text-center mb-12 md:mb-16">
               {/* ... (header code remains the same) ... */}
               <div className="flex flex-col items-center mb-4">
-                 <div className="text-[#5F1CFC] font-sans text-sm md:text-base leading-4 tracking-[-0.32px] py-[7.5px] px-[17px] rounded-[42px] border border-[#E5E5EA] ">
+                 <div className="text-accent font-sans text-sm md:text-base leading-4 tracking-[-0.32px] py-[7.5px] px-[17px] rounded-[42px] border border-border-primary ">
                      Comparison
                  </div>
              </div>
-             <div className="text-[#140F23] font-sans text-[40px] leading-[44px] sm:text-[50px] sm:leading-[55px] lg:text-[66px] font-semibold lg:leading-[72.6px] tracking-tight lg:tracking-[-2.64px]">
+             <div className="text-text-primary font-sans text-size-40 leading-[44px] sm:text-size-50 sm:leading-[55px] lg:text-size-66 font-semibold lg:leading-[72.6px] tracking-tight lg:tracking-[-2.64px]">
                  <div className="mb-3 md:mb-5">Why choose</div>
                  <div className="flex items-center justify-center gap-2 md:gap-[15px]">
                      <span>Memorable.ai</span>
@@ -254,7 +254,7 @@ export function ComparisonSection() {
         <div className="hidden lg:flex flex-row justify-center gap-4 md:gap-6 w-full items-stretch">
             {/* Desktop: Left Column - Categories */}
             <div className={columnStandardClass}>
-                 <div className="min-h-[70px] border-b border-[#E5E5EA]"></div>
+                 <div className="min-h-[70px] border-b border-border-primary"></div>
                  <div className="flex flex-col">
                     {categories.map((cat) => (
                         <DataRowItem key={cat} isCategory>
@@ -266,7 +266,7 @@ export function ComparisonSection() {
 
             {/* Desktop: Memorable.ai Column - Highlighted */}
             <div className={`${columnBaseClass} bg-[#777CFD] p-[10px] rounded-[42px]`}>
-                 <div className="bg-[#5F1CFC] rounded-[32px] flex flex-col flex-1 overflow-hidden">
+                 <div className="bg-accent rounded-[32px] flex flex-col flex-1 overflow-hidden">
                     <DataRowItem isHeader isHighlighted>
                         {desktopColumnTitles.magier}
                     </DataRowItem>
@@ -333,7 +333,7 @@ export function ComparisonSection() {
                  >
                     <div className={clsx(
                         "flex flex-col flex-1",
-                        isMagierActiveMobile ? "bg-[#5F1CFC] rounded-[32px]" : "" // Magier inner
+                        isMagierActiveMobile ? "bg-accent rounded-[32px]" : "" // Magier inner
                     )}>
                          {/* Data Items */}
                          <div className={clsx(

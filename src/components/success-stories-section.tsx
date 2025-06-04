@@ -5,18 +5,18 @@ import Image from "next/image";
 
 export function SuccessStoriesSection() {
   return (
-    <div className="w-full rounded-[42px] border border-[#E5E5EA] bg-white overflow-hidden">
+    <div className="w-full rounded-[42px] border border-border-primary bg-white overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-6 py-28 md:px-12 lg:px-20">
         {/* Header */}
         <div className="flex flex-col items-center mb-20">
           <div className="inline-flex items-center justify-center mb-4">
-            <span className="text-[#5f1cfc] text-base font-medium tracking-[-0.32px] py-2 px-[17px] rounded-[42px] border border-[#E5E5EA]">
+            <span className="text-accent text-base font-medium tracking-[-0.32px] py-2 px-[17px] rounded-[42px] border border-border-primary">
               Testimonials
             </span>
           </div>
 
           <div className="flex items-center justify-center">
-            <h2 className="text-[#140f23] text-[66px] font-semibold leading-[1.1] tracking-[-2.64px] md:text-[40px]">
+            <h2 className="text-text-primary text-size-66 font-semibold leading-[1.1] tracking-[-2.64px] md:text-size-40">
               Success
             </h2>
             <div className="mx-2">
@@ -35,7 +35,7 @@ export function SuccessStoriesSection() {
                 />
               </svg>
             </div>
-            <h2 className="text-[#140f23] text-[66px] font-semibold leading-[1.1] tracking-[-2.64px] md:text-[40px]">
+            <h2 className="text-text-primary text-size-66 font-semibold leading-[1.1] tracking-[-2.64px] md:text-size-40">
               stories
             </h2>
           </div>
@@ -46,10 +46,10 @@ export function SuccessStoriesSection() {
           {/* Left Column */}
           <div className="space-y-4">
             {/* Purple Stats Card */}
-            <div className="bg-[#5F1CFC] rounded-[32px] p-10 text-white relative">
+            <div className="bg-accent rounded-[32px] p-10 text-white relative">
               <div className="mb-12 relative">
                 <div className="w-[159px] h-[102px] bg-white/10 rounded-full border border-white/20"></div>
-                <span className="absolute right-5 bottom-4 text-[61px] font-semibold leading-none tracking-[-2.6px] md:text-[40px]">
+                <span className="absolute right-5 bottom-4 text-size-61 font-semibold leading-none tracking-[-2.6px] md:text-size-40">
                   80+
                 </span>
               </div>
@@ -88,11 +88,11 @@ export function SuccessStoriesSection() {
             {/* Decorative Element */}
             <div className="flex justify-center mt-16 mb-8">
               <div className="w-[252px] h-[252px] relative">
-                <div className="w-full h-full rounded-full border-2 border-[#E5E5EA] flex items-center justify-center">
-                  <div className="w-3/4 h-3/4 rounded-full border-2 border-[#E5E5EA] flex items-center justify-center">
-                    <div className="w-2/3 h-2/3 rounded-full border-2 border-[#E5E5EA] flex items-center justify-center">
-                      <div className="w-1/2 h-1/2 rounded-full border-2 border-[#E5E5EA] flex items-center justify-center">
-                        <div className="w-2 h-2 rounded-full bg-[#5F1CFC]"></div>
+                <div className="w-full h-full rounded-full border-2 border-border-primary flex items-center justify-center">
+                  <div className="w-3/4 h-3/4 rounded-full border-2 border-border-primary flex items-center justify-center">
+                    <div className="w-2/3 h-2/3 rounded-full border-2 border-border-primary flex items-center justify-center">
+                      <div className="w-1/2 h-1/2 rounded-full border-2 border-border-primary flex items-center justify-center">
+                        <div className="w-2 h-2 rounded-full bg-accent"></div>
                       </div>
                     </div>
                   </div>
@@ -104,14 +104,14 @@ export function SuccessStoriesSection() {
           {/* Right Column */}
           <div className="space-y-4">
             {/* Testimonial Card */}
-            <div className="rounded-[32px] border border-[#EBEBEE] bg-white p-10">
+            <div className="rounded-[32px] border border-border-light bg-white p-10">
               <div className="mb-6">
-                <div className="bg-[#140F23] text-white px-4 py-2 rounded-full inline-flex">
+                <div className="bg-text-primary text-white px-4 py-2 rounded-full inline-flex">
                   MAGIER DIGITAL
                 </div>
               </div>
 
-              <div className="text-[#828088] text-base tracking-[-0.32px] leading-5 space-y-5">
+              <div className="text-text-muted text-base tracking-[-0.32px] leading-5 space-y-5">
                 <p>
                   &quot;At Softwaregini we have been very satisfied with the
                   work by the
@@ -140,11 +140,11 @@ export function SuccessStoriesSection() {
                 </p>
               </div>
 
-              <div className="flex items-center gap-4 pt-6 mt-6 border-t border-[#E5E5EA]">
+              <div className="flex items-center gap-4 pt-6 mt-6 border-t border-border-primary">
                 <div className="w-12 h-12 rounded-full bg-gray-300 overflow-hidden"></div>
                 <div>
-                  <div className="text-[#140f23] text-base">Johannes Bock</div>
-                  <div className="text-[#828088] text-base mt-2">
+                  <div className="text-text-primary text-base">Johannes Bock</div>
+                  <div className="text-text-muted text-base mt-2">
                     Founder @ Softwaregini
                   </div>
                 </div>
@@ -154,10 +154,10 @@ export function SuccessStoriesSection() {
             {/* Bottom Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* Purple Stats Card */}
-              <div className="bg-[#5F1CFC] rounded-[32px] p-10 text-white">
+              <div className="bg-accent rounded-[32px] p-10 text-white">
                 <div className="mb-12 relative">
                   <div className="w-[159px] h-[102px] bg-white/10 rounded-full border border-white/20"></div>
-                  <span className="absolute right-5 bottom-4 text-[64px] font-semibold leading-none tracking-[-2.6px] md:text-[40px]">
+                  <span className="absolute right-5 bottom-4 text-size-64 font-semibold leading-none tracking-[-2.6px] md:text-size-40">
                     20%
                   </span>
                 </div>
@@ -198,7 +198,7 @@ export function SuccessStoriesSection() {
 
         {/* CTA Button */}
         <div className="mt-16 flex justify-center">
-          <button className="min-w-[200px] rounded-[100px] border border-[#140F23] bg-[#140F23] text-white py-[21px] px-[65px] text-base font-medium tracking-[-0.32px] hover:bg-[#2a2541] transition-colors">
+          <button className="min-w-[200px] rounded-[100px] border border-text-primary bg-text-primary text-white py-[21px] px-[65px] text-base font-medium tracking-[-0.32px] hover:bg-[#2a2541] transition-colors">
             See more
           </button>
         </div>

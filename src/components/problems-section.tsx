@@ -179,12 +179,12 @@ export function ProblemsSection() {
           >
              <div className="flex flex-col items-center w-full max-w-2xl">
                <motion.div className="pb-2 sm:pb-3" variants={itemVariants}>
-                 <span className="text-[#5f1cfc] text-center text-sm font-medium leading-tight py-1.5 px-3 rounded-full border border-[#e5e5ea]">
+                 <span className="text-accent text-center text-sm font-medium leading-tight py-1.5 px-3 rounded-full border border-border-primary">
                    Problems
                  </span>
                </motion.div>
                <motion.h2
-                 className="text-[#140f23] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-semibold leading-tight tracking-tight lg:tracking-[-2px] w-full m-0"
+                 className="text-text-primary text-3xl sm:text-4xl md:text-5xl lg:text-size-56 font-semibold leading-tight tracking-tight lg:tracking-[-2px] w-full m-0"
                  variants={itemVariants}
                >
                  Is your company struggling with design?
@@ -223,10 +223,10 @@ export function ProblemsSection() {
                    </div>
                    {/* Text Content */}
                    <div className="flex flex-col items-center sm:items-start gap-1 text-center sm:text-left w-full">
-                     <h3 className="text-[#140f23] text-base sm:text-lg md:text-xl font-medium leading-snug tracking-tight w-full m-0">
+                     <h3 className="text-text-primary text-base sm:text-lg md:text-xl font-medium leading-snug tracking-tight w-full m-0">
                        {problem.title}
                      </h3>
-                     <p className="text-[#828088] text-xs sm:text-sm md:text-base font-normal leading-relaxed tracking-tight w-full m-0">
+                     <p className="text-text-muted text-xs sm:text-sm md:text-base font-normal leading-relaxed tracking-tight w-full m-0">
                        {problem.description}
                      </p>
                    </div>
@@ -237,7 +237,7 @@ export function ProblemsSection() {
             {/* Right Column: Illustration */}
             <div className="flex w-full lg:w-[calc(100%-450px-2rem)] xl:w-[580px] flex-col justify-center items-center h-[300px] sm:h-[380px] md:h-[450px] lg:sticky lg:top-24">
               {/* Container with border and shadow */}
-              <div className="flex p-2 justify-center items-center w-full h-full rounded-[24px] sm:rounded-[30px] border border-[#ebebee] bg-white shadow-[0px_0px_0px_1px_#e5e5ea_inset]">
+              <div className="flex p-2 justify-center items-center w-full h-full rounded-[24px] sm:rounded-[30px] border border-border-light bg-white shadow-[0px_0px_0px_1px_#e5e5ea_inset]">
                 <AnimatePresence mode="wait">
                    <motion.div
                       key={activeProblem ? activeProblem.id : 'empty'}

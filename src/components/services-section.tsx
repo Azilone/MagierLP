@@ -115,7 +115,7 @@ export function ServicesSection() {
         {/* Section Header */}
         <div className="flex flex-col gap-2 md:gap-3 lg:gap-4"> {/* Smaller gap */}
           <div className="flex">
-            <span className="w-fit rounded-[32px] border border-[#E5E5EA] px-3 py-1 text-xs font-medium text-[#5F1CFC] md:px-4 md:py-1.5 md:text-sm md:leading-4 tracking-[-0.32px]"> {/* Smaller padding/text */}
+            <span className="w-fit rounded-[32px] border border-border-primary px-3 py-1 text-xs font-medium text-accent md:px-4 md:py-1.5 md:text-sm md:leading-4 tracking-[-0.32px]"> {/* Smaller padding/text */}
               Collections
             </span>
           </div>
@@ -123,7 +123,7 @@ export function ServicesSection() {
           <div className="flex flex-col items-start justify-between gap-2 md:gap-3 lg:flex-row lg:items-start lg:gap-4"> {/* Smaller gap */}
 
             {/* Title Block */}
-            <h2 className="text-xl font-bold leading-snug tracking-tighter text-[#140F23] sm:text-2xl sm:leading-snug md:text-[26px] md:leading-tight lg:text-[32px] lg:leading-tight">
+            <h2 className="text-xl font-bold leading-snug tracking-tighter text-text-primary sm:text-2xl sm:leading-snug md:text-size-26 md:leading-tight lg:text-size-32 lg:leading-tight">
               Explore Our Collections
             </h2>
 
@@ -143,8 +143,8 @@ export function ServicesSection() {
                     onClick={() => setSelectedService(serviceName)}
                     className={`cursor-pointer rounded-[32px] px-2 py-1 text-xs font-medium leading-4 tracking-[-0.36px] transition-colors duration-200 md:px-3 md:py-1.5 md:text-sm ${
                       isSelected
-                        ? 'bg-[#5F1CFC] text-white'
-                        : 'border border-[#E5E5EA] bg-white text-[#828088] hover:border-gray-400 hover:text-gray-900'
+                        ? 'bg-accent text-white'
+                        : 'border border-border-primary bg-white text-text-muted hover:border-gray-400 hover:text-gray-900'
                     }`}
                   >
                     {serviceName}
@@ -157,7 +157,7 @@ export function ServicesSection() {
           {/* Showcase Area */}
           {currentShowcase ? (
             <div className="flex w-full items-start justify-center">
-              <div className="flex w-full flex-col rounded-[20px] border border-[#E5E5EA] bg-white p-1 sm:rounded-[28px] sm:p-2">
+              <div className="flex w-full flex-col rounded-[20px] border border-border-primary bg-white p-1 sm:rounded-[28px] sm:p-2">
                 {/* Image container - RESPONSIVE HEIGHT */}
                 <div className="relative w-full overflow-hidden rounded-[16px] bg-gray-200 sm:rounded-[24px] aspect-[16/9]">
                   <Image
@@ -173,11 +173,11 @@ export function ServicesSection() {
                 <div className="flex flex-col items-start justify-between gap-2 px-2 pt-2 pb-1 sm:px-3 lg:flex-row lg:items-center lg:px-4 lg:pt-3 lg:pb-2">
                   {/* Left side - Client name and price */}
                   <div className="flex flex-col items-start gap-1">
-                    <span className="text-xs font-semibold text-[#140F23] md:text-sm">
+                    <span className="text-xs font-semibold text-text-primary md:text-sm">
                       {currentShowcase.clientName}
                     </span>
                     {/* Price tag - visually emphasized */}
-                    <span className="mt-1 rounded-[16px] bg-[#F7F1FF] px-3 py-1 text-base font-bold text-[#5F1CFC] shadow-sm border border-[#E5D6FF] md:text-lg lg:text-xl">
+                    <span className="mt-1 rounded-[16px] bg-[#F7F1FF] px-3 py-1 text-base font-bold text-accent shadow-sm border border-[#E5D6FF] md:text-lg lg:text-xl">
                       {currentShowcase.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}
                     </span>
                   </div>
@@ -188,8 +188,8 @@ export function ServicesSection() {
                         key={index}
                         className={`flex items-center gap-1 rounded-[32px] border px-2 py-1 text-xs font-medium leading-4 tracking-[-0.32px] sm:px-2.5 sm:py-1.5 sm:text-sm md:text-sm ${
                           tag.isHighlight
-                          ? 'border-[#5F1CFC] text-[#5F1CFC]'
-                          : 'border-[#E5E5EA] bg-white text-[#140F23]'
+                          ? 'border-accent text-accent'
+                          : 'border-border-primary bg-white text-text-primary'
                         }`}
                       >
                         <span>{tag.text}</span>
