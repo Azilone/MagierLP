@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import assets from "@/data/assets.json";
 
 export function Footer() {
   return (
@@ -10,7 +11,7 @@ export function Footer() {
           {/* Branding & Social */}
           <div className="flex flex-col items-center md:items-start gap-6">
             <Link href="/" className="flex flex-col items-center md:items-start gap-2 group">
-              <Image src="/images/logo.webp" alt="GetPawtrait" width={56} height={56} className="w-14 h-14 rounded-lg transition-transform duration-300 group-hover:scale-105" />
+              <Image src={assets.images.logo} alt="GetPawtrait" width={56} height={56} className="w-14 h-14 rounded-lg transition-transform duration-300 group-hover:scale-105" />
               <span className="font-black text-lg text-text-primary group-hover:text-accent transition-colors">GetPawtrait</span>
             </Link>
             <span className="text-sm text-gray-500 text-center md:text-left">French Support Team 🇫🇷<br />We're here to help!</span>
@@ -53,23 +54,23 @@ export function Footer() {
             <div>
               <span className="font-semibold text-base text-gray-800 uppercase tracking-wide">Tracked Shipping Available</span>
               <div className="flex items-center justify-center md:justify-end gap-3 mt-3">
-                <Image src="/images/brand/Logo UPS.svg" alt="UPS" width={32} height={16} />
-                <Image src="/images/brand/FedEx Express.svg" alt="FedEx" width={32} height={16} />
-                <Image src="/images/brand/Logo USPS.svg" alt="USPS" width={32} height={16} />
+                <Image src={assets.images.brand.ups} alt="UPS" width={32} height={16} />
+                <Image src={assets.images.brand.fedex} alt="FedEx" width={32} height={16} />
+                <Image src={assets.images.brand.usps} alt="USPS" width={32} height={16} />
               </div>
             </div>
             <div>
               <span className="font-semibold text-base text-gray-800 uppercase tracking-wide">Secure Payment</span>
               <div className="flex items-center justify-center md:justify-end gap-3 mt-3">
-                <Image src="/images/brand/Logo Visa Inc.svg" alt="VISA from Visa Inc." width={28} height={16} />
-                <Image src="/images/brand/Logo Mastercard.svg" alt="MasterCard from Mastercard" width={28} height={16} />
-                <Image src="/images/brand/American Express Icon.svg" alt="American Express from American Express" width={28} height={16} />
-                <Image src="/images/brand/SVG Paypal.svg" alt="PayPal from PayPal" width={28} height={16} />
-                <Image src="/images/brand/Logo Apple Pay.svg" alt="Apple Pay from Apple" width={28} height={16} />
+                <Image src={assets.images.brand.visa} alt="VISA from Visa Inc." width={28} height={16} />
+                <Image src={assets.images.brand.mastercard} alt="MasterCard from Mastercard" width={28} height={16} />
+                <Image src={assets.images.brand.americanExpress} alt="American Express from American Express" width={28} height={16} />
+                <Image src={assets.images.brand.paypal} alt="PayPal from PayPal" width={28} height={16} />
+                <Image src={assets.images.brand.applePay} alt="Apple Pay from Apple" width={28} height={16} />
               </div>
             </div>
             <div className="mt-2 flex flex-col items-center md:items-end gap-2">
-              <Image src="/images/brand/usa.svg" alt="USA Flag" width={36} height={24} />
+              <Image src={assets.images.brand.usaFlag} alt="USA Flag" width={36} height={24} />
               <span className="font-semibold text-xs text-gray-700">Printed in USA</span>
             </div>
           </div>

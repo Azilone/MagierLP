@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import clsx from 'clsx';
+import assets from "@/data/assets.json";
 import { ImageComparison, ImageComparisonImage, ImageComparisonSlider } from '@/components/ui/image-comparison';
 
 
@@ -17,8 +18,8 @@ const comparisonData: Record<'memorable' | 'others', ImageComparisonData> = {
   memorable: {
     title: "GetPawtrait.com",
     description: "Why GetPawtrait stands out for pet portraits",
-    beforeImage: "/images/placeholder-image1.jpg",
-    afterImage: "/images/placeholder-image2.webp",
+    beforeImage: assets.images.placeholders.comparison1,
+    afterImage: assets.images.placeholders.comparison2,
     features: [
       "Proprietary Pawtraits model V2 + optional designer retouching: sharp details, true-to-life colors",
       "Instant HD preview before payment",
@@ -32,8 +33,8 @@ const comparisonData: Record<'memorable' | 'others', ImageComparisonData> = {
   others: {
     title: "Other Pet Portrait Services",
     description: "How typical services compare",
-    beforeImage: "/images/placeholder-image1.jpg",
-    afterImage: "/images/placeholder-image2.webp",
+    beforeImage: assets.images.placeholders.comparison1,
+    afterImage: assets.images.placeholders.comparison2,
     features: [
       "Low-res or no preview, pay before you see",
       "Fewer than 10 styles, often reused elsewhere",

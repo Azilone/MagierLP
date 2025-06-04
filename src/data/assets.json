@@ -1,0 +1,59 @@
+{
+  "images": {
+    "logo": "/images/logo.webp",
+    "brand": {
+      "ups": "/images/brand/Logo UPS.svg",
+      "fedex": "/images/brand/FedEx Express.svg",
+      "usps": "/images/brand/Logo USPS.svg",
+      "visa": "/images/brand/Logo Visa Inc.svg",
+      "mastercard": "/images/brand/Logo Mastercard.svg",
+      "americanExpress": "/images/brand/American Express Icon.svg",
+      "paypal": "/images/brand/SVG Paypal.svg",
+      "applePay": "/images/brand/Logo Apple Pay.svg",
+      "usaFlag": "/images/brand/usa.svg"
+    },
+    "benefits": {
+      "1": "/images/benefits/1.webp",
+      "2": "/images/benefits/2.webp",
+      "3": "/images/benefits/3.webp",
+      "4": "/images/benefits/4.webp",
+      "5": "/images/benefits/5.webp",
+      "6": "/images/benefits/6.webp"
+    },
+    "placeholders": {
+      "product": "/images/product_placeholder.webp",
+      "comparison1": "/images/placeholder-image1.jpg",
+      "comparison2": "/images/placeholder-image2.webp",
+      "demo": "/product-placeholder.webp"
+    },
+    "customers": {
+      "1": "/images/customer/ac1.jpg",
+      "2": "/images/customer/ac2.jpg",
+      "3": "/images/customer/ac3.jpg",
+      "4": "/images/customer/ac4.jpg",
+      "5": "/images/customer/ac5.jpg"
+    },
+    "howItWorks": {
+      "1": "/images/hiw1.webp",
+      "2": "/images/hiw2.webp",
+      "3": "/images/hiw3.webp"
+    },
+    "rabbits": {
+      "before": "/images/rabbit1.webp",
+      "after": "/images/rabbit2.webp"
+    }
+  },
+  "svg": {
+    "cta1": "/svg/cta1.svg",
+    "cta2": "/svg/cta2.svg",
+    "laurierLeft": "/svg/laurier-gauche.svg",
+    "laurierRight": "/svg/laurier-droit.svg",
+    "tiktok": "/svg/TikTok.svg",
+    "instagram": "/svg/instagram.svg"
+  },
+  "lotties": {
+    "1": "/lotties/1.json",
+    "2": "/lotties/2.json",
+    "4": "/lotties/4.json"
+  }
+}
