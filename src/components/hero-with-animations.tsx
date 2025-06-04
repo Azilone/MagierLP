@@ -35,7 +35,7 @@ export function HeroWithAnimations() {
           {/* Main Content */}
           <div className="text-center">
             
-            <h1 className="text-[3vh] font-bold tracking-tight text-[#140F23] leading-tight
+            <h1 className="text-[3vh] font-bold tracking-tight text-text-primary leading-tight
                            sm:text-[3.2vh] sm:leading-tight
                            md:text-[3.5vh] md:leading-none md:tracking-[-0.5px]
                            lg:text-[5vh] lg:leading-[1.1] lg:tracking-[-0.75px]
@@ -72,7 +72,7 @@ export function HeroWithAnimations() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1 }}
-                className="block text-[1.7vh] text-[#5F1CFC] font-medium mt-1"
+                className="block text-[1.7vh] text-accent font-medium mt-1"
               >
                 in under 3 minutes.
               </motion.div>
@@ -83,7 +83,7 @@ export function HeroWithAnimations() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1 }}
-              className="mt-[1.2vh] text-[1.2vh] leading-relaxed text-[#828088] max-w-sm mx-auto
+              className="mt-[1.2vh] text-[1.2vh] leading-relaxed text-text-muted max-w-sm mx-auto
                          md:mt-[1.5vh] md:text-[1.3vh] md:leading-6 md:max-w-md
                          lg:mt-[1.8vh] lg:text-[1.4vh] lg:leading-7 lg:max-w-lg
                          xl:text-[1.5vh] xl:leading-7 xl:max-w-xl"

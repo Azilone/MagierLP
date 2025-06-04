@@ -9,7 +9,7 @@ export function NotificationBanner() {
   if (!isVisible) return null;
 
   return (
-    <div className="bg-[#5F1CFC] py-[15px] w-full">
+    <div className="bg-accent py-[15px] w-full">
       <div className="max-w-[1200px] mx-auto flex justify-center items-center text-white font-sans text-base gap-2 px-4">
         <span>🪄 MagicDesign is now magier →</span>
         <a href="#" className="font-bold underline">

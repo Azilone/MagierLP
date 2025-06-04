@@ -17,13 +17,13 @@ import { FoundersNote } from "@/components/founders-note";
 export default function Home() {
   return (
     <div className="bg-gray-100">
-      <div className="mx-auto max-w-[1920px] px-4 sm:px-6 lg:px-8 py-8 relative space-y-8">
-        <div className="sticky top-4 bg-white rounded-[32px]  ring ring-gray-200 z-[1000]"> {/* Added top-4 for spacing example */}
+      <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8 py-8 relative space-y-8">
+        <div className="sticky top-4 bg-white rounded-layout ring ring-gray-200 z-[1000]"> {/* Added top-4 for spacing example */}
           <Navbar /> {/* Navbar component no longer needs sticky */}
         </div>
 
         {/* Main content container */}
-        <div className="bg-white rounded-[32px]  bg-gradient-to-t from-white via-white to-[#f8f7fd]/90 ring ring-gray-200">
+        <div className="bg-white rounded-layout bg-gradient-to-t from-white via-white to-background-light/90 ring ring-gray-200">
           <HeroWithAnimations />
         </div>
         <HeroAwardBanner />

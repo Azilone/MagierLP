@@ -15,7 +15,7 @@ export function HowItWorksSection() {
           {/* Badge */}
           <div className="flex flex-col items-start">
             {/* Corrected border class */}
-            <span className="rounded-[42px] border-2 border-[#E5E5EA] py-[7.5px] px-[17px] text-base font-medium leading-4 tracking-[-0.32px] text-[#5F1CFC]">
+            <span className="rounded-[42px] border-2 border-border-primary py-[7.5px] px-[17px] text-base font-medium leading-4 tracking-[-0.32px] text-accent">
               How it works
             </span>
           </div>
@@ -25,7 +25,7 @@ export function HowItWorksSection() {
             {/* Heading container */}
             <div className="w-full lg:w-auto">
               {/* Responsive heading */}
-              <h2 className="text-4xl font-bold leading-tight tracking-tighter text-[#140F23] sm:text-3xl lg:text-[50px] xl:text-[56px]">
+              <h2 className="text-4xl font-bold leading-tight tracking-tighter text-text-primary sm:text-3xl lg:text-size-50 xl:text-size-56">
               How to get your custom pet portrait{' '}
                 {/* Inline container for "magic" + icon */}
                 <span className="inline-flex items-center gap-2 align-bottom">
@@ -36,7 +36,7 @@ export function HowItWorksSection() {
                     viewBox="0 0 64 64"
                     fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="inline-block h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16 text-[#5F1CFC] rotate-[-12deg]"
+                    className="inline-block h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16 text-accent rotate-[-12deg]"
                   >
                     <path d="M18.137 21.824c-5.645 1.549-9.088 7.132-8.092 10.944c.998 3.813 4.766-.53 10.411-2.08c5.643-1.551 11.024.281 10.028-3.532c-.997-3.813-6.702-6.883-12.347-5.332" />f
                     <path d="M13.768 20.047c1.701-.632 1.918-4.417 1.012-6.969c-.906-2.55-3.02-4.103-4.721-3.469c-1.7.635-2.344 3.217-1.438 5.767c.906 2.551 3.445 5.306 5.147 4.671" />
@@ -55,7 +55,7 @@ export function HowItWorksSection() {
             </div>
 
             {/* Paragraph with responsive max-width */}
-            <p className="w-full max-w-md text-md leading-relaxed tracking-[-0.36px] text-[#828088] lg:pt-2">
+            <p className="w-full max-w-md text-md leading-relaxed tracking-[-0.36px] text-text-muted lg:pt-2">
               
             </p>
           </div>
@@ -67,7 +67,7 @@ export function HowItWorksSection() {
           {/* Corrected border class */}
           <div className="relative flex flex-col items-start rounded-[42px] border-2 border-gray-200] bg-white p-3 ">
             {/* Number Chip */}
-            <div className="absolute -top-4 -left-4 flex items-center justify-center w-9 h-9 rounded-full bg-[#5F1CFC] text-white font-bold text-lg shadow-md border-4 border-white">1</div>
+            <div className="absolute -top-4 -left-4 flex items-center justify-center w-9 h-9 rounded-full bg-accent text-white font-bold text-lg shadow-md border-4 border-white">1</div>
             {/* Placeholder Image Area */}
             <div className="flex h-[300px] w-full items-center justify-center rounded-[32px] bg-[#F7E6D4] bg-[radial-gradient(circle,_#ede9fe_1px,_transparent_1px)] [background-size:20px_20px]">
               {/* Replace with <Image /> component */}
@@ -81,10 +81,10 @@ export function HowItWorksSection() {
             </div>
             {/* Card Content */}
             <div className="flex w-full flex-col items-center justify-center gap-3 p-6 pt-5 text-center">
-              <h3 className="text-xl font-medium leading-tight tracking-tight text-[#140F23] md:text-2xl">
+              <h3 className="text-xl font-medium leading-tight tracking-tight text-text-primary md:text-2xl">
                 Upload a photo of your pet
               </h3>
-              <p className="text-base leading-relaxed text-[#828088] sm:text-lg">
+              <p className="text-base leading-relaxed text-text-muted sm:text-lg">
                 Pick a photo you like—any clear picture works. Just upload it to get started.
               </p>
             </div>
@@ -94,7 +94,7 @@ export function HowItWorksSection() {
           {/* Corrected border class */}
           <div className="relative flex flex-col items-start rounded-[42px] border-2 border-gray-200 bg-white p-3 ">
             {/* Number Chip */}
-            <div className="absolute -top-4 -left-4 flex items-center justify-center w-9 h-9 rounded-full bg-[#5F1CFC] text-white font-bold text-lg shadow-md border-4 border-white">2</div>
+            <div className="absolute -top-4 -left-4 flex items-center justify-center w-9 h-9 rounded-full bg-accent text-white font-bold text-lg shadow-md border-4 border-white">2</div>
             <div className="flex h-[300px] w-full items-center justify-center rounded-[32px] bg-[#F7E6D4] bg-[radial-gradient(circle,_#ede9fe_1px,_transparent_1px)] [background-size:20px_20px]">
          
               <Image
@@ -107,10 +107,10 @@ export function HowItWorksSection() {
             </div>
              {/* Card Content */}
             <div className="flex w-full flex-col items-center justify-center gap-3 p-6 pt-5 text-center">
-              <h3 className="text-xl font-medium leading-tight tracking-tight text-[#140F23] md:text-2xl">
+              <h3 className="text-xl font-medium leading-tight tracking-tight text-text-primary md:text-2xl">
                 Choose your favorite style
               </h3>
-              <p className="text-base leading-relaxed text-[#828088] sm:text-lg">
+              <p className="text-base leading-relaxed text-text-muted sm:text-lg">
                 Pick between a handcrafted design or get an instant, high-quality AI illustration. See previews on different products before you decide.
               </p>
             </div>
@@ -120,7 +120,7 @@ export function HowItWorksSection() {
           {/* Corrected border class. Added transform-gpu for performance. */}
           <div className="relative flex transform-gpu flex-col items-start rounded-[42px] border-2 border-gray-200 bg-white p-3 transition-transform duration-300 md:rotate-[4deg] md:hover:rotate-[2deg]">
             {/* Number Chip */}
-            <div className="absolute -top-4 -left-4 flex items-center justify-center w-9 h-9 rounded-full bg-[#5F1CFC] text-white font-bold text-lg shadow-md border-4 border-white">3</div>
+            <div className="absolute -top-4 -left-4 flex items-center justify-center w-9 h-9 rounded-full bg-accent text-white font-bold text-lg shadow-md border-4 border-white">3</div>
             {/* Placeholder Image Area */}
             <div className="flex h-[300px] w-full items-center justify-center rounded-[32px] bg-[#E9C69E]">
               {/* Replace with <Image /> component */}
@@ -134,10 +134,10 @@ export function HowItWorksSection() {
             </div>
              {/* Card Content */}
             <div className="flex w-full flex-col items-center justify-center gap-3 p-6 pt-5 text-center">
-              <h3 className="text-xl font-medium leading-tight tracking-tight text-[#140F23] md:text-2xl">
+              <h3 className="text-xl font-medium leading-tight tracking-tight text-text-primary md:text-2xl">
                 Get your artwork
               </h3>
-              <p className="text-base leading-relaxed text-[#828088] sm:text-lg">
+              <p className="text-base leading-relaxed text-text-muted sm:text-lg">
                 Place your order and receive your pet's portrait as a digital file or printed product. It's that simple.
               </p>
             </div>
@@ -149,12 +149,12 @@ export function HowItWorksSection() {
           {/* Feature 1 */}
           <div className="flex items-center gap-2">
             {/* Lightning bolt icon chip */}
-            <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#5F1CFC] text-white">
+            <span className="flex items-center justify-center w-8 h-8 rounded-full bg-accent text-white">
               <svg width="20" height="20" fill="none" viewBox="0 0 20 20">
                 <path d="M11 2L4 11h5l-1 7 7-9h-5l1-7z" fill="white"/>
               </svg>
             </span>
-            <span className="text-base font-medium text-[#5F1CFC]">
+            <span className="text-base font-medium text-accent">
               Instant result preview
             </span>
           </div>
@@ -162,12 +162,12 @@ export function HowItWorksSection() {
           {/* Feature 2 */}
           <div className="flex items-center gap-2">
             {/* Diamond icon chip (SVG from public/svg/Icône SVG Diamant.svg) */}
-            <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#5F1CFC] text-white">
+            <span className="flex items-center justify-center w-8 h-8 rounded-full bg-accent text-white">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" className="w-4 h-4">
                 <path fill="#fff" d="M32.711 64 64 30H44.71L32.711 64zM64 28l-8.762-11.969L46.031 28H64zM53.508 15H32.437l11.494 12.45L53.508 15zM32 30H21.41L32 59.99 42.59 30H32zM0 30l31.289 34L19.29 30H0zM32 28h9.72L32 17.47 22.28 28H32zM8.762 16.031 0 28h17.969L8.762 16.031zM31.563 15H10.492l9.577 12.45L31.563 15zM32 13a1 1 0 0 1-1-1V1a1 1 0 0 1 2 0v11a1 1 0 0 1-1 1zM40 13a1 1 0 0 1-.759-1.65l6-7a1 1 0 0 1 1.518 1.3l-6 7A.993.993 0 0 1 40 13zM24 13a.993.993 0 0 1-.759-.35l-6-7a1 1 0 0 1 1.518-1.3l6 7A1 1 0 0 1 24 13z"/>
               </svg>
             </span>
-            <span className="text-base font-medium text-[#5F1CFC]">
+            <span className="text-base font-medium text-accent">
               High quality materials
             </span>
           </div>
@@ -175,14 +175,14 @@ export function HowItWorksSection() {
           {/* Feature 3 */}
           <div className="flex items-center gap-2">
             {/* Globe icon chip */}
-            <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#5F1CFC] text-white">
+            <span className="flex items-center justify-center w-8 h-8 rounded-full bg-accent text-white">
               <svg width="20" height="20" fill="none" viewBox="0 0 20 20">
                 <circle cx="10" cy="10" r="7" stroke="white" strokeWidth="2" fill="none"/>
                 <ellipse cx="10" cy="10" rx="7" ry="3" stroke="white" strokeWidth="2" fill="none"/>
                 <path d="M10 3v14" stroke="white" strokeWidth="2"/>
               </svg>
             </span>
-            <span className="text-base font-medium text-[#5F1CFC]">
+            <span className="text-base font-medium text-accent">
               Worldwide delivery
             </span>
           </div>

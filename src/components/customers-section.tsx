@@ -7,10 +7,10 @@ export function CustomersSection() {
     <section className="py-28 max-w-7xl mx-auto px-4">
       <div className="flex flex-col gap-20">
         <div>
-          <div className="py-[7.5px] px-[17px] rounded-[42px] border border-gray-200 text-[#5F1CFC] text-base inline-block mb-4">
+          <div className="py-[7.5px] px-[17px] rounded-[42px] border border-gray-200 text-accent text-base inline-block mb-4">
             Customers
           </div>
-          <h2 className="text-[#140F23] text-[66px] font-bold leading-[72.6px] tracking-[-2.64px] max-w-[622px] mb-2.5 sm:text-4xl sm:leading-[44px]">
+          <h2 className="text-text-primary text-size-66 font-bold leading-[72.6px] tracking-[-2.64px] max-w-[622px] mb-2.5 sm:text-4xl sm:leading-[44px]">
             <span>We work with some of</span>
             <span className="relative inline-flex items-center">
               <span> the</span>
@@ -126,7 +126,7 @@ export function CustomersSection() {
             </span>
             <span> best companies out there</span>
           </h2>
-          <p className="text-[#828088] text-lg leading-[27px] max-w-[405px] mt-2.5">
+          <p className="text-text-muted text-lg leading-[27px] max-w-[405px] mt-2.5">
             Great ideas deserve great design. And great teams deserve a partner
             they can trust. We work with high-growth companies of all sizes -
             from idea stage to unicorn - and tackle all of their marketing
@@ -136,7 +136,7 @@ export function CustomersSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-[311px_1fr] gap-6">
           {/* Stats Card */}
-          <div className="rounded-[32px] p-12 bg-[#5F1CFC] text-white">
+          <div className="rounded-[32px] p-12 bg-accent text-white">
             <div className="mb-6">
               <div className="text-5xl font-bold leading-[52.8px] tracking-[-1.92px]">
                 $2B+
@@ -168,7 +168,7 @@ export function CustomersSection() {
           {/* Company Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Pango */}
-            <div className="rounded-[32px] border border-[#EBEBEE] p-8 shadow-[0_0_0_1px_#E5E5EA_inset] bg-white sm:p-5">
+            <div className="rounded-[32px] border border-border-light p-8 shadow-[0_0_0_1px_#E5E5EA_inset] bg-white sm:p-5">
               <div className="flex justify-between items-center mb-6">
                 <div>
                   <svg
@@ -236,17 +236,17 @@ export function CustomersSection() {
                     </defs>
                   </svg>
                 </div>
-                <div className="py-[7.5px] px-[17px] rounded-[42px] border border-gray-200 text-[#828088] text-base">
+                <div className="py-[7.5px] px-[17px] rounded-[42px] border border-gray-200 text-text-muted text-base">
                   SaaS
                 </div>
               </div>
-              <div className="text-[#828088] text-lg">
+              <div className="text-text-muted text-lg">
                 United States → Used by millions
               </div>
             </div>
 
             {/* Seller X */}
-            <div className="rounded-[32px] border border-[#EBEBEE] p-8 shadow-[0_0_0_1px_#E5E5EA_inset] bg-white sm:p-5">
+            <div className="rounded-[32px] border border-border-light p-8 shadow-[0_0_0_1px_#E5E5EA_inset] bg-white sm:p-5">
               <div className="flex justify-between items-center mb-6">
                 <div>
                   <svg
@@ -310,17 +310,17 @@ export function CustomersSection() {
                     </defs>
                   </svg>
                 </div>
-                <div className="py-[7.5px] px-[17px] rounded-[42px] border border-gray-200 text-[#828088] text-base">
+                <div className="py-[7.5px] px-[17px] rounded-[42px] border border-gray-200 text-text-muted text-base">
                   Ecommerce
                 </div>
               </div>
-              <div className="text-[#828088] text-lg">
+              <div className="text-text-muted text-lg">
                 Berlin, Germany → Unicorn in 18 months
               </div>
             </div>
 
             {/* Plancraft */}
-            <div className="rounded-[32px] border border-[#EBEBEE] p-8 shadow-[0_0_0_1px_#E5E5EA_inset] bg-white sm:p-5">
+            <div className="rounded-[32px] border border-border-light p-8 shadow-[0_0_0_1px_#E5E5EA_inset] bg-white sm:p-5">
               <div className="flex justify-between items-center mb-6">
                 <div>
                   <svg
@@ -418,17 +418,17 @@ export function CustomersSection() {
                     </defs>
                   </svg>
                 </div>
-                <div className="py-[7.5px] px-[17px] rounded-[42px] border border-gray-200 text-[#828088] text-base">
+                <div className="py-[7.5px] px-[17px] rounded-[42px] border border-gray-200 text-text-muted text-base">
                   SaaS
                 </div>
               </div>
-              <div className="text-[#828088] text-lg">
+              <div className="text-text-muted text-lg">
                 Hamburg, Germany → Raised $20M+
               </div>
             </div>
 
             {/* Aikido */}
-            <div className="rounded-[32px] border border-[#EBEBEE] p-8 shadow-[0_0_0_1px_#E5E5EA_inset] bg-white sm:p-5">
+            <div className="rounded-[32px] border border-border-light p-8 shadow-[0_0_0_1px_#E5E5EA_inset] bg-white sm:p-5">
               <div className="flex justify-between items-center mb-6">
                 <div>
                   <svg
@@ -484,17 +484,17 @@ export function CustomersSection() {
                     </defs>
                   </svg>
                 </div>
-                <div className="py-[7.5px] px-[17px] rounded-[42px] border border-gray-200 text-[#828088] text-base">
+                <div className="py-[7.5px] px-[17px] rounded-[42px] border border-gray-200 text-text-muted text-base">
                   SaaS
                 </div>
               </div>
-              <div className="text-[#828088] text-lg">
+              <div className="text-text-muted text-lg">
                 Ghent, Belgium → Raised $17M
               </div>
             </div>
 
             {/* Upvest */}
-            <div className="rounded-[32px] border border-[#EBEBEE] p-8 shadow-[0_0_0_1px_#E5E5EA_inset] bg-white sm:p-5">
+            <div className="rounded-[32px] border border-border-light p-8 shadow-[0_0_0_1px_#E5E5EA_inset] bg-white sm:p-5">
               <div className="flex justify-between items-center mb-6">
                 <div>
                   <svg
@@ -566,11 +566,11 @@ export function CustomersSection() {
                     </defs>
                   </svg>
                 </div>
-                <div className="py-[7.5px] px-[17px] rounded-[42px] border border-gray-200 text-[#828088] text-base">
+                <div className="py-[7.5px] px-[17px] rounded-[42px] border border-gray-200 text-text-muted text-base">
                   Fintech
                 </div>
               </div>
-              <div className="text-[#828088] text-lg">
+              <div className="text-text-muted text-lg">
                 Berlin, Germany → Raised $160M+
               </div>
             </div>
