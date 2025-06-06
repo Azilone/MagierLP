@@ -1,4 +1,5 @@
 import React from "react";
+import { assets } from "@/lib/assets";
 
 export default function AwardBanner() {
   return (
@@ -6,7 +7,7 @@ export default function AwardBanner() {
       <div className="flex items-center gap-1 sm:gap-2  w-full justify-center">
         {/* Laurel left */}
         <img
-          src="/svg/laurier-gauche.svg"
+          src={assets.svg.laurierLeft}
           alt="Laurel Left"
           className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 text-gray-400 relative top-[2px] sm:top-[4px]"
           aria-hidden="true"
@@ -21,7 +22,7 @@ export default function AwardBanner() {
         </div>
         {/* Laurel right */}
         <img
-          src="/svg/laurier-droit.svg"
+          src={assets.svg.laurierRight}
           alt="Laurel Right"
           className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 text-gray-400 relative top-[2px] sm:top-[4px]"
           aria-hidden="true"
@@ -31,7 +32,7 @@ export default function AwardBanner() {
         <span className="text-gray-400">Seen on</span>
         {/* TikTok logo */}
         <img
-          src="/svg/TikTok.svg"
+          src={assets.svg.tiktok}
           alt="TikTok Logo"
           className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-gray-400 relative top-[2px]"
           aria-hidden="true"
@@ -39,7 +40,7 @@ export default function AwardBanner() {
         <span className="text-gray-400">&amp;</span>
         {/* Instagram logo */}
         <img
-          src="/svg/instagram.svg"
+          src={assets.svg.instagram}
           alt="Instagram Logo"
           className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-gray-400 relative top-[2px]"
           aria-hidden="true"
