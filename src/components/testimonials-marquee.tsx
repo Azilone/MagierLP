@@ -3,32 +3,33 @@
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/magicui/marquee"
 import Image from "next/image";
+import { assets } from "@/lib/assets";
 import Link from "next/link";
 import { ImageComparison, ImageComparisonImage, ImageComparisonSlider } from "@/components/ui/image-comparison";
 
 const portfolioItems = [
   {
     title: "PHOTO > CADEAU",
-    beforeImage: "/images/rabbit1.webp",
-    afterImage: "/images/rabbit2.webp",
+    beforeImage: assets.images.rabbits.before,
+    afterImage: assets.images.rabbits.after,
     href: "",
   },
   {
     title: "PHOTO > CADEAU",
-    beforeImage: "/images/rabbit1.webp",
-    afterImage: "/images/rabbit2.webp",
+    beforeImage: assets.images.rabbits.before,
+    afterImage: assets.images.rabbits.after,
     href: "",
   },
   {
     title: "PHOTO > CADEAU",
-    beforeImage: "/images/rabbit1.webp",
-    afterImage: "/images/rabbit2.webp",
+    beforeImage: assets.images.rabbits.before,
+    afterImage: assets.images.rabbits.after,
     href: "",
   },
   {
     title: "PHOTO > CADEAU",
-    beforeImage: "/images/rabbit1.webp",
-    afterImage: "/images/rabbit2.webp",
+    beforeImage: assets.images.rabbits.before,
+    afterImage: assets.images.rabbits.after,
     href: "",
   },
 ];

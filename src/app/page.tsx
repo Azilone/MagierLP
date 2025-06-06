@@ -11,6 +11,7 @@ import { HeroWithAnimations } from "@/components/hero-with-animations";
 import { BenefitsSection } from "@/components/benefits-section";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import HeroAwardBanner from "@/components/award-banner";
+import { assets } from "@/lib/assets";
 import { FoundersNote } from "@/components/founders-note";
 
 
@@ -36,35 +37,35 @@ export default function Home() {
                   "A fantastic picture of my fur babies! The quality and detail is brilliant! So so happy with my purchase!",
                 name: "Louise S.",
                 designation: "",
-                src: "/images/customer/ac1.jpg",
+                src: assets.images.customer.ac1,
               },
               {
                 quote:
                   "This is the 2nd canvas that we have done. The quality is A+, including the frames!! Great communication during the entire process, start to finish! We have a 3rd picture-canvas that will be in the works soon... We can't wait to work with you again!!",
                 name: "Christopher S.",
                 designation: "",
-                src: "/images/customer/ac2.jpg",
+                src: assets.images.customer.ac2,
               },
               {
                 quote:
                   "I'm so pleased with the portrait; it was a gift for my husband after our beloved lab passed away. The picture is absolutely perfect and captures his spirit beautifully.",
                 name: "Leah A.",
                 designation: "",
-                src: "/images/customer/ac3.jpg",
+                src: assets.images.customer.ac3,
               },
               {
                 quote:
                   "I'm sorry, not sorry, but I'm in love with this. Super easy to order. They sent a proof and the final photo is even better than expected because it has like a velvet feel to it almost like a vintage painting or art.",
                 name: "Betsy T.",
                 designation: "",
-                src: "/images/customer/ac4.jpg",
+                src: assets.images.customer.ac4,
               },
               {
                 quote:
                   "Amazing service, updated all the way and absolutely delighted with the portrait of our gorgeous dog. The quality is exceptional and the attention to detail is remarkable.",
                 name: "Lauraine Q.",
                 designation: "",
-                src: "/images/customer/ac5.jpg",
+                src: assets.images.customer.ac5,
               },
             ]}
             // autoplay={true}

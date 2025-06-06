@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image"; // Import next/image
+import { assets } from "@/lib/assets";
 
 export function CTASection() {
   return (
@@ -9,7 +10,7 @@ export function CTASection() {
     <div className="relative mx-auto my-8 w-full rounded-[32px] bg-[#5F1CFC] px-5 py-12 sm:p-12 md:p-16 flex flex-col items-center overflow-hidden">
       {/* Decorative SVG - Top Right */}
       <Image
-        src="/svg/cta1.svg"
+        src={assets.svg.cta1}
         alt=""
         width={150}
         height={150}
@@ -19,7 +20,7 @@ export function CTASection() {
       />
       {/* Decorative SVG - Bottom Left */}
       <Image
-        src="/svg/cta2.svg"
+        src={assets.svg.cta2}
         alt=""
         width={150}
         height={150}

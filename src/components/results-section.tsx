@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { assets } from "@/lib/assets";
 import { motion } from "framer-motion"; // Import motion
 
 import CTAButton from "./ui/CTAButton";
@@ -171,30 +172,30 @@ const serviceCards = [
     title: "Posters & Canvas",
     description:
       "Transform your pet photos into stunning wall art. Premium quality prints delivered to your door in days.",
-    imageSrc: "/images/customer/ac1.jpg",
+    imageSrc: assets.images.customer.ac1,
   },
   {
     title: "Mugs & Phone Cases",
     description: 
       "Show off your furry friend everywhere you go. Durable, high-quality prints that last.",
-    imageSrc: "/images/customer/ac2.jpg",
+    imageSrc: assets.images.customer.ac2,
   },
   {
     title: "Gift Sets",
     description:
       "Perfect for pet lovers. Mix and match products to create the ultimate personalized gift.",
-    imageSrc: "/images/customer/ac3.jpg",
+    imageSrc: assets.images.customer.ac3,
   },
   {
     title: "Custom Styles",
     description:
       "Choose from our exclusive collection of pet-specific art styles. From classic to modern.",
-    imageSrc: "/images/customer/ac4.jpg",
+    imageSrc: assets.images.customer.ac4,
   },
   {
     title: "Premium Quality",
     description:
       "Professional printing, worldwide shipping, and gift wrapping available. Satisfaction guaranteed.",
-    imageSrc: "/images/customer/ac5.jpg",
+    imageSrc: assets.images.customer.ac5,
   },
 ];

@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image"; // Import next/image
+import { assets } from "@/lib/assets";
 
 export function HowItWorksSection() {
   return (
@@ -71,8 +72,8 @@ export function HowItWorksSection() {
             {/* Placeholder Image Area */}
             <div className="flex h-[300px] w-full items-center justify-center rounded-[32px] bg-[#F7E6D4] bg-[radial-gradient(circle,_#ede9fe_1px,_transparent_1px)] [background-size:20px_20px]">
               {/* Replace with <Image /> component */}
-              <Image
-                  src="/images/hiw1.webp"
+                <Image
+                  src={assets.images.hiw["1"]}
                   alt="Upload your pet photo"
                   className="object-contain w-full h-full rounded-[32px]"
                   width={400}
@@ -98,7 +99,7 @@ export function HowItWorksSection() {
             <div className="flex h-[300px] w-full items-center justify-center rounded-[32px] bg-[#F7E6D4] bg-[radial-gradient(circle,_#ede9fe_1px,_transparent_1px)] [background-size:20px_20px]">
          
               <Image
-                src="/images/hiw2.webp"
+                src={assets.images.hiw["2"]}
                 alt="Choose your favorite style"
                 className="object-contain w-full h-full rounded-[32px] opacity-90"
                 width={400}
@@ -125,7 +126,7 @@ export function HowItWorksSection() {
             <div className="flex h-[300px] w-full items-center justify-center rounded-[32px] bg-[#E9C69E]">
               {/* Replace with <Image /> component */}
               <Image
-                src="/images/hiw3.webp"
+                src={assets.images.hiw["3"]}
                 alt="Get your artwork"
                 className="object-contain w-full h-full rounded-[32px] opacity-90"
                 width={400}
