@@ -7,6 +7,8 @@ import { AuroraText } from "@/components/magicui/aurora-text";
 import CTAButton from "./ui/CTAButton";
 import { Spotlight } from "./ui/spotlight";
 import HeroStatsBar from "./hero-stats-bar";
+import { styles, color } from "@/styles";
+import { cn } from "@/lib/utils";
 
 export function HeroWithAnimations() {
   return (
@@ -34,13 +36,8 @@ export function HeroWithAnimations() {
 
           {/* Main Content */}
           <div className="text-center">
-            
-            <h1 className="text-[3vh] font-bold tracking-tight text-[#140F23] leading-tight
-                           sm:text-[3.2vh] sm:leading-tight
-                           md:text-[3.5vh] md:leading-none md:tracking-[-0.5px]
-                           lg:text-[5vh] lg:leading-[1.1] lg:tracking-[-0.75px]
-                           xl:text-[5.5vh] xl:leading-[1.1] xl:tracking-[-1px]
-                           max-w-[80vw] mx-auto"
+
+            <h1 className={cn(styles.h1, "max-w-[80vw] mx-auto")}
             >
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -72,7 +69,7 @@ export function HeroWithAnimations() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1 }}
-                className="block text-[1.7vh] text-[#5F1CFC] font-medium mt-1"
+                className={cn("block text-[1.7vh] font-medium mt-1", color.primary)}
               >
                 in under 3 minutes.
               </motion.div>
@@ -83,10 +80,10 @@ export function HeroWithAnimations() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1 }}
-              className="mt-[1.2vh] text-[1.2vh] leading-relaxed text-[#828088] max-w-sm mx-auto
-                         md:mt-[1.5vh] md:text-[1.3vh] md:leading-6 md:max-w-md
-                         lg:mt-[1.8vh] lg:text-[1.4vh] lg:leading-7 lg:max-w-lg
-                         xl:text-[1.5vh] xl:leading-7 xl:max-w-xl"
+              className={cn(
+                styles.subtitle,
+                "mt-[1.2vh] max-w-sm mx-auto md:mt-[1.5vh] md:max-w-md lg:mt-[1.8vh] lg:max-w-lg xl:max-w-xl"
+              )}
             >
               Upload a photo, pick from the largest library of pet-only styles, and see an instant HD preview on posters, mugs, phone cases and more.
 

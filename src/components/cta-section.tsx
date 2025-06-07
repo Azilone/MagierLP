@@ -1,12 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image"; // Import next/image
+import Image from "next/image";
+import { styles, color } from "@/styles";
+import { cn } from "@/lib/utils";
 
 export function CTASection() {
   return (
     // Main container: Using Magier's style - large padding, specific bg, rounded
-    <div className="relative mx-auto my-8 w-full rounded-[32px] bg-[#5F1CFC] px-5 py-12 sm:p-12 md:p-16 flex flex-col items-center overflow-hidden">
+    <div className={cn(
+      "relative mx-auto my-8 w-full rounded-[32px] px-5 py-12 sm:p-12 md:p-16 flex flex-col items-center overflow-hidden",
+      color.primaryBg
+    )}>
       {/* Decorative SVG - Top Right */}
       <Image
         src="/svg/cta1.svg"
@@ -31,7 +36,7 @@ export function CTASection() {
       {/* Content Wrapper */}
       <div className="flex flex-col items-center text-center gap-6 z-10 w-full">
         {/* Heading */}
-        <h2 className="text-white font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight tracking-tight max-w-4xl">
+        <h2 className={cn(styles.h2, "text-white max-w-4xl")}> 
           This is⚡️where FastFrame comes in
           <span className="block text-xl sm:text-2xl lg:text-3xl mt-3 font-medium leading-snug tracking-tight">
             <br />We are your remote design team 🚀<br />
@@ -50,7 +55,10 @@ export function CTASection() {
         <div className="mt-6">
           <Link
             href="/demo"
-            className="inline-block rounded-full bg-white px-6 py-3 text-base font-bold text-[#5F1CFC] tracking-tight transition-transform duration-200 hover:scale-105 sm:px-8 sm:py-4"
+            className={cn(
+              "inline-block rounded-full bg-white px-6 py-3 text-base font-bold tracking-tight transition-transform duration-200 hover:scale-105 sm:px-8 sm:py-4",
+              color.primary
+            )}
           >
             Book a demo
           </Link>
